@@ -30,6 +30,10 @@ jobs:
 
 配置调整完成之后，就可以push项目看效果了，当然这里也可以通过GitHub_Token的方式认证，就不赘述了。
 
+效果呈现如下：
+
+![image_20220719_110310](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_110310.png)
+
 `配置列表：`
 
 | name                      | description                                                  | default                                                      | required | e.g.                           |
@@ -60,3 +64,9 @@ jobs:
 | GITHUB_TOKEN              | Access token                                                 | `${{github.token}}`                                          | true     | `${{secrets.ACCESS_TOKEN}}`    |
 
 可根据自己的实际需求以及情况进行配置！
+
+## 另外
+
+后来在一个地方学到了一招，原来GitHub针对Markdown文件已经默认支持了目录的方式，并且还支持搜索，如下：
+
+![image_20220719_110613](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_110613.png)
