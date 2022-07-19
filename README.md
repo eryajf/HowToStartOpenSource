@@ -5,6 +5,7 @@
 - [项目基础配置](./docs/01.basic-content/%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE.md)
 - [项目个人维护流程](./docs/01.basic-content/%E4%B8%AA%E4%BA%BA%E7%BB%B4%E6%8A%A4%E6%B5%81%E7%A8%8B.md)
 - [项目协同开发流程](./docs/01.basic-content/%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.md)
+-  [PR与issue的联动维护](./docs/01.basic-content/PR%E4%B8%8Eissue%E7%9A%84%E8%81%94%E5%8A%A8%E7%BB%B4%E6%8A%A4.md)
 
 ## GitHub Actions
 
