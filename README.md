@@ -19,5 +19,7 @@
 - [如何将README中的表格居中显示](./docs/03.github-tips/%E5%A6%82%E4%BD%95%E5%B0%86README%E4%B8%AD%E7%9A%84%E8%A1%A8%E6%A0%BC%E5%B1%85%E4%B8%AD%E6%98%BE%E7%A4%BA.md)
 - [如何在一台电脑上配置多个GitHub账号](./docs/03.github-tips/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7.md)
 - [如何将多次提交合并为一次](./docs/03.github-tips/%E5%A6%82%E4%BD%95%E5%B0%86%E5%A4%9A%E6%AC%A1%E6%8F%90%E4%BA%A4%E5%90%88%E5%B9%B6%E4%B8%BA%E4%B8%80%E6%AC%A1.md)
+- [使用GitHub键盘快捷键汇总](https://docs.github.com/cn/get-started/using-github/keyboard-shortcuts)
+- [阅读代码运行代码的技巧](./docs/03.github-tips/%E9%98%85%E8%AF%BB%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E6%8A%80%E5%B7%A7.md)
 
 欢迎补充，欢迎指正！
