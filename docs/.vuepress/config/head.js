@@ -1,7 +1,7 @@
 // head
 module.exports = [
   // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
-  ['link', { rel: 'icon', href: '/HowToStartOpenSource/img/favicon.ico' }], //favicons，资源放在public文件夹
+  ['link', { rel: 'icon', href: 'https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220720_132133.ico' }], //favicons，资源放在public文件夹
   [
     'meta',
     {
