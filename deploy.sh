@@ -14,17 +14,12 @@ cd docs/.vuepress/dist
 
 # cat CNAME
 
-if [ -z "$GITHUB_TOKEN" ]; then
-  msg='deploy'
-  githubUrl=git@github.com:eryajf/HowToStartOpenSource.git
-else
   Date=`date '+%Y%m%d%H%M%S'`
   echo $Date
   msg='GitHub Actions Deploy'
   githubUrl=https://eryajf:${GITHUB_TOKEN}@github.com/eryajf/HowToStartOpenSource.git
   git config --global user.name "eryajf"
   git config --global user.email "eryajf@163.com"
-fi
 
 git init
 git add -A
