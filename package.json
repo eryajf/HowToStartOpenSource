@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/api-github-v4": "^1.4.7",
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "busuanzi.pure.js": "^1.0.3",
     "leancloud-storage": "^4.11.1",
