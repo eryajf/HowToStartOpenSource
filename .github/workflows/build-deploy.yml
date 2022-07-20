@@ -24,10 +24,20 @@ jobs:
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
           node-version: ${{ matrix.node-version }} # 版本
-      - name: run deploy.sh # 步骤3
+      # - name: run deploy.sh # 步骤3
+      #   env: # 设置环境变量
+      #     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
+      #   run: npm install && npm run deploy
+
+      - name: Build and Deploy # 步骤3 （只提交到github可以使用这个步骤）
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         env: # 设置环境变量
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
-        run: npm install && npm run deploy
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
+        with:
+          branch: gh-pages # 部署到的分支
+          folder: docs/.vuepress/dist # 要部署的文件夹.
+          BUILD_SCRIPT: npm install && npm run build && cd docs/.vuepress/dist
+
 
       # 利用action把build好的文件上传到服务器/home/eryajf.github.io路径下,需要确认此目录已在服务端创建
       # - name: deploy file to server
