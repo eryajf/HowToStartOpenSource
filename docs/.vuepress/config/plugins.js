@@ -13,8 +13,7 @@ module.exports = [
   //       clientSecret: '8843cb9fb9a9bd9131c65b87f322f491a7d09795',
   //     }],
       [
-        "vuepress-plugin-vssue-global",
-        {
+        'vuepress-plugin-vssue-global',{
           platform: "github",
           title: "[Comment]<%- frontmatter.title %>",
           needComments: true,
@@ -24,7 +23,6 @@ module.exports = [
           owner: "eryajf",
           repo: "HowToStartOpenSource",
         },
-      ],
     ],
   ],
 
