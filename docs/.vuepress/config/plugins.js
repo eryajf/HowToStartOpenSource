@@ -1,18 +1,17 @@
 // 插件配置
 module.exports = [
+  'plugins', [
   // vssue 评论
     [
-      '@vssue/vuepress-plugin-vssue',
-      {
+      '@vssue/vuepress-plugin-vssue', {
         // 设置 `platform` 而不是 `api`
         platform: 'github-v4',
-
         // 其他的 Vssue 配置
         owner: 'eryajf',
         repo: 'HowToStartOpenSource',
         clientId: '173bf094ce5ddd2d011e',
         clientSecret: '8843cb9fb9a9bd9131c65b87f322f491a7d09795',
-      },
+      }],
   ],
 
   'vuepress-plugin-baidu-autopush', // 百度自动推送
