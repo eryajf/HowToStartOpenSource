@@ -18,8 +18,6 @@
     "json2yaml": "^1.1.0",
     "segmentit": "^2.0.3",
     "vuepress": "1.8.0",
-    "vuepress-plugin-baidu-autopush": "^1.0.1",
-    "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-fulltext-search": "^2.2.1",
     "vuepress-plugin-mermaidjs": "^1.8.1",
     "vuepress-plugin-one-click-copy": "^1.0.2",
