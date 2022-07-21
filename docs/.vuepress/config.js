@@ -24,6 +24,7 @@ module.exports = {
         title: "[Comment]<%- frontmatter.title %>",
         needComments: true,
         // 其他的 Vssue 配置
+        autoCreateIssue: true,
         clientId: "173bf094ce5ddd2d011e",
         clientSecret: "8843cb9fb9a9bd9131c65b87f322f491a7d09795",
         owner: "eryajf",
