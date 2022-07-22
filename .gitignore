@@ -16,3 +16,4 @@ urls.txt
 
 # mac
 .DS_Store
+yarn-error.log
