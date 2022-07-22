@@ -1,6 +1,8 @@
 
 查看在线版：[https://eryajf.github.io/HowToStartOpenSource](https://eryajf.github.io/HowToStartOpenSource)
 
+> 强烈建议通过在线版进行阅读，内容更加美观，知识串联也更加优雅！！！
+
 混迹于互联网，或多或少难免都会与 GitHub 有交互，大多数时候在公司中积累的 git 使用经验都是面向 GitLab 的，也很容易想当然地将过往的经验套到 GitHub 中，而事实上还是有一些差别的，最近开源了几个项目，有一些还涉及到要与外部开发者协同工作，当我真正面对要处理一个 PR 的时候，内心是慌乱的，一时间不知道该从何处下手，这里就整理记录一下这方面的实践。
 
 ## 基础内容
@@ -11,6 +13,7 @@
 - [项目个人维护流程](./docs/01.basic-content/02.%E4%B8%AA%E4%BA%BA%E7%BB%B4%E6%8A%A4%E6%B5%81%E7%A8%8B.md)
 - [项目协同开发流程](./docs/01.basic-content/03.%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.md)
 -  [PR与issue的联动维护](./docs/01.basic-content/04.PR%E4%B8%8Eissue%E7%9A%84%E8%81%94%E5%8A%A8%E7%BB%B4%E6%8A%A4.md)
+- [如何将个人的GitHub主页配置的优雅好看](./docs/01.basic-content/05.%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%AA%E4%BA%BA%E7%9A%84GitHub%E4%B8%BB%E9%A1%B5%E9%85%8D%E7%BD%AE%E7%9A%84%E4%BC%98%E9%9B%85%E5%A5%BD%E7%9C%8B.md)
 
 ## GitHub Actions
 
