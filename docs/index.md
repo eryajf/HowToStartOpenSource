@@ -10,3 +10,7 @@ bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | no
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: simple
 ---
+
+::: center
+当前在线文档是开源项目 [HowToStartOpenSource](https://github.com/eryajf/HowToStartOpenSource) 的在线呈现版，如果觉得内容不错，欢迎给项目点赞收藏！
+:::
