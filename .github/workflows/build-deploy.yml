@@ -28,3 +28,32 @@ jobs:
         with:
           folder: docs/.vuepress/dist
           branch: gh-pages # 部署到的分支
+
+  test_website:
+    needs: deploy-gh-pages
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Test Connect
+        run: |
+          curl https://eryajf.github.io/HowToStartOpenSource/ --connect-timeout 5
+          curl https://ms-d5d5d07c4cab-1961.sgp.meilisearch.io/health --connect-timeout 5
+
+  scrape-docs:
+    needs: test_website
+    runs-on: ubuntu-20.04
+    steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v2
+          with:
+              node-version: 14
+              registry-url: https://registry.npmjs.org/
+        - name: Run docs-scraper
+          env:
+              API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
+              CONFIG_FILE_PATH: ${{ github.workspace }}/docs/.vuepress/public/data/docs-scraper-config.json
+          run: |
+              docker run -t --rm \
+                -e MEILISEARCH_HOST_URL="https://ms-d5d5d07c4cab-1961.sgp.meilisearch.io" \
+                -e MEILISEARCH_API_KEY=$API_KEY \
+                -v $CONFIG_FILE_PATH:/docs-scraper/config.json \
+                getmeili/docs-scraper:v0.12.7 pipenv run ./docs_scraper config.json
