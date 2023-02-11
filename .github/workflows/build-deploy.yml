@@ -30,7 +30,7 @@ jobs:
           branch: gh-pages # 部署到的分支
 
   test_website:
-    needs: deploy-gh-pages
+    needs: deploy
     runs-on: ubuntu-20.04
     steps:
       - name: Test Connect
