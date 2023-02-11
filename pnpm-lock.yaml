@@ -11,6 +11,7 @@ specifiers:
   vuepress: 1.8.0
   vuepress-plugin-comment: ^0.7.3
   vuepress-plugin-fulltext-search: ^2.2.1
+  vuepress-plugin-meilisearch: ^0.13.0
   vuepress-plugin-mermaidjs: ^1.8.1
   vuepress-plugin-one-click-copy: ^1.0.2
   vuepress-plugin-sitemap: ^2.3.1
@@ -23,6 +24,7 @@ dependencies:
   busuanzi.pure.js: 1.0.3
   leancloud-storage: 4.14.0
   vuepress-plugin-comment: 0.7.3
+  vuepress-plugin-meilisearch: 0.13.0
   vuepress-plugin-sitemap: 2.3.1
   vuepress-plugin-vssue-global: 0.0.3
 
@@ -2532,6 +2534,12 @@ packages:
       immediate: 3.3.0
     dev: true
 
+  /autocomplete.js/0.38.1:
+    resolution: {integrity: sha512-6pSJzuRMY3pqpozt+SXThl2DmJfma8Bi3SVFbZHS0PW/N72bOUv+Db0jAh2cWOhTsA4X+GNmKvIl8wExJTnN9w==}
+    dependencies:
+      immediate: 3.3.0
+    dev: false
+
   /autoprefixer/9.8.8:
     resolution: {integrity: sha512-eM9d/swFopRt5gdJ7jrpCwgvEMIayITpojhkkSMRsFHYuH5bkSQ4p/9qTEHtmNudUZh22Tehu7I6CxAW0IXTKA==}
     hasBin: true
@@ -3745,6 +3753,14 @@ packages:
       sha.js: 2.4.11
     dev: true
 
+  /cross-fetch/3.1.5:
+    resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
+    dependencies:
+      node-fetch: 2.6.7
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /cross-spawn/6.0.5:
     resolution: {integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==}
     engines: {node: '>=4.8'}
@@ -4720,6 +4736,17 @@ packages:
     dependencies:
       buffer-indexof: 1.1.1
     dev: true
+
+  /docs-searchbar.js/2.4.1:
+    resolution: {integrity: sha512-2b3vJ43SffIRJM2yyxmS0ivMc87LPECFjAs+jw8EJ5P/zyQCOCimFMh9MexOzWKI0heXRnqAYNmufW5e92kC3w==}
+    dependencies:
+      autocomplete.js: 0.38.1
+      meilisearch: 0.30.0
+      to-factory: 1.0.0
+      zepto: 1.2.0
+    transitivePeerDependencies:
+      - encoding
+    dev: false
 
   /docsearch.js/2.6.3:
     resolution: {integrity: sha512-GN+MBozuyz664ycpZY0ecdQE0ND/LSgJKhTLA0/v3arIS3S1Rpf2OJz6A35ReMsm91V5apcmzr5/kM84cvUg+A==}
@@ -6174,7 +6201,6 @@ packages:
 
   /immediate/3.3.0:
     resolution: {integrity: sha512-HR7EVodfFUdQCTIeySw+WDRFJlPcLOJbXfwwZ7Oom6tjsvZ3bOkCDJHehQC3nxJrv7+f9XecwazynjU8e4Vw3Q==}
-    dev: true
 
   /immutability-helper/2.9.1:
     resolution: {integrity: sha512-r/RmRG8xO06s/k+PIaif2r5rGc3j4Yhc01jSBfwPCXDLYZwp/yxralI37Df1mwmuzcCsen/E/ITKcTEvc1PQmQ==}
@@ -7226,6 +7252,14 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
+  /meilisearch/0.30.0:
+    resolution: {integrity: sha512-3y1hALOwTDpquYar+gDREqRasFPWKxkWAhk6h+RF+nKObPVf9N77wcTNvukGwOKbxRyJnKge0OPgAB1BkB9VVw==}
+    dependencies:
+      cross-fetch: 3.1.5
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /memory-fs/0.4.1:
     resolution: {integrity: sha512-cda4JKCxReDXFXRqOHPQscuIYg1PvxbE2S2GP45rnwfEK+vZaXC8C1OFvdHIbgw0DLzowXGVoxLaAmlgRy14GQ==}
     dependencies:
@@ -7557,6 +7591,18 @@ packages:
     dependencies:
       lower-case: 1.1.4
     dev: true
+
+  /node-fetch/2.6.7:
+    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: false
 
   /node-forge/0.10.0:
     resolution: {integrity: sha512-PPmu8eEeG9saEUvI97fm4OYxXVB6bFvyNTyiUOBichBpFG8A1Ljw3bY62+5oOjDEMHRnd0Y7HQ+x7uzxOzC6JA==}
@@ -9959,7 +10005,6 @@ packages:
 
   /to-factory/1.0.0:
     resolution: {integrity: sha512-JVYrY42wMG7ddf+wBUQR/uHGbjUHZbLisJ8N62AMm0iTZ0p8YTcZLzdtomU0+H+wa99VbkyvQGB3zxB7NDzgIQ==}
-    dev: true
 
   /to-fast-properties/2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
@@ -10021,6 +10066,10 @@ packages:
       psl: 1.9.0
       punycode: 2.3.0
     dev: true
+
+  /tr46/0.0.3:
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+    dev: false
 
   /tr46/1.0.1:
     resolution: {integrity: sha512-dTpowEjclQ7Kgx5SdBkqRzVhERQXov8/l9Ft9dVM9fmg0W0KQSVaXX9T4i6twCPNtYiZM53lpSSUAwJbFPOHxA==}
@@ -10588,6 +10637,14 @@ packages:
       vuepress: 1.8.0
     dev: true
 
+  /vuepress-plugin-meilisearch/0.13.0:
+    resolution: {integrity: sha512-qNDjY6rqDwP52v06zO+U+6CdTiMvJBb64Puq+pe0kROUrmuBwxLZ7g3ssYRMe3vil6EhLYnamRmVb/gJ88I/RQ==}
+    dependencies:
+      docs-searchbar.js: 2.4.1
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /vuepress-plugin-mermaidjs/1.9.1:
     resolution: {integrity: sha512-ZJiFyia/NMjnkCni7baaRaRxi4+SJG4DetgQ3PodlWITWVzxzOGlkBdwKzaBNIAa43NLQwgUu5Mgwe9nBZWl9w==}
     dependencies:
@@ -10767,6 +10824,10 @@ packages:
       minimalistic-assert: 1.0.1
     dev: true
 
+  /webidl-conversions/3.0.1:
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+    dev: false
+
   /webidl-conversions/4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
     dev: false
@@ -10941,6 +11002,13 @@ packages:
     resolution: {integrity: sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==}
     engines: {node: '>=0.8.0'}
     dev: true
+
+  /whatwg-url/5.0.0:
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
+    dev: false
 
   /whatwg-url/7.1.0:
     resolution: {integrity: sha512-WUu7Rg1DroM7oQvGWfOiAK21n74Gg+T4elXEQYkOhtyLeWiJFoOGLXPKI/9gzIie9CtwVLm8wtw6YJdKyxSjeg==}
@@ -11154,7 +11222,6 @@ packages:
 
   /zepto/1.2.0:
     resolution: {integrity: sha512-C1x6lfvBICFTQIMgbt3JqMOno3VOtkWat/xEakLTOurskYIHPmzJrzd1e8BnmtdDVJlGuk5D+FxyCA8MPmkIyA==}
-    dev: true
 
   /zooming/2.1.1:
     resolution: {integrity: sha512-Z38dkZRQsFNBE67+xDBQLNKMs5J1Gc+s3/zO6iezTrC24VYLJV7YPBdBDJmiLhff5qa6Awxv4wsjqx3oYz2MYA==}

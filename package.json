@@ -18,7 +18,6 @@
     "json2yaml": "^1.1.0",
     "segmentit": "^2.0.3",
     "vuepress": "1.8.0",
-    "vuepress-plugin-fulltext-search": "^2.2.1",
     "vuepress-plugin-mermaidjs": "^1.8.1",
     "vuepress-plugin-one-click-copy": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.7",
@@ -29,6 +28,7 @@
     "busuanzi.pure.js": "^1.0.3",
     "leancloud-storage": "^4.11.1",
     "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-meilisearch": "^0.13.0",
     "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress-plugin-vssue-global": "^0.0.3"
   }
