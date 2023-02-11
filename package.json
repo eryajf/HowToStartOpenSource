@@ -29,6 +29,7 @@
     "busuanzi.pure.js": "^1.0.3",
     "leancloud-storage": "^4.11.1",
     "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress-plugin-vssue-global": "^0.0.3"
   }
 }

@@ -28,6 +28,12 @@ module.exports = [
     },
   ],
   [
+    'sitemap', {
+      hostname: 'https://eryajf.github.io/howtoStartOpenSource',
+      exclude: ["/404.html"],
+    },
+  ],
+  [
     'vuepress-plugin-zooming', // 放大图片
     {
       selector: '.theme-vdoing-content img:not(.no-zoom)', // 排除class是no-zoom的图片
