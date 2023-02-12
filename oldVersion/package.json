@@ -1,0 +1,35 @@
+{
+  "name": "theme-vdoing-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh",
+    "editFm": "node utils/editFrontmatter.js",
+    "baiduPush": "node utils/baiduPush.js https://wiki.eryajf.net && bash baiduPush.sh",
+    "publish": "cd ./theme-vdoing && npm publish && cd ../ && npm run updateTheme",
+    "updateTheme": "npm uninstall vuepress-theme-vdoing && rm -rf node_modules && npm i && npm i vuepress-theme-vdoing -D"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "dayjs": "^1.9.7",
+    "html-to-text": "^5.1.1",
+    "inquirer": "^7.1.0",
+    "json2yaml": "^1.1.0",
+    "segmentit": "^2.0.3",
+    "vuepress": "1.8.0",
+    "vuepress-plugin-mermaidjs": "^1.8.1",
+    "vuepress-plugin-one-click-copy": "^1.0.2",
+    "vuepress-plugin-zooming": "^1.1.7",
+    "vuepress-theme-vdoing": "^1.12.0",
+    "yamljs": "^0.3.0"
+  },
+  "dependencies": {
+    "busuanzi.pure.js": "^1.0.3",
+    "leancloud-storage": "^4.11.1",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-meilisearch": "^0.13.0",
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "vuepress-plugin-vssue-global": "^0.0.3"
+  }
+}
