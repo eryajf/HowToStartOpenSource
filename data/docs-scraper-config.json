@@ -3,10 +3,11 @@
     "sitemap_urls": ["https://eryajf.github.io/HowToStartOpenSource/sitemap.xml"],
     "start_urls": ["https://eryajf.github.io/HowToStartOpenSource/"],
     "stop_urls": [
-        "https://eryajf.github.io/HowToStartOpenSource/archives/",
-        "https://eryajf.github.io/HowToStartOpenSource/basic/",
-        "https://eryajf.github.io/HowToStartOpenSource/github-actions/",
-        "https://eryajf.github.io/HowToStartOpenSource/github-tips/"
+        "https://eryajf.github.io/HowToStartOpenSource/",
+        "https://eryajf.github.io/HowToStartOpenSource/timeline/",
+        "https://eryajf.github.io/HowToStartOpenSource/categories/",
+        "https://eryajf.github.io/HowToStartOpenSource/tag/",
+        "https://eryajf.github.io/HowToStartOpenSource/en/"
     ],
     "selectors": {
         "lvl0": {
