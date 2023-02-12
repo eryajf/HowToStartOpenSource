@@ -1,0 +1,92 @@
+---
+title: 利用GitHub Actions自动构建go项目的二进制到release
+date: 2022-12-12 13:10:22
+---
+
+
+
+## 前言
+
+最近 ChatGPT 大火，随之一起火起来的，有一大批基于 ChatGPT 编写的工具，我的项目 [chatgpt-dingtalk](https://github.com/eryajf/chatgpt-dingtalk) 也是这批项目中的一个，旨在提供在钉钉群聊中与 ChatGPT 交互的能力。
+
+这是一个工具类的项目，已经提供了 docker 一键部署的能力。但是也有人只想通过二进制直接部署的方式进行体验，多平台兼容的二进制构建，早已有成熟的 Actions 支持，本文就来介绍一个实现方案。
+
+## 配置
+
+所用 Actions：[go-release-action](https://github.com/wangyoucao577/go-release-action)
+
+使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了。
+
+我们在 workflows 目录下添加如下内容：
+
+```yaml
+$ cat go-binary-release.yml
+
+name: build-go-binary
+
+on:
+  release:
+    types: [created] # 表示在创建新的 Release 时触发
+
+jobs:
+  build-go-binary:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        goos: [linux, windows, darwin] # 需要打包的系统
+        goarch: [amd64, arm64] # 需要打包的架构
+        exclude: # 排除某些平台和架构
+          - goarch: arm64
+            goos: windows
+    steps:
+      - uses: actions/checkout@v3
+      - uses: wangyoucao577/go-release-action@v1.30
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 一个默认的变量，用来实现往 Release 中添加文件
+          goos: ${{ matrix.goos }}
+          goarch: ${{ matrix.goarch }}
+          goversion: 1.18 # 可以指定编译使用的 Golang 版本
+          binary_name: "chatgpt-dingtalk" # 可以指定二进制文件的名称
+          extra_files: README.md config.dev.json # 需要包含的额外文件
+```
+
+配置好之后，我们可以来到 release 页面，点击 `Darft a new release` 创建完一个 release 之后，这个 Actions 就会自动运行，将不同环境不同架构下的二进制打好了。
+
+效果如下：
+
+![](http://t.eryajf.net/imgs/2022/12/1d8e1511fa8befa5.png)
+
+## 参数说明
+
+如上 yaml 文件中用到的参数基本上都已经有了注释，这里再对官方目前提供的所有参数做个注释说明：
+
+::: v-pre
+|         参数名         | **必填** |                             说明                             |
+| :--------------------: | :------: | :----------------------------------------------------------: |
+|      github_token      |  **是**  |     你的 `GITHUB_TOKEN` 用于将版本上传到 Github Release。     |
+|          goos          |  **是**  |   `GOOS` 是运行程序的操作系统：darwin、windows、linux 等。    |
+|         goarch         |  **是**  | `GOARCH` 是运行程序的架构：386、amd64、arm、arm64、s390x、loong64 等。 |
+|        goamd64         |  **否**  | `GOAMD64` 是正在运行的程序 amd64 微架构级别，从 1.18 开始可用。它只能在 GOARCH 是 amd64 时使用：v1、v2、v3、v4 之一。 |
+|       goversion        |  **否**  | Go 编译环境版本。 `latest` ([check it here](https://go.dev/VERSION?m=text)) 是默认的, 可自定义选项有： `1.13`, `1.14`, `1.15`, `1.16`, `1.17`, `1.18`, `1.19`. |
+|      project_path      |  **否**  |                 在哪里运行 `go build` 命令。                 |
+|      binary_name       |  **否**  | 如果不想使用仓库名称作为二进制名字，请指定另一个二进制名称。如果未设置，请使用存储库的基本名称。 |
+|      pre_command       |  **否**  | 在构建之前将执行的额外命令。如果您不使用 Go 模块，您可能需要使用它来解决依赖性问题。 |
+|     build_command      |  **否**  | 构建二进制文件的实际命令，通常用 `go build`. 您可能希望使用其他命令包装器, e.g., [packr2](https://github.com/gobuffalo/packr/tree/master/v2), example `build_command: 'packr2 build'`. 记得用 `pre_command` 设置 `packr2` 命令. 它还支持 `make` (`Makefile`) 构建方案, example `build_command: make`. 在这种情况下两者都是 `build_flags` and `ldflags` 将被忽略，因为它们应该写在你的 `Makefile` . 此外，请确保生成的二进制文件放在 Make 运行的路径中, i.e., `project_path`. |
+| executable_compression |  **否**  | 用一些第三方工具压缩可执行的二进制文件。它接受带有否参数的压缩命令作为输入，例如 UPX 或 UPX-V。目前只支持 UPX。 |
+|      build_flags       |  **否**  |               传递给 `go build` 命令的其他参数。               |
+|        ldflags         |  **否**  |               要提供给 `-ldflags` 标志参数的值。               |
+|      extra_files       |  **否**  | 指定将额外的文件打包的制品内。用空间分隔的多个文件。支持拷贝文件夹，因为内部执行的是 `cp -r`. E.g., `extra_files: LICENSE README.md` |
+|         md5sum         |  **否**  |             与工件一起发布 `.md5`，默认为 TRUE。              |
+|       sha256sum        |  **否**  |           与工件一起发布 `.sha256` ，默认为 FALSE。           |
+|      release_tag       |  **否**  | 将二进制文件发布到的目标版本标签。它致力于在每次推送时将二进制文件发布到一个指定的发布页面，因为在这种情况下没有目标。如果像大多数人一样，通过 `release：[created]` 事件触发动作，不要设置它。 |
+|      release_name      |  **否**  | 替代 `release_tag` 用于发布目标规范和二进制推送. 给定 `release_name` 的最新版本将从所有版本中选择。对例如无标签 (草稿) 的有用。 |
+|       overwrite        |  **否**  |          如果资产已经存在，则覆盖它。默认为 FALSE。           |
+|       asset_name       |  **否**  | 如果不想使用默认格式，请自定义资产名称 `${BINARY_NAME}-${RELEASE_TAG}-${GOOS}-${GOARCH}`. 确保正确设置它，特别是对于必须附加的矩阵用法 `-${{ matrix.goos }}-${{ matrix.goarch }}`. 一个有效的例子可能是 `asset_name: binary-name-${{ matrix.goos }}-${{ matrix.goarch }}`. |
+|         retry          |  **否**  |             如果上传失败，重试多少次。默认为 3。              |
+|      post_command      |  **否**  | 将为拆解工作执行的额外命令。例如，您可以使用它将工件上传到 AWS s3 或阿里云 OSS |
+|    compress_assets     |  **否**  | `auto` 默认将产生一个 `zip` 文件于 Windows 系统以及 `tar.gz` 文件于其他. `zip` 将强制使用 `zip`. `OFF` 将禁用资产打包. |
+:::
+
+## 遗留问题
+
+如果单个项目，同时配置了自动生成 release 和当前这个构建二进制的 Action，会发现发布 release 之后没有触发构建，这个问题目前还没有找到比较好的解决办法。

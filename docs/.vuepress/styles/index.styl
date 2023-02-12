@@ -1,48 +1,22 @@
+// html, body {
+//   font-family: Comic Sans MS, "Comic Sans MS", -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif !important;
+// }
 
-// 评论区颜色重置
-.gt-container
-  .gt-ico-tip
-    &::after
-      content: '。( Win + . ) 或 ( ⌃ + ⌘ + ␣ ) 打开表情'
-      color: #999
-      font-size: .8rem
-  .gt-meta
-    border-color var(--borderColor)!important
-  .gt-comments-null
-    color var(--textColor)
-    opacity .5
-  .gt-header-textarea
-    color var(--textColor)
-    background rgba(180,180,180,0.1)!important
-  .gt-btn
-    border-color $accentColor!important
-    background-color $accentColor!important
-  .gt-btn-preview
-    background-color rgba(255,255,255,0)!important
-    color $accentColor!important
-  a
-    color $accentColor!important
-  .gt-svg svg
-    fill $accentColor!important
-  .gt-comment-content,.gt-comment-admin .gt-comment-content
-    background-color rgba(150,150,150,0.1)!important
-    &:hover
-      box-shadow 0 0 25px rgba(150,150,150,.5)!important
-    .gt-comment-body
-      color var(--textColor)!important
-
-
-// 搜索结果样式
-.suggestions {
-  max-height: 80vh;
-  overflow-y: scroll;
-}
-.suggestions .highlight{
-  color: #646cff
-  font-weight: bold
+.nav-links .repo-link {
+  display: none
 }
 
-// 图片默认居中
-.theme-vdoing-content:not(.custom) img
-  display: block
-  margin: auto
+#valine:last-child
+  position relative
+  margin-top: 90px
+  &:last-child::before
+    position: absolute
+    top: -95px
+    left 0
+    display: block
+    content 'NOTE: 由于个人精力有限，无法维护社区评论，评论功能暂时关闭，如有疑问或 bug，请点击右上角 GitHub 按钮提交 issue。'
+    color: #3eaf7c
+    font-size: 18px
+    line-height: 30px
+  .vwrap
+    display: none
