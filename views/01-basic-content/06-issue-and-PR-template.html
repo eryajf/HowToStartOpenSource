@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>issue与pr模板的配置及应用 | HowToStartOpenSource</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/HowToStartOpenSource/favicon.ico">
+    <link rel="manifest" href="/HowToStartOpenSource/manifest.json">
+    <link rel="apple-touch-icon" href="/HowToStartOpenSource/logo.png">
+    <link rel="mask-icon" href="/HowToStartOpenSource/logo.png" color="#42b983">
+    <meta name="description" content="⚗️ GitHub开源项目维护协作指南。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="author" content="eryajf">
+    <meta name="keywords" content="vuepress,reco,eryajf,github,HowToStartOpenSource,二丫讲梵">
+    <meta name="theme-color" content="#42b983">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/logo.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/HowToStartOpenSource/assets/css/0.styles.63967d44.css" as="style"><link rel="preload" href="/HowToStartOpenSource/assets/js/app.ea60a8d0.js" as="script"><link rel="preload" href="/HowToStartOpenSource/assets/js/5.8d562952.js" as="script"><link rel="preload" href="/HowToStartOpenSource/assets/js/1.53d7bf45.js" as="script"><link rel="preload" href="/HowToStartOpenSource/assets/js/34.76be0087.js" as="script"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/10.3811680a.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/11.87535582.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/12.5750e0b9.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/13.101f4ce4.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/14.33dfc5f1.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/15.8d551738.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/16.a46d2e4d.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/17.be04ce80.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/18.d13dcd6a.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/19.fd4320a6.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/20.92530e22.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/21.9f3993fb.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/22.57f32d9f.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/23.0141770d.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/24.483579f2.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/25.999bd025.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/26.5bf5cfe0.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/27.9a9039f2.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/28.8c6c7ebe.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/29.ba1d4217.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/30.15017337.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/31.316bc72e.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/32.acab0758.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/33.933dc8ec.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/35.4678ce91.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/36.099fcb50.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/37.9fa91cfd.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/38.2c153f68.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/39.035aed02.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/40.0efd46c4.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/41.e5a884f3.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/42.3ccd579a.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/43.4319c953.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/44.48444e54.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/45.459a55f4.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/46.c662b2c1.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/47.93082c3c.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/48.ad444f5c.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/49.8342a15a.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/50.77f0c3e9.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/51.410891c6.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/52.31d2dfac.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/53.9efda097.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/54.4e570733.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/55.34946f7b.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/6.6a09c3f8.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/7.e5153e7d.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/8.59f9129a.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/9.4b2fb36d.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/vendors~docs-searchbar.e86fe931.js"><link rel="prefetch" href="/HowToStartOpenSource/assets/js/vendors~flowchart.14b1bfc9.js">
+    <link rel="stylesheet" href="/HowToStartOpenSource/assets/css/0.styles.63967d44.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5bb33761><div data-v-5bb33761><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-5bb33761 data-v-5bb33761><h3 class="title" data-v-59e6cb88>HowToStartOpenSource</h3> <p class="description" data-v-59e6cb88>⚗️ GitHub开源项目维护协作指南。</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>eryajf</span>
+          
+        <span data-v-59e6cb88>2022 - </span>
+        2023
+      </a></span></div></div> <div class="hide" data-v-5bb33761><header class="navbar" data-v-5bb33761><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/HowToStartOpenSource/" class="home-link router-link-active"><!----> <span class="site-name">HowToStartOpenSource</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <form id="search-form" role="search" class="meilisearch-search-wrapper search-box theme-false"><input id="meilisearch-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/HowToStartOpenSource/views/01-basic-content/01-basic-configuration.html" class="nav-link"><i class="undefined"></i>
+  基础内容
+</a></div><div class="nav-item"><a href="/HowToStartOpenSource/views/02-github-actions/01-Automatically-add-TOC-directories-for-README.html" class="nav-link"><i class="undefined"></i>
+  Github-Actions
+</a></div><div class="nav-item"><a href="/HowToStartOpenSource/views/03-github-tips/01-How-to-center-the-table-in-README.html" class="nav-link"><i class="undefined"></i>
+  Github-Tips
+</a></div><div class="nav-item"><a href="/HowToStartOpenSource/views/other/myopensource.html" class="nav-link"><i class="undefined"></i>
+  我的项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      language
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/HowToStartOpenSource/views/01-basic-content/06-issue-and-PR-template.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="undefined"></i>
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/HowToStartOpenSource/en/views/01-basic-content/06-issue-and-PR-template.html" class="nav-link"><i class="undefined"></i>
+  English
+</a></li></ul></div></div> <a href="https://github.com/eryajf/HowToStartOpenSource" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask" data-v-5bb33761></div> <aside class="sidebar" data-v-5bb33761><div class="personal-info-wrapper" data-v-1fad0c41 data-v-5bb33761><img src="/HowToStartOpenSource/head.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    eryajf
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>33</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/HowToStartOpenSource/views/01-basic-content/01-basic-configuration.html" class="nav-link"><i class="undefined"></i>
+  基础内容
+</a></div><div class="nav-item"><a href="/HowToStartOpenSource/views/02-github-actions/01-Automatically-add-TOC-directories-for-README.html" class="nav-link"><i class="undefined"></i>
+  Github-Actions
+</a></div><div class="nav-item"><a href="/HowToStartOpenSource/views/03-github-tips/01-How-to-center-the-table-in-README.html" class="nav-link"><i class="undefined"></i>
+  Github-Tips
+</a></div><div class="nav-item"><a href="/HowToStartOpenSource/views/other/myopensource.html" class="nav-link"><i class="undefined"></i>
+  我的项目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      language
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/HowToStartOpenSource/views/01-basic-content/06-issue-and-PR-template.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="undefined"></i>
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/HowToStartOpenSource/en/views/01-basic-content/06-issue-and-PR-template.html" class="nav-link"><i class="undefined"></i>
+  English
+</a></li></ul></div></div> <a href="https://github.com/eryajf/HowToStartOpenSource" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>基础内容</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/HowToStartOpenSource/views/01-basic-content/01-basic-configuration.html" class="sidebar-link">基础配置</a></li><li><a href="/HowToStartOpenSource/views/01-basic-content/02-personal-maintenance-process.html" class="sidebar-link">个人维护流程</a></li><li><a href="/HowToStartOpenSource/views/01-basic-content/03-collaborative-development-process.html" class="sidebar-link">协同开发流程</a></li><li><a href="/HowToStartOpenSource/views/01-basic-content/04-PR-and-issue.html" class="sidebar-link">PR与issue的联动维护</a></li><li><a href="/HowToStartOpenSource/views/01-basic-content/05-How-to-configure-a-personal-GitHub-home-page-with-elegance-and-beauty.html" class="sidebar-link">如何将个人的GitHub主页配置的优雅好看</a></li><li><a href="/HowToStartOpenSource/views/01-basic-content/06-issue-and-PR-template.html" aria-current="page" class="active sidebar-link">issue与pr模板的配置及应用</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-5bb33761><h3 class="title" data-v-59e6cb88>issue与pr模板的配置及应用</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>eryajf</span>
+          
+        <span data-v-59e6cb88>2022 - </span>
+        2023
+      </a></span></div></div> <div data-v-5bb33761><div data-v-5bb33761><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">issue与pr模板的配置及应用</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>eryajf</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2022/7/27</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><p>项目协作过程中，我们需要通过制定一些模板，从而简化协作者以及自己的维护工作，本文就介绍issue与pr的模板。</p> <p>有一个仓库汇集了各种issue与pr模板，我们可以从中选取适合自己的：</p> <ul><li>项目：<a href="https://github.com/stevemao/github-issue-templates" target="_blank" rel="noopener noreferrer">github-issue-templates<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <h2 id="issue"><a href="#issue" class="header-anchor">#</a> issue</h2> <p>给项目配置issue模板，能够让普通使用者更加规范地提交issue内容，也便于我们更加高效地处理issue。</p> <p>接下来我来讲下如何配置项目的issue模板。</p> <ul><li><a href="https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository" target="_blank" rel="noopener noreferrer">官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <p>官方提供的模板几乎做成了一个表单，其实有时候反而加重了提交者的心智负担，以下是我项目中使用的模板。</p> <p><code>template-bug：</code></p> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">cat</span> .github/ISSUE_TEMPLATE/issue-template-bug.md
+---
+name: 🐛 错误报告 <span class="token operator">|</span> Bug Report
+about: 请详细描述您使用过程中遇到的问题。<span class="token operator">|</span> Please describe <span class="token keyword">in</span> detail the problems you encountered <span class="token keyword">in</span> the process of using.
+title: <span class="token string">&quot;🐛 一些问题。。。 | [Bug] Some problem...&quot;</span>
+labels: <span class="token punctuation">[</span><span class="token string">&quot;bug&quot;</span><span class="token punctuation">]</span>
+---
+
+<span class="token operator">&lt;</span><span class="token operator">!</span>-- 请在您提交 bug 之前，回答以下这些问题。 <span class="token operator">|</span> Please answer these questions before you submit a bug. --<span class="token operator">&gt;</span>
+
+<span class="token comment">#### 您使用的版本？ | Your usage version?</span>
+
+<span class="token comment">#### 您使用的场景？ | Your usage scenarios?</span>
+
+<span class="token comment">#### 您做了什么操作？ | What did you do?</span>
+
+<span class="token comment">#### 您遇到了什么问题？ | What are your problems?</span>
+
+<span class="token comment">#### 您期望的结果是怎样的？ | What is your expected outcome?</span>
+</code></pre></div><p><code>template-feature：</code></p> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">cat</span> .github/ISSUE_TEMPLATE/issue-template-feature.md
+---
+name: 🚀 功能请求 <span class="token operator">|</span> Feature Request
+about: 请详细描述您期望的功能。 <span class="token operator">|</span> Please describe <span class="token keyword">in</span> detail the features you expect.
+title: <span class="token string">&quot;🚀 一些功能。。。 | [Feature]Some feature...&quot;</span>
+labels: <span class="token punctuation">[</span><span class="token string">&quot;enhancement&quot;</span><span class="token punctuation">]</span>
+---
+
+<span class="token operator">&lt;</span><span class="token operator">!</span>-- 请在您提交期望的功能之前，回答以下这些问题。 <span class="token operator">|</span> Please answer these questions before you submit the desired feature. --<span class="token operator">&gt;</span>
+
+<span class="token comment">#### 您使用的场景？ | 1. Your usage scenarios?</span>
+
+<span class="token comment">#### 您期望的结果是怎样的？ | 2. What is your expected outcome?</span>
+</code></pre></div><p><code>template-question:</code></p> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">cat</span> .github/ISSUE_TEMPLATE/question-report.md
+---
+name: 🙋 问题交流 <span class="token operator">|</span> Question Report
+about: 在文档或讨论中没有回答的使用问题 <span class="token operator">|</span> Usage question that isn't answered <span class="token keyword">in</span> docs or discussion
+title: <span class="token string">&quot;🙋 问题交流。。。 | [Question] Some question...&quot;</span>
+labels: <span class="token punctuation">[</span><span class="token string">&quot;question&quot;</span><span class="token punctuation">]</span>
+---
+
+<span class="token comment">## Question Report</span>
+
+- 搜索打开和关闭的 <span class="token punctuation">[</span>GitHub 问题<span class="token punctuation">]</span><span class="token punctuation">(</span>https://github.com/eryajf/go-ldap-admin/issues<span class="token punctuation">)</span>
+
+请在提交问题之前回答这些问题，谢谢。 <span class="token operator">|</span> Please answer these questions before submitting them. Thank you.
+
+<span class="token comment">### 你使用了哪个版本？ | Which version did you use?</span>
+
+<span class="token comment">### 预期行为 | Expected behavior</span>
+
+<span class="token comment">### 实际行为 | Actual behavior</span>
+
+<span class="token comment">### 原因分析（如果可以） | Cause analysis (if possible)</span>
+
+<span class="token comment">### 问题重现步骤 | Steps to reproduce the problem</span>
+</code></pre></div><p>以及一个配置文件：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">cat</span> .github/ISSUE_TEMPLATE/config.yml
+blank_issues_enabled: <span class="token boolean">false</span>
+contact_links:
+  - name: 📜 官方文档 <span class="token operator">|</span> GO Ldap Admin Doc
+    url: http://ldapdoc.eryajf.net
+    about: 关于项目的功能用法以及设计考量，都会在官网进行呈现，提交问题之前，请先阅读官方文档，如果还不能满足，则再提问题。
+  - name: 👀 Github论坛 <span class="token operator">|</span> GitHub Discussions
+    url: https://github.com/eryajf/go-ldap-admin/discussions
+    about: 如果您的问题不是功能或者错误，请转到讨论面板并在提交之前检索您的问题是否已经存在。
+</code></pre></div><p>这样，文件只需要放置在 <code>.github/ISSUE_TEMPLATE</code>  目录下，GitHub就会自动将之识别解析为模板了，新建issue的页面也变成如下模样：</p> <p><img src="https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220726_205630.png" alt="image_20220726_205630"></p> <h2 id="pull-request"><a href="#pull-request" class="header-anchor">#</a> pull request</h2> <p>这里分享一下我个人使用的issue提交模板：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">cat</span> .github/pull-request-template.md
+<span class="token operator">&lt;</span><span class="token operator">!</span>-- 请务必在创建PR前，在右侧 Labels 选项中加上label的其中一个: <span class="token punctuation">[</span>feature<span class="token punctuation">]</span>、<span class="token punctuation">[</span>fix<span class="token punctuation">]</span>、<span class="token punctuation">[</span>documentation<span class="token punctuation">]</span> 。以便于Actions自动生成Releases时自动对PR进行归类。--<span class="token operator">&gt;</span>
+
+**在提出此拉取请求时，我确认了以下几点（请复选框）：**
+
+- <span class="token punctuation">[</span> <span class="token punctuation">]</span> 我已阅读并理解<span class="token punctuation">[</span>贡献者指南<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>。
+- <span class="token punctuation">[</span> <span class="token punctuation">]</span> 我已检查没有与此请求重复的拉取请求。
+- <span class="token punctuation">[</span> <span class="token punctuation">]</span> 我已经考虑过，并确认这份呈件对其他人很有价值。
+- <span class="token punctuation">[</span> <span class="token punctuation">]</span> 我接受此提交可能不会被使用，并根据维护人员的意愿关闭拉取请求。
+
+**填写PR内容：**
+
+-
+-
+-
+</code></pre></div><p>这样每当有协作者提交pr，都需要提前知晓一些预置信息，以及一些可能的情况。</p> <p>还有一个很重要的点在于，鼓励协作者主动给自己的pr打标签分类，从而便于<a href="/HowToStartOpenSource/views/01-basic-content/pages/4abd22/">自动构建release</a>的时候根据label归类pr信息。</p></div></section> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/eryajf/HowToStartOpenSource/edit/gh-pages/docs/views/01-basic-content/06-issue-and-PR-template.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2023/2/12 18:55:07</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/HowToStartOpenSource/views/01-basic-content/05-How-to-configure-a-personal-GitHub-home-page-with-elegance-and-beauty.html" class="prev">
+          如何将个人的GitHub主页配置的优雅好看
+        </a></span> <!----></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-ac050c62></ul></main></div> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/HowToStartOpenSource/assets/js/app.ea60a8d0.js" defer></script><script src="/HowToStartOpenSource/assets/js/5.8d562952.js" defer></script><script src="/HowToStartOpenSource/assets/js/1.53d7bf45.js" defer></script><script src="/HowToStartOpenSource/assets/js/34.76be0087.js" defer></script>
+  </body>
+</html>
