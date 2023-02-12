@@ -61,7 +61,7 @@ module.exports = {
             hostUrl: 'https://ms-d5d5d07c4cab-1961.sgp.meilisearch.io',        // meilisearch 服务端域名
             apiKey: "575b81b52d62c70a11367b8c4bdc1cb2532270d89381d2da7fb0ebd6b7c7f675", // 只有搜索权限的 key
             indexUid: 'howtoStartOpenSource',
-            // placeholder: 'Search as you type...',   // 在搜索栏中显示的占位符
+            placeholder: '按下 𝑺 或 / 搜索',
             maxSuggestions: 9,                      // 最多显示几个搜索结果
             cropLength: 30,                         // 每个搜索结果最多显示多少个字符
         },
