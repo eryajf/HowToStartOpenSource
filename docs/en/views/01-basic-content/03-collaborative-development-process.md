@@ -1,22 +1,22 @@
 ---
-title: 协同开发流程
+title: Collaborative development processes
 date: 2022-07-18 17:15:31
 ---
 
-当我们的项目吸引了更多的同学关注之后，有一些有想法的同学可能就会参与进来，作为项目维护者，我们会面对第一个 issue，第一个 PR，这个时候不要慌，开源是一个很有包容性的理念，甚至有时候没有人关注你的某一个错漏，但你也不要因此就肆无忌惮，因为还会有人关注你的每一处用心与细节。
+When our project attracts more students' attention, some students with ideas may participate, as project maintainers, we will face the first issue, the first PR, don't panic at this time, open source is a very inclusive concept, and even sometimes no one pays attention to one of your mistakes, but you don't want to be unscrupulous, because there will be people who pay attention to your every intention and detail.
 
-现在我这里用另外一个账号，模拟项目协同者，来看看这个流程会经历哪些内容。
+Now I'm here to use another account, a simulated project collaborator, to see what the process will go through.
 
-注意接下来的内容描述将会在两个账号之间切换，这里首先将两个账号角色做个概览：
+Note that the next description will switch between the two accounts, here is the first overview of the two account roles:
 
-- eryajf：项目 owner。
-- lql95：项目协作者。
+- eryajf：Project owner。
+- lql95：Project collaborator.
 
-通常作为协同者，我们会先把项目 fork 到自己的仓库中：
+Usually, as collaborators, we fork the project into our own repository first:
 
 ![image_20220718_171810](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171810.png)
 
-现在我处于 lql95 的视角，已经将刚刚 eryajf 名下的项目 fork 到了自己的仓库，此时可以将该项目拉到自己本地进行编码：
+Now that I'm in the perspective of lql95, I've forked the project I just named Eryajf to my own repository, at this point I can pull the project to my own local for coding:
 
 ```sh
 $ git clone git@github.com:lql95/learn-github.git
@@ -24,69 +24,68 @@ $ git clone git@github.com:lql95/learn-github.git
 $ cd learn-github
 ```
 
-将 README 内容改变如下：
+Change the README content to read as follows:
 
 ```sh
 $ cat README.md
 # learn-github
-学习GitHub相关交互以及功能
-模拟修改提交
+Learn about GitHub interactions and features Simulate a modification commit.
 
-这是lql95新增的内容
+This is new in lql95
 
 - a
 - b
 ```
-
-编码完毕之后，就可以将代码提交到自己的远程仓库了，步骤如下：
+After coding, you can commit the code to your remote repository, as follows:
 
 ```
 $ git add .
-$ git commit -m '以lql95的视角协同维护项目'
+$ git commit -m 'Collaborative maintenance projects from the perspective of lql95'
 $ git push --set-upstream origin main
 ```
 
-此时 lql95 的远程仓库实际可以相当于刚刚自己维护的 test 分支，我们需要到 eryajf 的仓库中请求对方将自己的修改 pull 过去：
+At this time, the remote repository of lql95 can actually be equivalent to the test branch that has just been maintained by itself, and we need to go to the eryajf repository to ask the other party to pull their own changes:
 
 ![image_20220718_171822](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171822.png)
 
-方向选择正确之后，我们就可以创建这个 PR 了，同样下一步需要填写标题与备注，这里的标题备注尽量将当次 PR 的内容以列表的形式表明，以便于维护者能够直观地审核自己的这次 PR。
+At this time, the remote repository of lql95 can actually be equivalent to the test branch that has just been maintained by itself, and we need to go to the eryajf repository to ask the other party to pull their own changes:
 
-创建完 PR 之后，lql95 突然发现还有一些内容需要修改，于是又进行了一波编码操作：
+After creating the PR, lql95 suddenly found that there was still something to change, so it carried out another wave of encoding operations:
 
 ```sh
-# 调整后的内容如下
+# The adjusted content is as follows
 $ cat README.md
 # learn-github
-学习GitHub相关交互以及功能
+Learn about GitHub interactions and features
 
-这是lql95新增的内容
+This is new in lql95
 
 - a
 - b
 ```
 
-然后再次进行提交：
+Then submit again:
 
 ```
 $ git add .
-$ git commit -m '删除无用内容'
+$ git commit -m 'Removed useless content'
 $ git push
 ```
 
-这次提交同样会呈现在刚刚创建的那次 PR 之上，现在我们站在 eryajf 的视角来看看这个 PR：
+This commit will also be presented on top of the PR just created, now let's look at this PR from eryajf's perspective:
 
 ![image_20220718_171832](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171832.png)
 
-可以看到 lql95 的 2 次 commit，也可以在差异页面查看此次 PR 的详情，因为这次交互内容不多，所以这里看起来比较简单，在真实项目协作过程中，一次 PR 变化的文件可能有几十个，这个时候再通过页面来看就很不直观了，可以通过如下方式在本地处理。
+You can see the 2 commits of lql95, you can also view the details of this PR on the difference page, because this interaction content is not much, so it looks relatively simple here, in the real project collaboration process, a PR change file may be dozens, at this time through the page is very unintuitive, can be processed locally in the following way.
 
-owner 在自己本地项目目录下，打开 `.git/config` 文件，在 `[remote "origin"]` 后添加一行：
+ In your own local project directory，Open the `.git/config` file，Add a line after `[remote "origin"]`: 
 
 ```
 fetch = +refs/pull/*/head:refs/pull/origin/*
 ```
 
-然后执行 `git pull` 将远程内容拉到本地：
+Then execute a `git pull` to pull the remote content locally:
+
 
 ```sh
 $ git pull
@@ -103,10 +102,10 @@ Your configuration specifies to merge with the ref 'refs/heads/test'
 from the remote, but no such ref was fetched.
 ```
 
-可以看到有两个 PR，我们将分支切到第二个 PR，并在本地创建一个新分支：
+You can see that there are two PRs, we switch the branch to the second PR and create a new branch locally:
 
 ```
 $ git checkout -b eryajf_test refs/pull/origin/2
 ```
 
-此时项目在本地就将此次 PR 后的最新代码，以 eryajf_test 分支存在，我们可以对协作者提交的代码功能进行一些核验等工作，当我们测验感觉没有问题之后，就可以将代码进行合并了。合并的操作与上边一样，不再赘述。
+At this time, the project will locally store the latest code after this PR as a eryajf_test branch, we can do some verification and other work on the code submitted by the collaborators, and when we test and feel that there is no problem, we can merge the code. The operation of merging is the same as above, and will not be repeated.

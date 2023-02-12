@@ -1,23 +1,23 @@
 ---
-title: issue与pr模板的配置及应用
+title: Configuration and application of issues and PR templates.
 date: 2022-07-26 18:35:55
 ---
 
-项目协作过程中，我们需要通过制定一些模板，从而简化协作者以及自己的维护工作，本文就介绍issue与pr的模板。
+In the process of project collaboration, we need to simplify the maintenance of collaborators and ourselves by developing some templates, and this article introduces the templates for issues and PRs.
 
-有一个仓库汇集了各种issue与pr模板，我们可以从中选取适合自己的：
+There is a repository that brings together various issues and PR templates, from which we can choose the one that suits us:
 
-- 项目：[github-issue-templates](https://github.com/stevemao/github-issue-templates)
+- Project：[github-issue-templates](https://github.com/stevemao/github-issue-templates)
 
 ## issue
 
-给项目配置issue模板，能够让普通使用者更加规范地提交issue内容，也便于我们更加高效地处理issue。
+Configuring the issue template for the project allows ordinary users to submit issue content more standardized, and also facilitates us to handle issues more efficiently.
 
-接下来我来讲下如何配置项目的issue模板。
+Next, I'll talk about how to configure the project's issue template.
 
-- [官方文档](https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
+- [Official documentation](https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
 
-官方提供的模板几乎做成了一个表单，其实有时候反而加重了提交者的心智负担，以下是我项目中使用的模板。
+The official template is almost a form, in fact, sometimes it increases the mental burden of the submitter, the following is the template used in my project.
 
 `template-bug：`
 
@@ -26,7 +26,7 @@ $ cat .github/ISSUE_TEMPLATE/issue-template-bug.md
 ---
 name: 🐛 错误报告 | Bug Report
 about: 请详细描述您使用过程中遇到的问题。| Please describe in detail the problems you encountered in the process of using.
-title: "🐛 一些问题。。。 | [Bug] Some problem..."
+title: "🐛 一Questions。。。 | [Bug] Some problem..."
 labels: ["bug"]
 ---
 
@@ -97,38 +97,38 @@ blank_issues_enabled: false
 contact_links:
   - name: 📜 官方文档 | GO Ldap Admin Doc
     url: http://ldapdoc.eryajf.net
-    about: 关于项目的功能用法以及设计考量，都会在官网进行呈现，提交问题之前，请先阅读官方文档，如果还不能满足，则再提问题。
+    about: The functional usage and design considerations of the project will be presented on the official website, please read the official documentation before submitting a question, and if it is not satisfied, then ask the question.
   - name: 👀 Github论坛 | GitHub Discussions
     url: https://github.com/eryajf/go-ldap-admin/discussions
-    about: 如果您的问题不是功能或者错误，请转到讨论面板并在提交之前检索您的问题是否已经存在。
+    about: If your issue is not a feature or bug, go to the discussion panel and retrieve if your issue already exists before submitting.
 ```
 
-这样，文件只需要放置在 `.github/ISSUE_TEMPLATE`  目录下，GitHub就会自动将之识别解析为模板了，新建issue的页面也变成如下模样：
+In this way, the file only needs to be placed in the `.github/ISSUE_TEMPLATE` directory, GitHub will automatically identify and parse it into a template, and the page for creating a new issue will look like this:
 
 ![image_20220726_205630](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220726_205630.png)
 
 ## pull request
 
-这里分享一下我个人使用的issue提交模板：
+Here is my personal use of the issue submission template:
 
 ```sh
 $ cat .github/pull-request-template.md
-<!-- 请务必在创建PR前，在右侧 Labels 选项中加上label的其中一个: [feature]、[fix]、[documentation] 。以便于Actions自动生成Releases时自动对PR进行归类。-->
+<!-- Be sure to add one of the labels to the Labels option on the right before creating a PR : [feature]、[fix]、[documentation]. This allows Actions to automatically categorize PRs when Releases are automatically generated. -->
 
-**在提出此拉取请求时，我确认了以下几点（请复选框）：**
+**When I made this pull request, I confirmed the following (please checkbox): **
 
-- [ ] 我已阅读并理解[贡献者指南]()。
-- [ ] 我已检查没有与此请求重复的拉取请求。
-- [ ] 我已经考虑过，并确认这份呈件对其他人很有价值。
-- [ ] 我接受此提交可能不会被使用，并根据维护人员的意愿关闭拉取请求。
+- [ ] I have read and understood[Contributor Guide]()。
+- [ ] I have checked for pull requests that are not  duplicated with this request.
+- [ ] I have considered and confirmed that this submission is valuable to others.
+- [ ] I accept that this commit may not be used and close the pull request as the maintainer wishes.
 
-**填写PR内容：**
+**Fill in the PR content:**
 
 -
 -
 -
 ```
 
-这样每当有协作者提交pr，都需要提前知晓一些预置信息，以及一些可能的情况。
+In this way, whenever a collaborator submits a PR, it is necessary to know some preset information in advance, as well as some possible scenarios.
 
-还有一个很重要的点在于，鼓励协作者主动给自己的pr打标签分类，从而便于[自动构建release](./pages/4abd22/)的时候根据label归类pr信息。
+Another important point is to encourage collaborators to actively label and classify their PRs, so that PR information can be classified according to labels when [Automatically Build Release](./pages/4abd22/)

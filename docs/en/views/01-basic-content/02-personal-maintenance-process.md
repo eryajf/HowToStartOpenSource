@@ -1,14 +1,14 @@
 ---
-title: 个人维护流程
+title: Personal Maintenance Process
 date: 2022-07-18 17:13:51
 ---
 
 
-如果你是项目的负责人，在后期项目维护中，同样不建议直接使用本地 push 的方式进行，尽管我们有这个项目的全部权限，也可能会因为某次失手，导致将不符合预期的内容提交。这里建议走 pr 的方式进行维护，便于在 merge 的时候二次核验一下代码差异。
+If you are the person in charge of the project, it is also not recommended to directly use the local push method in the later project maintenance, although we have full permissions to this project, and we may also submit content that does not meet expectations due to a miss. Here, it is recommended to use the pr method for maintenance, so that the code difference can be verified twice when merging.
 
-接下来是一个维护的常规流程。
+What follows is a routine process for maintenance.
 
-拉取代码到本地：
+Pull the code locally:
 
 ```sh
 $ git clone git@github.com:eryajf/learn-github.git
@@ -17,19 +17,19 @@ $ cd learn-github
 
 $ cat README.md
 # learn-github
-学习GitHub相关交互以及功能
+Learn about GitHub interactions and features
 ```
 
-此时项目所在分支为默认的 main 分支，我们从最新代码切到一个测试分支。
+At this point, the branch where the project is located is the default main branch, and we cut from the latest code to a test branch.
 
 ```sh
 $ git checkout -b test
 
-# 模拟如下修改
-$ echo '模拟修改提交' >> README.md
+# Simulate the following modifications
+$ echo 'Mock Modification Commit' >> README.md
 ```
 
-然后将 test 分支提交到远程。
+Then commit the test branch to the remote.
 
 ```sh
 $ git add .
@@ -37,30 +37,30 @@ $ git commit -m 'test'
 $ git push --set-upstream origin test
 ```
 
-然后我们来到 GitHub 项目页，可以看到 test 分支：
+Then we go to the GitHub project page, we can see the test branch:
 
 ![image_20220718_171427](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171427.png)
 
-可以看到页面已经提示 test 分支，并有一个提交 PR 的按钮，我们来创建这个 PR：
+You can see that the page has prompted the test branch and has a button to submit a PR, let's create this PR:
 
 ![image_20220718_171438](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171438.png)
 
-通常点击 1 的 tab 进行交互，2 号可以选择当前项目的不同分支，我们这里选择刚刚的 test 分支。
-
-编号 3 表示可以选择其他远程仓库进行合并，通常是与一个 fork 后的仓库进行交互。编号 4 可以清晰看到当前这次合并与源分支的差异。
-
-点击创建 PR：
+ Usually click the tab of 1 to interact, number 2 can select different branches of the current project, here we select the test branch just now.
+  
+ Number 3 indicates that you can select other remote repositories to merge, typically interacting with a forked repository.
+ 
+  Number 4 clearly shows the difference between the current merge and the source branch. Click Create PR:
 
 ![image_20220718_171449](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171449.png)
 
-通常我们应该在这一步写明一个标题，以及当次将要合并的内容纲要。
+Usually we should write a title at this step, as well as a list a number of items of what will be merged at that time.
 
 ![image_20220718_171458](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171458.png)
 
-此时视角切回到项目主维护者，可以通过编号 1 和编号 2 来核对提交的次数以及差异内容，这里因为是从本地推送，所以通常直接二次 check 即可，如果是处理别人的 PR，则应该将代码拉到本地进行一些功能测验。
+At this time, the perspective switches back to the main maintainer of the project, you can check the number of submissions and the difference content through number 1 and number 2, here because it is pushed from the local level, it is usually directly checked twice, if it is dealing with someone else's PR, you should pull the code to the local for some functional tests.
 
-编号 3 表示将这次 PR 进行合并，所有的提交都会合并到 main 分支中，如果该次 PR 有多次 commit，主分支也会呈现多次 commit 的历史。
+Number 3 means that this PR will be merged, all commits will be merged into the main branch, and if the PR has multiple commits, the main branch will also show the history of multiple commits.
 
-编号 4 表示将多次 commit 压缩成 1 次，然后再合并到主分支，一般与协助者协同维护项目的时候，应该选择第二项。
+Number 4 means that multiple commits are compressed into 1 and then merged into the main branch, and generally the second item should be selected when maintaining the project in collaboration with the co-helper.
 
-当我们确认之后，就完成了一次自己面对项目的迭代推进流程。
+Once we have confirmed, we have completed an iterative process of promoting the project ourselves.

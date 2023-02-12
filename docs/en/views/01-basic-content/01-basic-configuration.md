@@ -1,19 +1,19 @@
 ---
-# 这是文章的标题
-title: 基础配置
-# 设置写作时间
+# This is the title of the article
+title: Basic configuration
+# Set the writing time
 date: 2022-07-18 17:10:13
 ---
 
 
-配置项目的说明，对应官网，以及标签，这些信息将辅助别人快速认识这个项目，并深入了解学习这个项目。
+The description of the configuration project, the corresponding official website, and the tags, this information will help others quickly understand the project and learn more about the project.
 
 ![image_20220718_171234](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171234.png)
 
-如果想要精简二级 tab，则可以在项目的设置中的 `Features` 配置项进行取舍：
+If you want to streamline Level 2 tab，You can choose between the `Features` configuration item in the project's settings：
 
 ![image_20220718_171250](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171250.png)
 
-在 settings 的 Pages 配置页面中，我们可以选择将该项目配置为静态站点：
+In the Pages configuration page of settings, we can choose to configure the project as a static site:
 
 ![image_20220718_171321](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171321.png)
