@@ -1,19 +1,20 @@
 ---
-title: PR与issue的联动维护
+title: Linkage maintenance of PR and issue
 date: 2022-07-19 14:49:19
 ---
 
-当我们需要解决项目中的一个bug时，通常一个新的`PR`会伴随一个`issue`，本文将介绍仅需通过创建`PR`时一个操作，关联上`issue`，然后当`PR`被同意之后，对应关联的`issue`也将随之关闭。
+When we need to solve a bug in a project, usually a new `PR` will be accompanied by an `issue`, this article will introduce only one operation when creating a `PR`, associate the `issue` , and then when the `PR` is approved, the corresponding associated 'issue' will also be closed.
 
-同样，我先在示例项目中创建一个`issue`：
+Again, I'll start by creating an `issue` in the sample project:
 
 ![image_20220719_145415](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_145415.png)
 
-这种时候，作为项目维护者，我们可以直接点击`Development`中的 `Create a branch` 创建一个fix分支，这样会自动关联上这个`issue`，同理，当该fix分支创建的`PR`被合并之后，`issue`也会自动关闭。
+In this case, as the project maintainer, we can directly click `Create a branch` in `Development` to create a fix branch, which will automatically associate the `issue`, and similarly, when the `PR` created by the fix branch is merged, the `issue `will be automatically closed.
 
-不过这里不讲此种方案，大家有兴趣可以自行体验一番。
+However, this kind of scheme is not mentioned here, and you can experience it for yourself if you are interested
 
-这里讲的是我们更常见的一种操作，在本地编辑器里，基于最新的`main分支`切出一个`fix`分支，如下：
+
+Here is our more common operation, in the local editor, based on the latest `main branch` cut out a `fix` branch, as follows:
 
 ```sh
 git checkout main
@@ -21,9 +22,9 @@ git pull
 git checkout -b fix_testbug
 ```
 
-然后就是在`fix_testbug`分支上进行对应问题的修复，这块儿不对赘述。
+Then there is the fix for the corresponding problem on the `fix_testbug` branch, which is not repeated.
 
-当我们感觉修复没问题了，也进行过自测了，就可以将此临时分支进行提交：
+When we feel that the fix is okay and have self-tested, we can commit this temporary branch:
 
 ```sh
 git add .
@@ -31,56 +32,56 @@ git commit -m "fix: test bug"
 git push --set-upstream origin fix_testbug
 ```
 
-推到远程之后，我们来到GitHub页面中，此时可以看到GitHub会自动提示一个新的分支可以合并：
+After pushing to the remote, we come to the GitHub page, at which point we can see that GitHub will automatically prompt a new branch to merge:
 
 ![image_20220719_150429](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_150429.png)
 
-可以直接点击`Compare & pull request`：
+You can directly click `Compare & pull request`:
 
 ![image_20220719_151051](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_151051.png)
 
-注意右侧`Development`中的说明，我们可以通过在说明中添加一些[关键字](https://docs.github.com/cn/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)，从而对`issue`进行关联，并触发关闭。当然也可以先创建PR，然后再进行关联也可以：
+Pay attention to the instructions in `Development` on the right, we can add some by adding some to the instructions[keywords](https://docs.github.com/cn/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)，This associates the `issue` and triggers a shutdown. Of course, you can also create a PR first and then associate it:
 
 ![image_20220719_151313](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_151313.png)
 
-完成关联的PR，可以看到有这样的状态显示：
+After completing the associated PR, you can see that there is a status display like this:
 
 ![image_20220719_151423](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_151423.png)
 
-这个时候，我们点击到`#21`号`issue`中，也可以看到被关联到该`PR`上了：
+At this time, we click on the `#21` `issue`, and we can also see that it is linked to the `PR`:
 
 ![image_20220719_151547](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_151547.png)
 
-现在我们将 `#23` 号`PR`进行合并，合并之后可以看到关联的`issue`也被关闭了，此次关联的临时分支也被删除了：
+Now we merge the `#23` `PR` , and after the merge, you can see that the associated `issue` has also been closed, and the temporary branch of the link has been deleted:
 
 ![image_20220719_151825](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_151825.png)
 
-以上就是项目协同中，`PR`与`issue`的联动维护。
+The above is the linkage maintenance of `PR` and `issue` in project collaboration.
 
 ---
 
-**另外：** 这里插一个小点，当我们完成一次PR流程之后，作为项目主维护人，通常会再次切回到main分支，然后将远程被合并到main分支的代码拉到本地：
+**Other than that：** A small point here, when we go through a PR process, as the main maintainer of the project, we usually switch back to the main branch again, and then pull the code that was merged into the main branch remotely:
 
 ```sh
 git checkout main
 git pull
 ```
 
-这样执行之后，会发现本地代码竟然已经超过远程分支了：
+After executing this way, you will find that the local code has exceeded the remote branch:
 
 ![image_20220719_154112](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_154112.png)
 
-其中的389fe那次是当前远程分支的ID，我们可以执行如下命令，与远程对齐：
+Among them, 389fe is the ID of the current remote branch, we can execute the following command to align with the remote:
 
 ```sh
 $ git reset --hard origin/main
 HEAD is now at 389fe7b fix: test bug (#23)
 ```
 
-这样本地与远程就实现了对齐，在下次重新切分支，然后提交PR的时候，就不会出现上边那种，带了`几次Merge`的情况了。
+In this way, the local and remote are aligned, and the next time you re-branch and then commit a PR, there will be no `several merges` like the above.
 
-图示如下：
+The illustration is as follows:
 
 ![image_20220719_154244](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_154244.png)
 
-理论上这次只有一个提交，而不应该出现3个`commit`，就是这个原因。
+Theoretically, there is only one commit this time, instead of 3 `commits`, which is why.
