@@ -1,24 +1,24 @@
 ---
-title: 自动执行代码扫描预检查等工作
+title: Automate code scanning, pre-checks, and more
 date: 2022-07-24 09:07:25
 ---
 
 
-## 前言
+## Preface
 
-一个项目，在推出去作为开源项目之后，自然而然就会吸引其他开发者来进行协同，当协同越来越多的时候，有一个能自动检测代码基本语法问题的预检，就非常重要。
+A project, after being launched as an open source project, will naturally attract other developers to collaborate, and when there is more and more collaboration, it is very important to have a pre-check that can automatically detect basic syntax problems in the code.
 
-本文就来讲一下，如何借助 Github Actions 自动执行各语言相关的代码检测扫描。
+This article will show you how to automate code detection scans for each language with the help of Github Actions.
 
-## Go语言
+## Go language
 
-所用 Actions。
-- [setup-go](https://github.com/actions/setup-go)：提供go基础环境。
-- [golangci-lint-action](https://github.com/golangci/golangci-lint-action)：能够运行golangci-lint检查的action。
+Used Actions。
+- [setup-go](https://github.com/actions/setup-go)：Provide a GO basic environment.
+- [golangci-lint-action](https://github.com/golangci/golangci-lint-action)：Ability to run actions for golangci-lint checks.
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，这里说一两个需要注意的地方。
+Using the configuration is actually very simple, basically after reading the official introduction document you can get started to use, here is one or two things to pay attention to.
 
-首先添加 Actions 配置文件，e.g. `.github/workflows/go-ci.yml`：
+Start by adding the Actions profile，e.g. `.github/workflows/go-ci.yml`：
 
 
 ```yaml
@@ -52,20 +52,20 @@ jobs:
       run: go build -v ./...
 ```
 
-配置项也都比较简单，不做过多赘述，根据自己的实际情况调整即可。
+The configuration items are also relatively simple, do not repeat too much, adjust according to your actual situation.
 
-这个配置添加之后，每次有push的动作，或者PR的请求，都会自动运行该动作，示例如下：
+After this configuration is added, every time there is a push action, or a PR request, the action will be automatically run, as shown in the following example:
 
 ![image_20220724_084202](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220724_084202.png)
 
-当这个步骤运行失败，则提交PR的人也会自行根据报错内容进行一些自检。
+When this step fails, the person submitting the PR will also perform some self-tests according to the content of the error.
 
 ## Node
 
-使用的Actions。
+Actions used.
 
-- [setup-node](https://github.com/actions/setup-node)：提供node的运行环境。
-- [npm-install](https://github.com/bahmutov/npm-install)：提供一个带有缓存的npm。
+- [setup-node](https://github.com/actions/setup-node)：Provide the runtime environment of node.
+- [npm-install](https://github.com/bahmutov/npm-install)：Provide an npm with caching.
 
 ```yaml
 name: Test
@@ -112,4 +112,4 @@ name: Test
 
 ---
 
-以上是拿两个语言作为例子，算是一个抛砖引玉，其他语言的检测，可参考官方文档：[https://docs.github.com/cn/actions/automating-builds-and-tests/building-and-testing-go](https://docs.github.com/cn/actions/automating-builds-and-tests/building-and-testing-go) 进行配置。
+The above is to take two languages as an example, it is a brick throwing jade, the detection of other languages, you can refer to the official documentation: the above is to take two languages as an example, it is a brick throwing jade, the detection of other languages, you can refer to the official documentation:[https://docs.github.com/cn/actions/automating-builds-and-tests/building-and-testing-go](https://docs.github.com/cn/actions/automating-builds-and-tests/building-and-testing-go) to configure.

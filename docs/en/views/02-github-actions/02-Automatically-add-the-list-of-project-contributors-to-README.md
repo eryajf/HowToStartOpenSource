@@ -1,24 +1,26 @@
 ---
-title: 自动将项目贡献者列表添加到README中
+title: Automatically add a list of project contributors to the README
+
 date: 2022-07-18 17:24:00
 ---
 
-当我们负责的项目有越来越多的人加入进行协作之后，将贡献者添加到 README 中是一个很好的激励作用，很多大的项目也都是这么做的，本文就来讲一下，如何借助 Github Actions 自动将项目贡献者列表添加到 README 中。
+Adding contributors to the README is a great incentive as more and more people join to collaborate on projects we are responsible for, and many large projects do the same, so this article will show how to automatically add the list of project contributors to the README with the help of Github Actions.
 
-所用 Actions： [contributors-readme-action](https://github.com/akhilmhdh/contributors-readme-action)
+Used Actions： [contributors-readme-action](https://github.com/akhilmhdh/contributors-readme-action)
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，这里说一两个需要注意的地方。
+Using the configuration is actually very simple, basically after reading the official introduction document you can get started to use, here is one or two things to pay attention to.
 
-首先需要在将要生成目录的文件内，指定目录生成位置，通常是 `README.md`，在要生成的地方添加如下内容：
+First of all, you need to specify the directory generation location, usually `README.md`, in the file where the directory will be generated, and add the following content in the place where you want to build:
 
 ```
-## 贡献者
+
+## Contributors
 
 <!-- readme: collaborators,contributors -start -->
 <!-- readme: collaborators,contributors -end -->
 ```
 
-然后添加 Actions 配置文件，e.g. `.github/workflows/reademe-contributors.yml`：
+Then add the Actions profile，e.g. `.github/workflows/reademe-contributors.yml`：
 
 ```yml
 on:
@@ -39,27 +41,27 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CONTRIBUTORS_TOKEN }}
 ```
 
-配置文件中用到了 GITHUB_TOKEN，我的这篇文章有详细介绍如何生成以及配置，可直接参考： [https://wiki.eryajf.net/pages/47a507/](https://wiki.eryajf.net/pages/47a507/)
+The GITHUB_TOKEN is used in the configuration file, and my article has a detailed introduction to how to generate and configure, which can be directly referenced: [https://wiki.eryajf.net/pages/47a507/](https://wiki.eryajf.net/pages/47a507/)
 
-接下来就是当 main 分支 push 代码之后，就会自动生成贡献者列表到 readme 中了。我这边测试项目生成效果如下：
+The next step is when the main branch pushes the code, and the list of contributors is automatically generated into the readme. The build effect of my test project is as follows:
 
 ![image_20220718_172421](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172421.png)
 
 
-当然，如果觉得如上配置比较麻烦，可以直接采用如下方式，会更加简单一些，直接添加如下内容到README就会自动生成：
+Of course, if you feel that the above configuration is more troublesome, you can directly use the following method, which will be simpler, and directly add the following content to the README will be automatically generated:
 
 ```
-## 贡献者
+## Contributors
 
 <a href="https://github.com/eryajf/learn-github/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=eryajf/learn-github" />
 </a>
 ```
 
-实际展示效果如下：
+The actual display effect is as follows:
 
 <a href="https://github.com/eryajf/learn-github/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=eryajf/learn-github" />
 </a>
 
-点击之后会自动跳转到贡献者列表详情中。
+Click it and automatically jump to the contributor list details.

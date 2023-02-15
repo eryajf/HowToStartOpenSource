@@ -1,21 +1,21 @@
 ---
-title: 自动获取博客rss文章
+title: Get blog RSS posts automatically
 date: 2022-07-18 17:25:42
 ---
 
-## 前言
+## Preface
 
-在GitHub中，我们能看到每个人都在折腾个人同名仓库的profile，我在这上边也花了不少的时间，在这个冲浪经历中，感觉外国人折腾的好像要更厉害一些，浏览过程中看到有人能直接在个人的profile中生成博客最近更新文章，很是新颖，于是就学习了一下。
+In GitHub, we can see that everyone is tossing the profile of the personal repository of the same name, I also spent a lot of time on this, in this surfing experience, I feel that foreigners seem to be more powerful, and during the browsing process, I saw that someone can directly generate blog latest updated articles in the personal profile, which is very novel, so I learned it.
 
-本文就来讲一下，如何借助 Github Actions 自动获取博客rss文章并呈现在profile中。
+This article will talk about how to automatically get blog RSS articles with the help of Github Actions and present them in the profile
 
-## 配置
+## Disposition
 
-所用 Actions： [blog-post-workflow](https://github.com/gautamkrishnar/blog-post-workflow)
+Used Actions： [blog-post-workflow](https://github.com/gautamkrishnar/blog-post-workflow)
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，这里说一两个需要注意的地方。
+Using the configuration is actually very simple, basically after reading the official introduction document you can get started to use, here is one or two things to pay attention to.
 
-首先添加 Actions 配置文件，e.g. `.github/workflows/blog-rss.yml`：
+Start by adding the Actions profile，e.g. `.github/workflows/blog-rss.yml`：
 
 
 ```yaml
@@ -42,9 +42,9 @@ jobs:
           template: "$newline- $randomEmoji(💯,🔥,💫,🚀,🌮,📝,🥳,💻,🧰,🏊,🥰,🧐,🤓,😎,🥸,🤩,🤗,🤔,🫣,🤭,🤠,👹,👺,🤡,🤖,🎃,😺,🫶,👍,💪,💄,👀,🧠,🧑‍🏫,👨‍🏫,💂,🧑‍💻,🥷,💃,🕴,💼,🎓,🐻,🐵,🙉,🦄,🦆,🦅,🦍,🦣,🐘,🦒,🦏,🐎,🦩,🐲,🌝,🌜,🌏,🌈,🌊,🎬,🎭,🚀,🚦,⛽️,🗽,🎡,🌋,🌁,💡,🕯,🪜,🧰,⚗️,🔭,🪄,🎊,🎉,) [$title]($url) $newline"
 ```
 
-很多配置见名知意，对照官方文档也都能找到答案，这里就不多赘述。
+Many configurations are known in name, and the answer can be found in the official documentation, so I will not repeat it here.
 
-在内容将要写入的地方配置如下内容：
+Configure the following where the content will be written:
 
 
 ```bash
@@ -52,19 +52,19 @@ jobs:
 <!-- BLOG-POST-LIST:END -->
 ```
 
-脚本会每个小时运行一次，自动将获取到的内容写入到两段注释中间。
+The script runs every hour and automatically writes the fetched content between two comments.
 
-生成内容效果如下：
+The generated content has the following effect:
 
 ![image_20220718_172600](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172600.png)
 
-## 注意
+## Note
 
-接下来讲几个注意点，以备扩展该工具时使用。
+Let's talk about a few notes in case you extend the tool.
 
-### 一次订阅多个
+### Subscribe to multiple at once
 
-如果你有多个内容源需要订阅，则可以在Actions中添加如下标识：
+If you have multiple content sources to subscribe to, you can add the following identity to your actions:
 
 
 ```yaml
@@ -75,15 +75,15 @@ jobs:
           comment_tag_name: "eryajf"
 ```
 
-在README中则需要添加如下内容：
+In the README, you need to add the following:
 
 ```bash
 <!-- eryajf:START -->
 <!-- eryajf:END -->
 ```
 
-`comment_tag_name`将与写入到README中的tag对应，就能实现多个源写入到同一个文件内了。
+The `comment_tag_name` will correspond to the tag written to the README, so that multiple sources can be written to the same file.
 
-正是借助这个能力，我创建了一个 [read-list](https://github.com/eryajf/read-list) 的项目。
+It was with this ability that I created one[read-list](https://github.com/eryajf/read-list) 的项目。
 
-其他的就不多说了，基本上参照我的内容，配合官方文档都可以自己玩起来了。
+I won't say much else, basically refer to my content, and you can play it yourself with the official documentation

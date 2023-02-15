@@ -1,27 +1,29 @@
 ---
-title: 自动构建兼容多CPU架构的docker镜像并发布到DockerHub
+title: Automatically build docker images compatible with multi-CPU architecture and publish to DockerHub
 date: 2022-07-23 11:01:19
 ---
 
 
-## 前言
+## Preface
 
-做一个开源项目，尽量提供给受众以简单易用的快速上手体验，也是项目能够立刻把人抓住的一个关键。现在如果想让用户快速体验项目，除了提供demo环境之外，还有一个方案，那就是提供一个完备的docker-compose，让人能够直接一键拉起。
+Making an open source project that tries to provide the audience with a quick and easy-to-use experience is also a key to the project's ability to catch people immediately. Now if you want to let users quickly experience the project, in addition to providing a demo environment, there is also a solution, that is, to provide a complete docker-compose, so that people can directly pull up with one click.
 
-> 注意：是docker-compose，而非k8s的yml，尽管生产环境直接用docker-compose的很少，但是作为中间阶段，快速部署一个项目体验，而又不需要过多基础环境配置的场景来说，优势还是很大的。
 
-于是，项目应该配套提供好对应的镜像，而由于现在Mac新CPU架构越来越多，因此提供的镜像最好又是能够支持多CPU架构运行的。
+> Note: It is Docker-Compose, not K8S's YML, although the production environment directly uses Docker-Compose is rare, but as an intermediate stage, quickly deploy a project experience without too much basic environment configuration, the advantage is still great.
 
-本文就来讲一下，如何借助 Github Actions 自动构建兼容多CPU架构的docker镜像并发布到DockerHub。
 
-## 配置
+Therefore, the project should provide the corresponding image, and since there are more and more new CPU architectures on Macs, it is best to provide images that can support multi-CPU architecture.
 
-所用 Actions： [build-push-action](https://github.com/docker/build-push-action)
-多CPU架构镜像构建的流程文档：[利用buildx构建支持多CPU架构平台的docker镜像](https://wiki.eryajf.net/pages/95cf71/) ,此内容提供基础知识参考，后边构建不需要了解过多。
+This article will talk about how to automatically build a docker image compatible with multi-CPU architecture with the help of Github Actions and publish it to DockerHub.
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，这里说一两个需要注意的地方。
+## Disposition
 
-首先添加 Actions 配置文件，e.g. `.github/workflows/docker-image.yml`：
+Used Actions： [build-push-action](https://github.com/docker/build-push-action)
+Process documentation for multi-CPU image construction：[利用buildx构建支持多CPU架构平台的docker镜像](https://wiki.eryajf.net/pages/95cf71/) ,This content provides a reference for the basics, and you don't need to know too much about the rest of the building.
+
+Using the configuration is actually very simple, basically after reading the official introduction document you can get started to use, here is one or two things to pay attention to.
+
+Start by adding the Actions profile ，e.g. `.github/workflows/docker-image.yml`：
 
 
 ```yaml
@@ -33,7 +35,7 @@ on:
     branches:
       - main
 # Allows you to run this workflow manually from the Actions tab
-  # 可以手动触发
+  # Can be triggered manually
   workflow_dispatch:
     inputs:
       logLevel:
@@ -75,27 +77,29 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          # 所需要的体系结构，可以在 Available platforms 步骤中获取所有的可用架构
+          # For the required architecture, you can get all available schemas in the Available platforms step
           platforms: linux/amd64,linux/arm64/v8
-          # 镜像推送时间
+          # Image push time
           push: ${{ github.event_name != 'pull_request' }}
-          # 给清单打上多个标签
+          # Label the list multiple times
           tags: |
             eryajf/go-ldap-admin-server:${{ steps.date.outputs.today }}
             eryajf/go-ldap-admin-server:latest
 ```
 
-很多配置见名知意，对照官方文档也都能找到答案，这里就不多赘述。
+Many configurations are known in name, and the answer can be found in the official documentation, so I will not repeat it here.
 
-这里对几个关键的配置项做一下单独说明：
+Here are a separate description of several key configuration items:：
 
-- DOCKERHUB_TOKEN的配置这里就不赘述了，在项目的setting中进行配置，已经多次讲过，这里留下此token创建的地址：[https://hub.docker.com/settings/security](https://hub.docker.com/settings/security)
-- `file:`指定在项目仓库中的Dockerfile文件位置。
-- `platforms：`指定构建镜像所需要兼容支持的平台架构，通常amd，arm就够了。
-- `tags:`将要构建的镜像标签，此处我定义的是，每次构建时，提交一个该镜像时间戳的标签，再覆盖一下latest的标签，这样提供给docker-compose就直接用latest标签，可以保障每个新用户体验拉起的时候都是最新的镜像。
 
-最后构建的镜像效果如下：
+- The configuration of the DOCKERHUB_TOKEN will not be repeated here, it is configured in the setting of the project, it has been said many times, and the address created by this token is left here：[https://hub.docker.com/settings/security](https://hub.docker.com/settings/security)
+- `file:`Specifies the location of the Dockerfile file in the project repository.
+- `platforms：`Specify the compatible supported platform architecture required to build the image, usually AMD, ARM is enough.
+
+- `tags:`The image tag to be built, what I define here is that every time you build, submit a tag with the timestamp of the image, and then cover the latest tag, so that docker-compose directly uses the latest tag, which can ensure that each new user experience is the latest image when it is pulled up.
+
+The final image looks like this:
 
 ![image_20220723_105957](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220723_105957.png)
 
-这里也可以看到推上去的镜像都是兼容两个CPU架构平台的。
+Here you can also see that the images pushed up are compatible with the two CPU architecture platforms.
