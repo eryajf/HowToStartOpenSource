@@ -66,7 +66,7 @@ module.exports = {
         ]
       }
     ],
-    '/views/02-github-actions/': [
+    '/en/views/02-github-actions/': [
       {
         title: 'Github-Actions',
         collapsable: true,
@@ -86,7 +86,7 @@ module.exports = {
         ]
       }
     ],
-    '/views/03-github-tips/': [
+    '/en/views/03-github-tips/': [
       {
         title: 'Github-Actions',
         collapsable: true,
