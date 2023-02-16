@@ -1,22 +1,22 @@
 ---
-title: 自动为README添加TOC目录
+title: Automatically add TOC directories for README
 date: 2022-07-18 17:23:23
 ---
 
-GitHub的Markdown目前不支持直接`[TOC]`渲染文章的目录，有些README则需要这样的效果，可以借助外部工具进行生成，也可以借助 `GitHub Actions` 自动生成，本文就介绍这种方式。
+GitHub's Markdown does not currently support direct `[TOC]` rendering of article directories, some READMEs require such effects, which can be generated with the help of external tools or automatically generated with the help of `GitHub Actions`, which is described in this article.
 
-所用Actions：[TOC Generator](https://github.com/marketplace/actions/toc-generator)
+Actions used：[TOC Generator](https://github.com/marketplace/actions/toc-generator)
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，这里说一两个需要注意的地方。
+Using the configuration is actually very simple, basically after reading the official introduction document you can get started to use, here is one or two things to pay attention to.
 
-首先需要在将要生成目录的文件内，指定目录生成位置，e.g. `README.md`，在要生成的地方添加如下内容：
+First of all, you need to specify the directory generation location, e.g. `README.md` in the file where the directory will be generated, and add the following content in the place to be generated:
 
 ```
 <!-- START doctoc -->
 <!-- END doctoc -->
 ```
 
-然后添加Actions配置文件，e.g. `.github/workflows/toc.yml`：
+Then add the Actions profile，e.g. `.github/workflows/toc.yml`：
 
 ```yml
 on: push
@@ -29,17 +29,17 @@ jobs:
       - uses: technote-space/toc-generator@v4
 ```
 
-接着需要调整下项目的Actions权限，在GitHub上点击`settings`--> `actions` --> `General` --> `Workflow permissions` --> 选择 `Read and write permissions`。
+Next, you need to adjust the project's Actions permissions，Click on GitHub, `settings`--> `actions` --> `General` --> `Workflow permissions` --> choose `Read and write permissions`。
 
 ![image_20220718_172340](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172340.png)
 
-配置调整完成之后，就可以push项目看效果了，当然这里也可以通过GitHub_Token的方式认证，就不赘述了。
+After the configuration adjustment is completed, you can push the project to see the effect, of course, you can also pass the GitHub_Token way of certification here, so I won't repeat it.
 
-效果呈现如下：
+The effect is presented as follows:
 
 ![image_20220719_110310](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_110310.png)
 
-`配置列表：`
+`Configure the list：`
 
 ::: v-pre
 | name                      | description                                                  | default                                                      | required | e.g.                           |
@@ -71,10 +71,10 @@ jobs:
 :::
 
 
-可根据自己的实际需求以及情况进行配置！
+It can be configured according to your actual needs and situation!
 
-## 另外
+## Other than that
 
-后来在一个地方学到了一招，原来GitHub针对Markdown文件已经默认支持了目录的方式，并且还支持搜索，如下：
+Later, I learned a trick in one place, it turned out that GitHub already supports the directory method by default for Markdown files, and also supports search, as follows：
 
 ![image_20220719_110613](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220719_110613.png)

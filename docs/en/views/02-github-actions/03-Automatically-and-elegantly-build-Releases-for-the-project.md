@@ -1,21 +1,21 @@
 ---
-title: 自动优雅地为项目构建Releases
+title: Automatically and elegantly build releases for projects.
 date: 2022-07-18 17:24:58
 ---
 
-## 前言
+## Preface
 
-基于 git 管理的项目，通常在分支管理之外，还会通过 tag 来对代码进行管理，尤其像 go 语言，go mod 更是依赖 tag 来对项目的版本进行管理，因此合理的版本管理，对于项目的发展也会是更加健康的一个激励。GitHub 中有一个 Releases 的概念，其实与 tag 差不多，简单理解就是在打一个 tag 的基础之上，用 releases 来进行管理。如果你没有了解过这里边的概念，那么要想成功打一个 release 还是有点难度的。
+Projects based on git management, usually in addition to branch management, will also manage the code through tags, especially like the go language, go mods rely on tags to manage the version of the project, so reasonable version management will also be a healthier incentive for the development of the project. There is a concept of Releases in GitHub, which is actually similar to tags, and the simple understanding is to use releases to manage on the basis of hitting a tag. If you don't understand the concept here, it's still a bit difficult to successfully hit a release.
 
-本文就来讲一下，如何借助 Github Actions 自动且优雅地为项目构建 Release。
+This article will show you how to build releases for your projects automatically and gracefully with Github Actions.
 
-## 配置
+## Disposition
 
-所用 Actions： [release-drafter](https://github.com/release-drafter/release-drafter)
+Used Actions： [release-drafter](https://github.com/release-drafter/release-drafter)
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，这里说一两个需要注意的地方。
+Using the configuration is actually very simple, basically after reading the official introduction document you can get started to use, here is one or two things to pay attention to.
 
-首先添加 Actions 配置文件，e.g. `.github/workflows/release.yml`：
+Start by adding the Actions profile ，e.g. `.github/workflows/release.yml`：
 
 ```yml
 name: Release Drafter
@@ -42,9 +42,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 ```
 
-配置文件中用到了 `GITHUB_TOKEN`，我的这篇文章有详细介绍如何生成以及配置，可直接参考： [https://wiki.eryajf.net/pages/47a507/](https://wiki.eryajf.net/pages/47a507/)
+`GITHUB_TOKEN` is used in the configuration file, and my article has detailed instructions on how to generate and configure, which can be directly referenced： [https://wiki.eryajf.net/pages/47a507/](https://wiki.eryajf.net/pages/47a507/)
 
-然后添加自动生成的变更日志模板，e.g: `.github/release-drafter.yml`
+Then add the auto-generated changelog template，e.g: `.github/release-drafter.yml`
 
 ```yml
 # Configuration for Release Drafter: https://github.com/toolmantim/release-drafter
@@ -93,35 +93,35 @@ Privacy
 Security
 ```
 
-模板的含义是当提交的 PR 符合其中的 labels 时，对应提交的标题会作为当次提交的说明信息，生成在 release 的草稿中。
+The meaning of the template is that when the submitted PR matches the labels in it, the title of the corresponding submission will be generated in the draft of release as the description information of the current submission.
 
-有了这些内容，在每次 push 或者 pr 的时候，Actions 都会自动将当次的内容写入到 release 的草稿中，下次再有 pr 则内容将会是追加，并不会覆盖一开始的草稿。
+With these contents, each push or pr, Actions will automatically write the current content to the release draft, and the next time there is a pr, the content will be appended and will not overwrite the original draft.
 
-还有一个注意点就是，通常普通协作者在提交 pr 的时候，大概都很少会有主动给 pr 添加 labels 的，每次还需要项目负责人自己添加，会比较麻烦，而这个功能又是依赖 pr 的 labels 的，因此可以再加一个配置，`.github/pull-request-template.md`
+Another point of attention is that usually ordinary collaborators rarely take the initiative to add labels to the PR when submitting PR, and every time the project leader needs to add their own, it will be more troublesome, and this function is dependent on the labels of the PR, so you can add another configuration，`.github/pull-request-template.md`
 
 ```markdown
-<!-- 请务必在创建PR前，在右侧 Labels 选项中加上label的其中一个: [feature]、[fix]、[documentation] 。以便于Actions自动生成Releases时自动对PR进行归类。-->
+<!-- Be sure to add one of the labels options on the right before creating a PR: [feature], [fix], [documentation]. This allows Actions to automatically categorize PRs when Releases are automatically generated.-->
 
-**在提出此拉取请求时，我确认了以下几点（请复选框）：**
+**When I made this pull request, I confirmed the following (please checkbox)：**
 
-- [ ] 我已阅读并理解[贡献者指南]()。
-- [ ] 我已检查没有与此请求重复的拉取请求。
-- [ ] 我已经考虑过，并确认这份呈件对其他人很有价值。
-- [ ] 我接受此提交可能不会被使用，并根据维护人员的意愿关闭拉取请求。
+- [ ] I have read and understood [Contributor Guide]()。
+- [ ] I've checked for pull requests that aren't duplicated with this request.
+- [ ] I have considered and confirmed that this submission is valuable to others.
+- [ ] I accept that this commit may not be used and close the pull request as the maintainer wishes.
 
-**填写PR内容：**
+**Fill in the PR content:**
 
 -
 ```
 
-这样协作者提交 pr 的时候就会主动提示协作者尽量给当次 pr 添加一个或多个合适的 labels。
+In this way, when the collaborator submits the PR, the collaborator will be actively prompted to try to add one or more suitable labels to the current PR.
 
-最后来看下生成的 release drafter：
+Finally, let's look at the generated release drafter:
 
 ![image_20220718_172517](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172517.png)
 
-当你觉得可以发布一个新的版本的时候，就可以点击小铅笔按钮，对内容二次审查之后，点击发布：
+When you feel that you can publish a new version, you can click the little pencil button, and after reviewing the content twice, click Publish:
 
 ![image_20220718_172527](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172527.png)
 
-以上就是借助 GitHub Actions 的能力，自动给项目构建 releases 的全部内容。
+That's all for automatically building releases to a project with the help of GitHub Actions' capabilities.
