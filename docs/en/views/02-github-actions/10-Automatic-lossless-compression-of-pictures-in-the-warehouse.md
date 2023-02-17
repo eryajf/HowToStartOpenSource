@@ -1,18 +1,18 @@
 ---
-title: 自动对仓库内图片进行无损压缩
+title: Automatically compress images in the warehouse losslessly
 date: 2022-08-01 23:42:55
 ---
 
 
-我维护的 [awesome-github-profile-readme-chinese](https://github.com/eryajf/awesome-github-profile-readme-chinese) 项目旨在收集汇总中文区优秀的个人主页，每个人的主页将会通过截图的方式存放在 exampls 目录下，有时候有的朋友主页内容很多，这样整体截图下来就非常大。
+I maintain [awesome-github-profile-readme-chinese](https://github.com/eryajf/awesome-github-profile-readme-chinese) The project aims to collect and summarize the excellent personal homepages in the Chinese area, and everyone's homepage will be stored in the exampls directory by taking screenshots, and sometimes some friends' homepages have a lot of content, so that the overall screenshot is very large.
 
-本文就介绍一个有意思的小动作，它的主要功能是可以自动扫描仓库内的图片，然后对其进行几乎无损的压缩，让整个仓库的体积保持在一个相对低的水平。
+This article introduces an interesting small action, its main function is to automatically scan the pictures in the warehouse, and then compress them almost losslessly, so that the volume of the entire warehouse is kept at a relatively low level.
 
-所用Actions：[image-actions](https://github.com/calibreapp/image-actions)
+Used Actions：[image-actions](https://github.com/calibreapp/image-actions)
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，这里说一两个需要注意的地方。
+Using the configuration is actually very simple, basically after reading the official introduction document you can get started to use, here is one or two things to pay attention to.
 
-首先添加Actions配置文件，e.g. `.github/workflows/images.yml`：
+Start by adding the Actions profile，e.g. `.github/workflows/images.yml`：
 
 
 ```yml
@@ -54,21 +54,22 @@ jobs:
           body: ${{ steps.calibre.outputs.markdown }}
 ```
 
-需要注意，压缩图片的动作，在运行之后，会自动将图片二次commit上来，这就要求该动作具有对应commit的权限才行，通常我们配置的token没有其他开发者fork之后的仓库的权限，于是这里并不能直接处理其他人PR过来的内容中的图片。
+It should be noted that the action of compressing the picture, after running, will automatically commit the picture twice, which requires the action to have the corresponding commit permission, usually the token we configure does not have the permission of the repository after the fork of other developers, so it is not possible to directly deal with the picture in the content of other people's PR.
 
-官方给出的建议是：
+The official advice is:
 
-- 要么其他开发者通过在主仓库check一个分支，然后在主仓库进行分支的PR。但这种方式其实并非是GitHub中协作的主流场景，多用在开发者个人维护的流程。
-- 要么就是先处理其他人通过fork的方式提交上来的PR，当PR被同意之后，会自动进行扫描检查，然后该动作完成图片压缩之后，再自动创建一个新的PR，来完成图片的压缩。
+- Either other developers do a PR by checking a branch in the main repository and then branching in the main repository. However, this method is not actually the mainstream scenario of collaboration in GitHub, and is mostly used in the process of personal maintenance of developers.
 
-还需要注意的一点是：其中的 `secrets.GITHUB_TOKEN`是操作当前仓库使用的，不需要进行更改，如果改了，反而会报错。
+- Or first deal with the PR submitted by others through fork, when the PR is approved, it will automatically scan and check, and then after the action completes the image compression, a new PR is automatically created to complete the image compression.
 
-效果如下：
+One thing to note is that the `secrets. GITHUB_TOKEN` is used to operate the current warehouse, and does not need to be changed, if it is changed, an error will be reported.
+
+The effect is as follows:
 
 ![image_20220801_234434](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220801_234434.png)
 
-这个动作会自动将图片处理好，然后提交到当次PR上，我们可以点开 View diff查看前后的区别：
+This action will automatically process the image and submit it to the current PR, we can click View diff to see the difference before and after:
 
 ![image_20220801_234504](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220801_234504.png)
 
-目前这个效果据我个人放大前后两张照片来看，在体积缩小了80%的情况下，清晰度几乎是一致的，还是非常给力的一个动作，适合那些存放图片比较多的仓库。
+At present, according to my personal zoomed in on the two photos before and after, in the case of 80% reduction in volume, the clarity is almost the same, or a very powerful action, suitable for those warehouses that store more pictures.

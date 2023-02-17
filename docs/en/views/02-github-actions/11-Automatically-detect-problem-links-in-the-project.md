@@ -1,22 +1,21 @@
 ---
-title: 自动检测项目中的问题链接
+title: Automatically detect problem links in your project.
 date: 2022-08-08 15:47:36
 ---
 
 
-## 前言
+## Preface
 
-我维护的开源项目 [Thanks-Mirror](https://github.com/eryajf/Thanks-Mirror) 整理记录了各个包管理器，系统镜像，以及常用软件的好用镜像，随着项目越来越完善，到今天，已经累计整理链接 1091 个，随着时间推移，一些国内镜像可能会停止维护，如何自定感知那些已经失效的链接，就是一个需要考虑的事情了。
+Open source projects that I maintain [Thanks-Mirror](https://github.com/eryajf/Thanks-Mirror) Collated and recorded various package managers, system images, and useful images of common software, as the project became more and more perfect, to today, has accumulated 1091 links, over time, some domestic mirrors may stop maintenance, how to customize the perception of those links that have failed, is a matter to consider.
 
-本文就介绍一个有意思的小动作，它的主要功能是可以自动扫描仓库内的链接，然后对链接进行请求，根据自定义的规则，自动抛出异常的链接，然后将这些链接创建到issue当中。
+This article introduces an interesting little action, its main function is to automatically scan the links in the repository, and then request the links, according to the custom rules, automatically throw abnormal links, and then create these links into the issue.
 
-## 配置
+## Disposition
 
-所用Actions：[lycheeverse/lychee-action](lycheeverse/lychee-action)
+Used Actions：[lycheeverse/lychee-action](lycheeverse/lychee-action)
+The use of configuration is actually very simple, basically after reading the official introduction document can be used to use, but the official document introduction method is not very flexible, the official is with the help of its open source project：[lychee](https://github.com/lycheeverse/lychee)To complete the check, this article will extend the configuration file for this open source project to achieve richer capabilities.
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，不过官方文档介绍的方式并不是很灵活，官方是借助其开源的项目：[lychee](https://github.com/lycheeverse/lychee)来完成检查，本文将针对这个开源项目拓展的配置文件，来实现更加丰富的能力。
-
-首先添加Actions配置文件，e.g. `.github/workflows/links-check.yml`：
+Start by adding the Actions profile，e.g. `.github/workflows/links-check.yml`：
 
 ```yml
 name: 🔗 检查链接
@@ -54,9 +53,9 @@ jobs:
           labels: report, automated issue
 ```
 
-> 简单介绍这个动作：当有内容提交，以及每天18点会自动运行（当然也可以手动运行），自动检测 `README.md`文件中的所有链接，使用配置文件 `./.github/config/lychee.toml`，结果输出到 `./lychee/out.md`，输出格式为Markdown，如果全部检查通过，则不会有任何动作，如果检查失败，则会自动创建issue。
+> Briefly introduce this action: when there is a content submission, and it will automatically run at 18 o'clock every day (of course, you can also run it manually), automatically detect all links in the `README.md` file, use the configuration file `./.github/config/lychee.toml`, the result is output to `./lychee/out.md`, the output format is Markdown, if all the checks pass, there will be no action, if the check fails, An issue will be created automatically.
 
-上边内容提到了 `.github/config/lychee.toml`，这里列出我使用的配置文件：
+The above content mentions `.github/config/lychee.toml`, and here is a list of the configuration files I used:
 
 ```toml
 #############################  Display  #############################
@@ -172,13 +171,13 @@ exclude_all_private = true
 exclude_mail = true
 ```
 
-其中大部分内容都通用，可能需要调整的两个内容是：`accept`与 `exclude`，一开始我检查的时候，发现所有 `developer.aliyun.com`在GitHub Actions中访问都是网络失败，猜测应该是ali限制了外部访问，这也能理解，因此就把整个域名全部加到排除的行列了。
+Most of these contents are generic, and the two things that may need to be adjusted are: `accept` and `exclude`, when I first checked, I found that all `developer.aliyun.com` access in GitHub Actions was a network failure, guessing that ali restricted external access, which is understandable, so I added the entire domain name to the exclusion.
 
-总之检查结果需要自己进行一些过滤分析，然后再结合配置文件的含义进行调整。
+In short, checking the results requires some filtering analysis yourself, and then adjusting it in combination with the meaning of the configuration file.
 
-## PR自动检查
+## PR automatic checking
 
-如上action并没有对PR进行检查，你还可以再添加一个动作，专门用于检测PR提交上来的链接：
+If the action above does not check the PR, you can also add another action specifically to detect the link submitted by the PR:
 
 ```yaml
 $ cat link-check-pr.yml
@@ -206,10 +205,10 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-这样当pr时有异常的链接，将会检测失败，以前置预检一些可能是坏的链接合并到项目。
+In this way, when there are abnormal links during PR, the detection will fail, and some links that may be bad will be merged into the project.
 
-## 效果
+## Effect
 
-检测通过之后的效果如下：
+The effect after passing the test is as follows:
 
 ![image_20220808_154825](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220808_154825.png)
