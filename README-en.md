@@ -1,3 +1,5 @@
+English | [简体中文](README.md)
+
 <h1 align="center">HowToStartOpenSource</h1>
 
 <div align="center">
@@ -16,31 +18,25 @@
 <p align="center"> ⚗️ GitHub Open source project maintenance collaboration guide</p>
 
 <div align="center">
-
-English | [简体中文](README.md)
-
-</div>
-
-<div align="center">
 <img src="https://camo.githubusercontent.com/82291b0fe831bfc6781e07fc5090cbd0a8b912bb8b8d4fec0696c881834f81ac/68747470733a2f2f70726f626f742e6d656469612f394575424971676170492e676966" width="800"  height="3">
 </div><br>
 
 
 **Check the online version：** [https://eryajf.github.io/HowToStartOpenSource](https://eryajf.github.io/HowToStartOpenSource)
 
-> It is highly recommended to read it through the online version，The content is more aesthetically pleasing，The knowledge tandem is also more elegant！！！
+> 🙋 It is highly recommended to read it through the online version，The content is more aesthetically pleasing，The knowledge tandem is also more elegant！！！
+>
+> 🍺 Special thanks to [ArslanYM](https://github.com/ArslanYM) for its English translation of this project
+
 
 `Home：`
 
-![image_20220722_162847](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220722_162847.png)
+![image_20230218_143536](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230218_143536.png)
 
 `Content：`
 
-![image_20220722_163110](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220722_163110.png)
+![image_20230218_143657](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230218_143657.png)
 
-`Message boards：`
-
-![image_20220722_163156](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220722_163156.png)
 
 Mixed up on the Internet，It's inevitable that you'll all interact with GitHub to a greater or lesser extent，Most of the time the experience gained in the company with git is for GitLab，It's also easy to take for granted past experience into GitHub，And in fact there are some differences，Several projects have recently been open-sourced，Some also involve working with external developers，When I was really faced with dealing with a PR，The heart was flustered，I didn't know where to start for a while. Here is a compilation and record of the practice in this regard.
 

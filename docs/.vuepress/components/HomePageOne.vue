@@ -16,8 +16,8 @@
         </ModuleTransition>
         <ModuleTransition delay="0.12">
           <div v-if="$parent.recoShowModule && !$parent.firstLoad && $parent.isHasKey">
-            <a target="_black" href="https://github.com/eryajf/HowToStartOpenSource">
-              <img alt="GitHub license" src="https://img.shields.io/github/license/eryajf/HowToStartOpenSource?">
+            <a target="_black" href="https://github.com/eryajf">
+              <img alt="Auth" src="https://img.shields.io/badge/Auth-eryajf-ff69b4">
             </a>
             <a target="_black" href="https://github.com/eryajf/HowToStartOpenSource">
               <img alt="GitHub stars" src="https://img.shields.io/github/stars/eryajf/HowToStartOpenSource?style=flat">
@@ -32,7 +32,10 @@
               <img alt="web status" src="https://img.shields.io/website-up-down-green-red/http/eryajf.github.io/HowToStartOpenSource.svg"/>
             </a>
             <a target="_black" href="https://github.com/eryajf/HowToStartOpenSource">
-              <img alt="web status" src="https://img.shields.io/badge/Awesome-MyStarList-c780fa?logo=Awesome-Lists"/>
+              <img alt="GitHub license" src="https://img.shields.io/github/license/eryajf/HowToStartOpenSource?">
+            </a>
+            <a target="_black" href="https://github.com/eryajf/HowToStartOpenSource">
+              <img alt="awesome-list" src="https://img.shields.io/badge/Awesome-MyStarList-c780fa?logo=Awesome-Lists"/>
             </a>
           </div>
         </ModuleTransition>

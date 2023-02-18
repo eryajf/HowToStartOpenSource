@@ -6,17 +6,11 @@
   display: none
 }
 
-#valine:last-child
-  position relative
-  margin-top: 90px
-  &:last-child::before
-    position: absolute
-    top: -95px
-    left 0
-    display: block
-    content 'NOTE: 由于个人精力有限，无法维护社区评论，评论功能暂时关闭，如有疑问或 bug，请点击右上角 GitHub 按钮提交 issue。'
-    color: #3eaf7c
-    font-size: 18px
-    line-height: 30px
-  .vwrap
-    display: none
+// 禁用首页的content展示
+.md-content-wrapper {
+  display: none
+}
+// 禁用底部footer的展示
+.footer-wrapper {
+  display: none
+}

@@ -66,18 +66,6 @@ module.exports = {
             cropLength: 30,                         // 每个搜索结果最多显示多少个字符
         },
     ],
-    // [
-    //   '@vuepress/plugin-register-components',
-    //   {
-    //     components: [
-    //       {
-    //         name: 'reco-home-page-one',
-    //         path: path.resolve(__dirname, './components/HomePageOne.vue')
-    //       }
-    //     ],
-    //     componentsDir: path.resolve(__dirname, './demo')
-    //   }
-    // ],
     '@vuepress-reco/extract-code',
     'flowchart',
     ['@vuepress-reco/rss', {
