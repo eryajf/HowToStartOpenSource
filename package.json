@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "build": "node --max_old_space_size=8192 --openssl-legacy-provider ./node_modules/vuepress/cli.js build docs",
     "push": "bash scripts/push.sh",
     "deploy": "bash scripts/deploy.sh"
   },
