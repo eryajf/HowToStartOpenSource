@@ -1,9 +1,9 @@
 ---
-title: 如何将README中的表格居中显示
+title: How to center a table in a README
 date: 2022-07-18 17:19:49
 ---
 
-这个居中指的是整个表格居中展示，而非内容的居中，查了一圈，发现将表格用如下内容包裹，就可以实现居中：
+This centering refers to the center display of the entire table, not the center of the content, and after checking it, I found that the table can be centered by wrapping it with the following content:
 
 ```html
 <div align="center">
@@ -11,4 +11,4 @@ date: 2022-07-18 17:19:49
 </div>
 ```
 
-参考：[https://stackoverflow.com/questions/24127507/is-it-possible-to-center-tables-in-a-markdown-file](https://stackoverflow.com/questions/24127507/is-it-possible-to-center-tables-in-a-markdown-file)
+Reference：[https://stackoverflow.com/questions/24127507/is-it-possible-to-center-tables-in-a-markdown-file](https://stackoverflow.com/questions/24127507/is-it-possible-to-center-tables-in-a-markdown-file)

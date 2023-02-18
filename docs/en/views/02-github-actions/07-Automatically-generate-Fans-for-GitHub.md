@@ -1,23 +1,23 @@
 ---
-title: 自动生成GitHub的Fans
+title: Automatically generate GitHub Fans
 date: 2022-07-29 15:52:21
 ---
 
 
 
-## 前言
+## Preface
 
-GitHub中的follow功能，类似于微博中的关注，而关注我们的大佬，就更应该有一个合适的地方安排，本文将分享如何基于GitHub Actions自动生成个人的Fans列表。
+The follow function in GitHub is similar to the follow in Weibo, and the big guy who follows us should have a suitable place arrangement, and this article will share how to automatically generate a personal fan list based on GitHub Actions。
 
-## 配置
+## Disposition
 
-所用 Actions。
-- [github-followers-action](https://github.com/JieDing/github-followers-action)：生成Fans的主动作。
-- [github-push-action](https://github.com/ad-m/github-push-action)：提供push能力的动作。
+Used Actions:
+- [github-followers-action](https://github.com/JieDing/github-followers-action)：Generate the main action of the fans.
+- [github-push-action](https://github.com/ad-m/github-push-action)：Actions that provide the ability to push.
 
-使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了。
+Using the configuration is actually very simple, basically after reading the official introduction document, you can get started.
 
-首先需要在将要生成目录的文件内，指定目录生成位置，e.g. `README.md`，在要生成的地方添加如下内容：
+First of all, you need to specify the directory generation location, e.g. `README.md` in the file where the directory will be generated, and add the following content in the place to be generated:
 
 ```
 <!--ACTION_START_FLAG:github-followers-->
@@ -25,7 +25,7 @@ GitHub中的follow功能，类似于微博中的关注，而关注我们的大�
 ```
 
 
-然后添加 Actions 配置文件，e.g. `.github/workflows/follow.yml`：
+Then add the Actions profile，e.g. `.github/workflows/follow.yml`：
 
 ```yaml
 name: Get Top Followers
@@ -63,18 +63,18 @@ jobs:
           branch: ${{ github.ref }}
 ```
 
-配置项也都比较简单，不做过多赘述，根据自己的实际情况调整即可。
+The configuration items are also relatively simple, do not repeat too much, adjust according to your actual situation.
 
-配置文件中用到了 `ACCESS_TOKEN`，我的这篇文章有详细介绍如何生成以及配置，可直接参考： [https://wiki.eryajf.net/pages/47a507/](https://wiki.eryajf.net/pages/47a507/)
+`ACCESS_TOKEN` is used in the configuration file, and my article has detailed instructions on how to generate and configure, which can be directly referenced： [https://wiki.eryajf.net/pages/47a507/](https://wiki.eryajf.net/pages/47a507/)
 
-## 效果
+## Effect
 
-如上动作每当master代码有push动作时将会运行，以及每天晚上八点会运行一次。
+The above action will run whenever the master code has a push action, and once a day at 8 pm.
 
-呈现效果如下：
+The rendering is as follows:
 
 ![](http://t.eryajf.net/imgs/2022/07/71ebbd7a8dc21cb3.png)
 
-然后就可以把如上内容放在个人的主页中。
+Then you can put the above content in your personal homepage. 
 
-看完本文，快快制作你的Fans列表吧。
+After reading this article, quickly make your fan list.
