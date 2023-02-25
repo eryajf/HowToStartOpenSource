@@ -1,14 +1,14 @@
 ---
-title: 如何在一台电脑上配置多个GitHub账号
+title: How to configure multiple GitHub accounts on a single computer
 date: 2022-07-18 17:22:01
 ---
-## 不同托管站
+## Different hosting stations
 
-日常开发过程中，我们的git交互可能有公司内部的gitlab以及公共的github，这个时候两边推送使用的用户以及邮箱可能不一样，因此不能用同一份配置来推送，本文说一下解决方案。
+In the daily development process, our git interaction may have the company's internal gitlab and public github, at this time the users and mailboxes used by the two sides may be different, so we cannot use the same configuration to push, this article talks about the solution.
 
-解决方案网上有好几种，这里记录一种配置相对简单的方式，就是利用配置文件的`includeIf`参数。
+There are several solutions online, and a relatively simple way to document configuration here is to use the `includeIf` parameter of the configuration file.
 
-添加如下配置到 `~/.gitconfig`：
+Add the following configuration to it: `~/.gitconfig`：
 
 ```sh
 $ cat ~/.gitconfig
@@ -22,9 +22,9 @@ $ cat ~/.gitconfig
     path = ~/.gitconfig_gitlab
 ```
 
-注意路径结尾要以 `/`结尾，表示此目录下所有项目应用下边path指定的配置文件。
+Note that the path should end with '/', indicating that all projects in this directory apply the configuration file specified in the following path.
 
-然后再定义两个path对应的配置文件：
+Then define two profiles corresponding to path:
 
 ```sh
 $ cat ~/.gitconfig_gitlab
@@ -38,7 +38,7 @@ $ cat ~/.gitconfig_gitlab
 	clean = git-lfs clean -- %f
 ```
 
-另外一个：
+Another one：
 
 ```sh
 $ cat .gitconfig_github
@@ -53,19 +53,20 @@ $ cat .gitconfig_github
 ```
 
 
-然后分别在两个目录中创建项目进行测试，发现推送的用户就变成对应定义的了。
+Then create the project in two directories separately for testing, and find that the users pushed become the corresponding definitions.
 
-## 相同托管站
+## Same hosting station
 
-上边举的例子是在不同代码托管站的多配置维护方案，还有一种情况是，如果我们在GitHub有多个账号，此时怎样维护才更加省心一些呢。
+The example given above is the multi-configuration maintenance scheme for different code hosting sites, and another situation is that if we have multiple accounts on GitHub, how to maintain it is more worry-free.
 
-有的同学可能想到用户名和邮箱可以套上边的方式进行配置，的确可以，但是有一个问题绕不过去，那就是在GitHub中，`同一个秘钥不能添加到不同用户账号中，`鉴于这种情况，就必须要给不同账号配置不同的秘钥对了。
+Some students may think that the username and email address can be configured in the way of the above, and it is true, but there is a problem that cannot be bypassed, that is, in GitHub, `the same key cannot be added to different user accounts,` In view of this situation, it is necessary to configure different key pairs for different accounts.
 
-网上很多地方给的方案建议修改 `~/.ssh/config` 来指定不同的秘钥，但交互的时候还需要手动修改一些内容，其实也麻烦，接下来这里介绍一种相对省心的方案。
 
-假如我有两个GitHub账号：eryajf和lql95。
+Many places on the Internet suggest modifying the scheme `~/.ssh/config` to specify different keys, but you also need to manually modify some content when interacting, in fact, it is troublesome, and then here is a relatively worry-free solution.
 
-然后在本地电脑有两对秘钥：
+Let's say I have two GitHub accounts：eryajf & lql95。
+
+Then there are two pairs of keys on the local computer:
 
 ```sh
 $ cd ~/.ssh
@@ -73,9 +74,9 @@ $ ssh-keygen -f "github-liql"
 $ ssh-keygen -f "github-eryajf"
 ```
 
-把公钥添加到账号的setting中这个就不介绍了，主要说一下本地的配置信息。
+Adding the public key to the account setting will not be introduced, mainly about the local configuration information.
 
-定义如下内容在 `~/.gitconfig` 文件：
+Define the following in the `~/.gitconfig` file:
 
 ```sh
 $ cat ~/.gitconfig
@@ -86,7 +87,7 @@ $ cat ~/.gitconfig
     path = ~/.gitconfig_github_eryajf
 ```
 
-然后再定义两个path对应的配置文件：
+Then define two profiles corresponding to path:
 
 ```sh
 $ cat ~/.gitconfig_gitlab_lql95
@@ -102,7 +103,7 @@ $ cat ~/.gitconfig_gitlab_lql95
   sshCommand = "ssh -i ~/.ssh/github-liql"
 ```
 
-另外一个：
+Another one:
 
 ```sh
 $ cat .gitconfig_github_eryajf
@@ -118,10 +119,9 @@ $ cat .gitconfig_github_eryajf
   sshCommand = "ssh -i ~/.ssh/github-eryajf"
 ```
 
-就是通过添加 `sshCommand` 实现不同配置中采用不同的秘钥，实测这种方案是最优雅好用的！
+It is by adding `sshCommand` to achieve different keys in different configurations, and this solution is the most elegant and easy to use!
 
-
-- 参考：
-	- [git config多用户配置](https://github-wiki-see.page/m/someoneHere/blog/wiki/git-config%E5%A4%9A%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE)
+- Reference：
+	- [Git config multi-user configuration](https://github-wiki-see.page/m/someoneHere/blog/wiki/git-config%E5%A4%9A%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE)
 	- [How to tell git which private key to use?](https://superuser.com/questions/232373/how-to-tell-git-which-private-key-to-use)
 

@@ -1,19 +1,18 @@
 ---
-title: 阅读代码运行代码的技巧
+title: Read the tricks of running code.
 date: 2022-07-19 16:42:48
 ---
 
-## 阅读代码
+## Read the code
 
-直接在仓库详情页按下`。`键，该项目将会在网页版的vscode中打开，我们可以像在本地一样浏览。
+Press `directly on the warehouse details page` key, the project will open in the web version of vscode, and we can browse as if we were local.
+Not only can you switch files to read at any time, enjoy code highlighting tips, quick jumps, code searches, and even install plugins to enhance the editor's functionality.
 
-不仅可以随时切换文件来阅读，享受代码高亮提示，快捷跳转，代码搜索，甚至可以安装插件来增强编辑器的功能。
+## Run the code
 
-## 运行代码
+Prefix the project address with `gitpod.io/#/`
 
-在项目地址前加上`gitpod.io/#/`前缀
-
-1. 不仅在网页编辑器中打开了项目代码，而且自动识别了项目的类别(前端/Java等)。
-2. 自动安装了项目依赖包。
-3. 可以把这个网页提供的远程服务器当做自己电脑使用。
-4. 执行项目，查看运行效果,一键构建Docker镜像等。
+1. Not only does the project code open in the web editor, but the category of the project (frontend/Java, etc.) is automatically recognized. 
+2. Project dependencies are automatically installed.
+3. You can use the remote server provided by this web page as your own computer.
+4. Execute the project, view the running effect, and build the Docker image with one click.
