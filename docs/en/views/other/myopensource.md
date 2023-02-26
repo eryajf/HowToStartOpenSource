@@ -1,18 +1,32 @@
 ---
-title: 我的开源项目汇总
+title: My Opensource Projects
 date: 2022-07-24 16:04:55
 ---
 
 
+## 开源名片
+
+::: center
+[![eryajf’s GitHub image](https://crd.so/i/eryajf?dark&removeLink)](https://github.com/eryajf)
+:::
+
+## 提交历史
+
+::: center
+[![](https://raw.githubusercontent.com/eryajf/eryajf/master/assets/github-contribution-grid-snake.svg)](https://github.com/eryajf)
+
+[![](https://raw.githubusercontent.com/eryajf/eryajf/master/profile-3d-contrib/profile-night-rainbow.svg)](https://raw.githubusercontent.com/eryajf/eryajf/master/profile-3d-contrib/profile-night-rainbow.svg)
+:::
+
+## 状态总览
+
+::: center
+[![二丫讲梵's github stats](https://github-readme-stats.vercel.app/api?username=eryajf&hide_title=false&hide_border=true&show_icons=true&include_all_commits=true&line_height=20&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn)](https://github-readme-stats.vercel.app/api?username=eryajf&hide_title=false&hide_border=true&show_icons=true&include_all_commits=true&line_height=20&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn)
+:::
+
+## 开源项目
+
 如果你觉得项目不错，欢迎来个🤩 Star 🤩
-
-**Activity**
-
-![](https://raw.githubusercontent.com/eryajf/eryajf/master/profile-3d-contrib/profile-night-rainbow.svg)
-
-**Project List**
-
-
 
 |                        Project                         |                            Stars                             |                           Watchers                           |                            Forks                             |              Remark              |
 | :----------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------: |

@@ -36,7 +36,7 @@ module.exports = {
     ],
     '/views/03-github-tips/': [
       {
-        title: 'Github-Actions',
+        title: 'Github-Tips',
         collapsable: true,
         children: [
           '01-How-to-center-the-table-in-README',
@@ -46,7 +46,8 @@ module.exports = {
           '05-Summary-using-GitHub-keyboard-shortcuts',
           '06-Summary-and-arrangement-of-personal-open-source-project-recommendation-platform',
           '07-How-to-bind-a-custom-domain-name-to-GitHub-Pages',
-          '08-How-to-deal-with-the-problem-that-file-name-conversion-case-cannot-be-submitted-in-Git'
+          '08-How-to-deal-with-the-problem-that-file-name-conversion-case-cannot-be-submitted-in-Git',
+          '09-How-to-use-pre-commit-to-standardize-coding'
         ]
       }
     ]
@@ -88,7 +89,7 @@ module.exports = {
     ],
     '/en/views/03-github-tips/': [
       {
-        title: 'Github-Actions',
+        title: 'Github-Tips',
         collapsable: true,
         children: [
           '01-How-to-center-the-table-in-README',
@@ -98,7 +99,8 @@ module.exports = {
           '05-Summary-using-GitHub-keyboard-shortcuts',
           '06-Summary-and-arrangement-of-personal-open-source-project-recommendation-platform',
           '07-How-to-bind-a-custom-domain-name-to-GitHub-Pages',
-          '08-How-to-deal-with-the-problem-that-file-name-conversion-case-cannot-be-submitted-in-Git'
+          '08-How-to-deal-with-the-problem-that-file-name-conversion-case-cannot-be-submitted-in-Git',
+          '09-How-to-use-pre-commit-to-standardize-coding'
         ]
       }
     ]

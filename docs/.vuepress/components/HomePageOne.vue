@@ -34,7 +34,7 @@
             <a target="_black" href="https://github.com/eryajf/HowToStartOpenSource">
               <img alt="GitHub license" src="https://img.shields.io/github/license/eryajf/HowToStartOpenSource?">
             </a>
-            <a target="_black" href="https://github.com/eryajf/HowToStartOpenSource">
+            <a target="_black" href="https://github.com/eryajf/awesome-stars-eryajf#readme">
               <img alt="awesome-list" src="https://img.shields.io/badge/Awesome-MyStarList-c780fa?logo=Awesome-Lists"/>
             </a>
           </div>

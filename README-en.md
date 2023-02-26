@@ -22,7 +22,7 @@ English | [简体中文](README.md)
 </div><br>
 
 
-**Check the online version：** [https://eryajf.github.io/HowToStartOpenSource](https://eryajf.github.io/HowToStartOpenSource)
+**Check the online version：** [https://eryajf.github.io/HowToStartOpenSource](https://eryajf.github.io/HowToStartOpenSource/en)
 
 > 🙋 It is highly recommended to read it through the online version，The content is more aesthetically pleasing，The knowledge tandem is also more elegant！！！
 >
