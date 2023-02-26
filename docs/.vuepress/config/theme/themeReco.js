@@ -4,6 +4,8 @@ module.exports = {
   // 搜索设置
   search: true,
   searchMaxSuggestions: 10,
+  // 右侧边栏的TOC
+  subSidebar: 'auto',
   // 自动形成侧边导航
   sidebar: 'auto',
   // 最后更新时间
