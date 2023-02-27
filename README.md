@@ -44,5 +44,5 @@
 
 **历程**
 
-- [2022年7月24日，登上了GitHub日推。](https://github.com/bonfy/github-trending/blob/master/2022-07-24.md#javascript)
+- [2022年7月24日，登上了GitHub日推。](https://github.com/bonfy/github-trending/blob/master/2022/2022-07-24.md#javascript)
   ![GitHub-Trending](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220724_173425.png)

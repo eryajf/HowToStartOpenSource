@@ -44,5 +44,5 @@ Welcome to add, welcome to correct!
 
 **Course*
 
-- [On July 24, 2022, it was featured on GitHub Daily](https://github.com/bonfy/github-trending/blob/master/2022-07-24.md#javascript)
+- [On July 24, 2022, it was featured on GitHub Daily](https://github.com/bonfy/github-trending/blob/master/2022/2022-07-24.md#javascript)
   ![GitHub-Trending](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220724_173425.png)
