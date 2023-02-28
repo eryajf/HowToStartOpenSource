@@ -47,7 +47,8 @@ module.exports = {
           '06-Summary-and-arrangement-of-personal-open-source-project-recommendation-platform',
           '07-How-to-bind-a-custom-domain-name-to-GitHub-Pages',
           '08-How-to-deal-with-the-problem-that-file-name-conversion-case-cannot-be-submitted-in-Git',
-          '09-How-to-use-pre-commit-to-standardize-coding'
+          '09-How-to-use-pre-commit-to-standardize-coding',
+          '10-Use-github-slug-action-to-leak-key-variables-in-the-Github-Action-context'
         ]
       }
     ]
@@ -100,7 +101,8 @@ module.exports = {
           '06-Summary-and-arrangement-of-personal-open-source-project-recommendation-platform',
           '07-How-to-bind-a-custom-domain-name-to-GitHub-Pages',
           '08-How-to-deal-with-the-problem-that-file-name-conversion-case-cannot-be-submitted-in-Git',
-          '09-How-to-use-pre-commit-to-standardize-coding'
+          '09-How-to-use-pre-commit-to-standardize-coding',
+          '10-Use-github-slug-action-to-leak-key-variables-in-the-Github-Action-context'
         ]
       }
     ]
