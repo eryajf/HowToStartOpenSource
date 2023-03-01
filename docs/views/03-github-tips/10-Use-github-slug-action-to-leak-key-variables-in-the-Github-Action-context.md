@@ -1,5 +1,5 @@
 ---
-title: 使用 github-slug-action 泄漏 Github Action 上下文中的关键变量
+title: 使用 github-slug-action 暴漏 Github Action 上下文中的关键变量
 date: 2023-02-28 15:05:10
 ---
 
