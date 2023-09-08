@@ -1,24 +1,17 @@
 {
-  "author": "eryajf",
-  "homepage": "./",
+  "name": "vuepress-theme-reco-demo",
+  "version": "2.0.0",
+  "description": "Demo for vuepress-theme-reco@2.x.",
+  "repository": "git@github.com:recoluan/vuepress-theme-reco-demo.git",
+  "author": "reco_luan <recoluan@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
-    "build": "node --max_old_space_size=8192 ./node_modules/vuepress/cli.js build docs",
-    "push": "bash scripts/push.sh",
-    "deploy": "bash scripts/deploy.sh"
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "dependencies": {
-    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
-    "@vuepress-reco/vuepress-plugin-rss": "1.0.0",
-    "@vuepress/plugin-register-components": "1.2.0",
-    "vuepress": "1.9.7",
-    "vuepress-plugin-flowchart": "1.4.3",
-    "vuepress-plugin-meilisearch": "^0.13.0",
-    "vuepress-plugin-one-click-copy": "^1.0.6",
-    "vuepress-plugin-sitemap": "^2.3.1",
-    "vuepress-theme-reco": "1.6.15",
-    "whatwg-fetch": "3.0.0"
+    "vuepress": "2.0.0-beta.66",
+    "vuepress-theme-reco": "2.0.0-beta.67"
   }
 }

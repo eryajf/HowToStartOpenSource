@@ -1,14 +1,11 @@
 ---
 home: true
-heroImage: /logo.png
-heroImageStyle: {
-  maxWidth: '200px',
-  width: '100%',
-  display: block,
-  margin: '0 auto 2rem',
-  borderRadius: '1rem',
-}
-isShowTitleInHome: true
-actionText: 开始
-actionLink: /views/01-basic-content/01-basic-configuration
+modules:
+  - BannerBrand
+bannerBrand:
+  bgImage: '/bg.svg'
+  title: HowToSOS
+  description: ⚗️ GitHub开源项目维护协作指南。
+  buttons:
+    - { text: 开始, link: '/HowToStartOpenSource/01-basic-content/01-basic-configuration' }
 ---

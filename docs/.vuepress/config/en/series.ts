@@ -1,0 +1,46 @@
+export const series = {
+  '/en/HowToStartOpenSource/': [{
+      text: 'basic content',
+      children: [
+        '/en/HowToStartOpenSource/01-basic-content/01-basic-configuration',
+        '/en/HowToStartOpenSource/01-basic-content/02-personal-maintenance-process',
+        '/en/HowToStartOpenSource/01-basic-content/03-collaborative-development-process',
+        '/en/HowToStartOpenSource/01-basic-content/04-PR-and-issue',
+        '/en/HowToStartOpenSource/01-basic-content/05-How-to-configure-a-personal-GitHub-home-page-with-elegance-and-beauty',
+        '/en/HowToStartOpenSource/01-basic-content/06-issue-and-PR-template',
+      ],
+    },
+    {
+      text: 'GitHub Action',
+      children: [
+        '/en/HowToStartOpenSource/02-github-actions/01-Automatically-add-TOC-directories-for-README',
+        '/en/HowToStartOpenSource/02-github-actions/02-Automatically-add-the-list-of-project-contributors-to-README',
+        '/en/HowToStartOpenSource/02-github-actions/03-Automatically-and-elegantly-build-Releases-for-the-project',
+        '/en/HowToStartOpenSource/02-github-actions/04-Automatically-get-blog-rss-articles',
+        '/en/HowToStartOpenSource/02-github-actions/05-Automatically-build-docker-images-compatible-with-multi-CPU-architecture-and-publish-to-DockerHub',
+        '/en/HowToStartOpenSource/02-github-actions/06-Automatically-perform-code-scan-pre-check',
+        '/en/HowToStartOpenSource/02-github-actions/07-Automatically-generate-Fans-for-GitHub',
+        '/en/HowToStartOpenSource/02-github-actions/08-Automatically-generate-a-personal-star-list-and-classify-it',
+        '/en/HowToStartOpenSource/02-github-actions/09-Automatically-get-the-project-current-star-and-fork-to-write-to-Description',
+        '/en/HowToStartOpenSource/02-github-actions/10-Automatic-lossless-compression-of-pictures-in-the-warehouse',
+        '/en/HowToStartOpenSource/02-github-actions/11-Automatically-detect-problem-links-in-the-project',
+        '/en/HowToStartOpenSource/02-github-actions/12-Automatically-build-binary-to-release-of-go-project',
+      ],
+    },
+    {
+      text: 'GitHub Tips',
+      children: [
+        '/en/HowToStartOpenSource/03-github-tips/01-How-to-center-the-table-in-README',
+        '/en/HowToStartOpenSource/03-github-tips/02-How-to-configure-multiple-GitHub-accounts-on-one-computer',
+        '/en/HowToStartOpenSource/03-github-tips/03-How-to-merge-multiple-submissions-into-one',
+        '/en/HowToStartOpenSource/03-github-tips/04-The-skill-of-reading-code-and-running-code',
+        '/en/HowToStartOpenSource/03-github-tips/05-Summary-using-GitHub-keyboard-shortcuts',
+        '/en/HowToStartOpenSource/03-github-tips/06-Summary-and-arrangement-of-personal-open-source-project-recommendation-platform',
+        '/en/HowToStartOpenSource/03-github-tips/07-How-to-bind-a-custom-domain-name-to-GitHub-Pages',
+        '/en/HowToStartOpenSource/03-github-tips/08-How-to-deal-with-the-problem-that-file-name-conversion-case-cannot-be-submitted-in-Git',
+        '/en/HowToStartOpenSource/03-github-tips/09-How-to-use-pre-commit-to-standardize-coding',
+        '/en/HowToStartOpenSource/03-github-tips/10-Use-github-slug-action-to-leak-key-variables-in-the-Github-Action-context',
+      ],
+    },
+  ],
+}
