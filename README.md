@@ -11,7 +11,7 @@
 [![GitHub Pull Requests](https://img.shields.io/github/stars/eryajf/HowToStartOpenSource)](https://github.com/eryajf/HowToStartOpenSource/stargazers)
 [![GitHub license](https://img.shields.io/github/license/eryajf/HowToStartOpenSource)](https://github.com/eryajf/HowToStartOpenSource/blob/main/LICENSE)
 [![HitCount](https://views.whatilearened.today/views/github/eryajf/HowToStartOpenSource.svg)](https://github.com/eryajf/HowToStartOpenSource)
-[![website eryajf.github.io/HowToStartOpenSource](https://img.shields.io/website-up-down-green-red/http/eryajf.github.io/HowToStartOpenSource.svg)](https://eryajf.github.io/HowToStartOpenSource/)
+[![website eryajf.github.io/HowToStartOpenSource](https://img.shields.io/website-up-down-green-red/http/eryajf.github.io/HowToStartOpenSource.svg)](https://howtosos.eryajf.net/)
 [![](https://img.shields.io/badge/Awesome-MyStarList-c780fa?logo=Awesome-Lists)](https://github.com/eryajf/awesome-stars-eryajf#readme)
 
 </div>
@@ -24,7 +24,7 @@
 </div><br>
 
 
-**查看在线版：** [https://eryajf.github.io/HowToStartOpenSource](https://eryajf.github.io/HowToStartOpenSource)
+**查看在线版：** [https://howtosos.eryajf.net](https://howtosos.eryajf.net)
 
 > 🙋 强烈建议通过在线版进行阅读，内容更加美观，知识串联也更加优雅！！！
 >
@@ -37,6 +37,10 @@
 `内容：`
 
 ![image_20230218_143657](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230218_143657.png)
+
+`v2`
+
+![image_20230908_155559](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230908_155559.png)
 
 混迹于互联网，或多或少难免都会与 GitHub 有交互，大多数时候在公司中积累的 git 使用经验都是面向 GitLab 的，也很容易想当然地将过往的经验套到 GitHub 中，而事实上还是有一些差别的，最近开源了几个项目，有一些还涉及到要与外部开发者协同工作，当我真正面对要处理一个 PR 的时候，内心是慌乱的，一时间不知道该从何处下手，这里就整理记录一下这方面的实践。
 
