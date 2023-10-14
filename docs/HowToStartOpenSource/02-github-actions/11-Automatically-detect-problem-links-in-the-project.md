@@ -3,20 +3,19 @@ title: 自动检测项目中的问题链接
 date: 2022-08-08 15:47:36
 ---
 
-
 ## 前言
 
 我维护的开源项目 [Thanks-Mirror](https://github.com/eryajf/Thanks-Mirror) 整理记录了各个包管理器，系统镜像，以及常用软件的好用镜像，随着项目越来越完善，到今天，已经累计整理链接 1091 个，随着时间推移，一些国内镜像可能会停止维护，如何自定感知那些已经失效的链接，就是一个需要考虑的事情了。
 
-本文就介绍一个有意思的小动作，它的主要功能是可以自动扫描仓库内的链接，然后对链接进行请求，根据自定义的规则，自动抛出异常的链接，然后将这些链接创建到issue当中。
+本文就介绍一个有意思的小动作，它的主要功能是可以自动扫描仓库内的链接，然后对链接进行请求，根据自定义的规则，自动抛出异常的链接，然后将这些链接创建到 issue 当中。
 
 ## 配置
 
-所用Actions：[lycheeverse/lychee-action](lycheeverse/lychee-action)
+所用 Actions：[lycheeverse/lychee-action](lycheeverse/lychee-action)
 
 使用配置其实非常简单，基本上阅读完官方介绍文档就可以上手使用了，不过官方文档介绍的方式并不是很灵活，官方是借助其开源的项目：[lychee](https://github.com/lycheeverse/lychee)来完成检查，本文将针对这个开源项目拓展的配置文件，来实现更加丰富的能力。
 
-首先添加Actions配置文件，e.g. `.github/workflows/links-check.yml`：
+首先添加 Actions 配置文件，e.g. `.github/workflows/links-check.yml`：
 
 ```yml
 name: 🔗 检查链接
@@ -39,12 +38,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-            # Check all markdown and html files in repo (default)
-            args: --config ./.github/config/lychee.toml README.md
-            # Use json as output format (instead of markdown)
-            format: markdown
-            # Use different output file path
-            output: ./lychee/out.md
+          # Check all markdown and html files in repo (default)
+          args: --config ./.github/config/lychee.toml README.md
+          # Use json as output format (instead of markdown)
+          format: markdown
+          # Use different output file path
+          output: ./lychee/out.md
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v3
@@ -54,7 +53,7 @@ jobs:
           labels: report, automated issue
 ```
 
-> 简单介绍这个动作：当有内容提交，以及每天18点会自动运行（当然也可以手动运行），自动检测 `README.md`文件中的所有链接，使用配置文件 `./.github/config/lychee.toml`，结果输出到 `./lychee/out.md`，输出格式为Markdown，如果全部检查通过，则不会有任何动作，如果检查失败，则会自动创建issue。
+> 简单介绍这个动作：当有内容提交，以及每天 18 点会自动运行（当然也可以手动运行），自动检测 `README.md`文件中的所有链接，使用配置文件 `./.github/config/lychee.toml`，结果输出到 `./lychee/out.md`，输出格式为 Markdown，如果全部检查通过，则不会有任何动作，如果检查失败，则会自动创建 issue。
 
 上边内容提到了 `.github/config/lychee.toml`，这里列出我使用的配置文件：
 
@@ -172,13 +171,13 @@ exclude_all_private = true
 exclude_mail = true
 ```
 
-其中大部分内容都通用，可能需要调整的两个内容是：`accept`与 `exclude`，一开始我检查的时候，发现所有 `developer.aliyun.com`在GitHub Actions中访问都是网络失败，猜测应该是ali限制了外部访问，这也能理解，因此就把整个域名全部加到排除的行列了。
+其中大部分内容都通用，可能需要调整的两个内容是：`accept`与 `exclude`，一开始我检查的时候，发现所有 `developer.aliyun.com`在 GitHub Actions 中访问都是网络失败，猜测应该是 ali 限制了外部访问，这也能理解，因此就把整个域名全部加到排除的行列了。
 
 总之检查结果需要自己进行一些过滤分析，然后再结合配置文件的含义进行调整。
 
-## PR自动检查
+## PR 自动检查
 
-如上action并没有对PR进行检查，你还可以再添加一个动作，专门用于检测PR提交上来的链接：
+如上 action 并没有对 PR 进行检查，你还可以再添加一个动作，专门用于检测 PR 提交上来的链接：
 
 ```yaml
 $ cat link-check-pr.yml
@@ -206,10 +205,10 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-这样当pr时有异常的链接，将会检测失败，以前置预检一些可能是坏的链接合并到项目。
+这样当 pr 时有异常的链接，将会检测失败，以前置预检一些可能是坏的链接合并到项目。
 
 ## 效果
 
 检测通过之后的效果如下：
 
-![image_20220808_154825](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220808_154825.png)
+![image_20220808_154825](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220808_154825.png)

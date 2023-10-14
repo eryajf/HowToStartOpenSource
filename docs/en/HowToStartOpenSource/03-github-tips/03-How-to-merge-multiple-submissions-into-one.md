@@ -54,19 +54,20 @@ $ git rebase -i <421212d> # -The argument after i is the last commit that does n
 
 After execution, you will enter an interactive interface with the following content:
 
-![image_20220718_172053](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172053.png)
+![image_20220718_172053](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172053.png)
 
 Let's change the last two picks to squash, and change them to the following:
 
-![image_20220718_172104](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172104.png)
+![image_20220718_172104](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172104.png)
 
 The meanings of the two keywords here are:
- - pick indicates that other commits will be merged into this commit 
- - Squash means to merge the commit of the corresponding identity into the commit selected by Pick.
+
+- pick indicates that other commits will be merged into this commit
+- Squash means to merge the commit of the corresponding identity into the commit selected by Pick.
 
 After saving, enter a new interactive page, this page is filled in the submission information, you can keep the default, and then save, the merge is successful:
 
-![image_20220718_172112](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172112.png)
+![image_20220718_172112](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172112.png)
 
 By viewing the status, you can also see the details of the status at this time:
 
@@ -85,7 +86,7 @@ By viewing the status, you can also see the details of the status at this time:
 
 Of course, changes can be clearly seen in VSCODE：
 
-![image_20220718_172123](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172123.png)
+![image_20220718_172123](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172123.png)
 
 Finally, push this adjustment to the remote, because this local adjustment causes the local to lag behind the remote, so it needs to be forced:
 
@@ -95,6 +96,6 @@ $ git push -f origin main
 
 At this time, go to the main perspective of eryajf and look at the PR just now, you can see that the number of commits is only once:
 
-![image_20220718_172134](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172134.png)
+![image_20220718_172134](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172134.png)
 
 Of course, the main purpose here is to experience the entire compressed commit process, in fact, in the development process, this step is not required, the owner of the project can directly choose to compress and merge when processing PR, and will not merge multiple commits.

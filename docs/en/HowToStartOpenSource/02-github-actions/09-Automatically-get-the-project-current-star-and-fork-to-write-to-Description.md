@@ -3,10 +3,7 @@ title: Automatically get the current star of the project and write the fork to t
 date: 2022-07-29 16:40:29
 ---
 
-
-
 This article introduces an interesting little action, its main function is to get the current number of stars and forks of the project, and then overlay these two data into the project's Descrition.
-
 
 Used Actions：[This-repo-has-x-stars-y-forks-action](https://github.com/ouuan/This-repo-has-x-stars-y-forks-action)
 
@@ -26,7 +23,7 @@ on:
     types:
       - started
   schedule:
-    - cron: '0 * * * *'
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -46,4 +43,4 @@ The current configuration performs an update every hour, and you can adjust it f
 
 The effect is as follows:
 
-![image_20220729_164001](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220729_164001.png)
+![image_20220729_164001](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220729_164001.png)

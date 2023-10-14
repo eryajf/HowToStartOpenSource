@@ -3,7 +3,6 @@ title: Use github-slug-action to leak key variables in the Github Action context
 date: 2023-02-28 15:05:10
 ---
 
-
 ## Foreword
 
 When using GitHub Action, there is a scenario requirement to trigger the build through release, and then use the release number created this time during the build process.
@@ -40,11 +39,11 @@ GITHUB_REF_NAME=v0.5.6
 Most solutions on the Internet start with `GITHUB _ REF` variable, for example:
 
 ```yaml
-      - name: Get Release version
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        run: |
-          echo "::set-env name=RELEASE_VERSION::$(echo $GITHUB_REF | cut -d'/' -f 3)"
+- name: Get Release version
+  env:
+    ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+  run: |
+    echo "::set-env name=RELEASE_VERSION::$(echo $GITHUB_REF | cut -d'/' -f 3)"
 ```
 
 `📢 Notice：` It should be noted that if you use `set-env` to add variables, you need to declare `ACTIONS_ALLOW_UNSECURE_COMMANDS: true`, otherwise the following error will be reported during the run:
@@ -67,6 +66,7 @@ See these two discussions on this issue:
 In order to verify the content stated above, I created a test script as follows:
 
 ::: v-pre
+
 ```yaml
 name: test action env
 
@@ -101,11 +101,12 @@ jobs:
           echo "通过自定义脚本获取版本号第一种： ${{ env.RELEASE_VERSION_ONE }}"
           echo "通过自定义脚本获取版本号第二种： ${{ env.RELEASE_VERSION_TWO }}"
 ```
+
 :::
 
 After running, the result is as follows:
 
-![image_20230228_151615](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230228_151615.jpg)
+![image_20230228_151615](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20230228_151615.jpg)
 
 ::: v-pre
 It can be seen that although `GITHUB_REF_NAME=v0.5.13` can be seen in the global environment variable, in fact, in the subsequent context, you cannot refer to this variable through `${{ env.GITHUB_REF_NAME }}`.
@@ -122,6 +123,7 @@ This Action provides a series of functions such as variable leakage during the o
 At this point, we change the configuration file of action to the following:
 
 ::: v-pre
+
 ```yaml
 name: test action env
 
@@ -148,6 +150,7 @@ jobs:
           echo "通过GitHub-Action获取版本号： ${{ env.GITHUB_REF_NAME }}"
           echo "通过github-slug-action获取版本号： ${{ env.GITHUB_REF_NAME_SLUG }}"
 ```
+
 :::
 
 ::: v-pre

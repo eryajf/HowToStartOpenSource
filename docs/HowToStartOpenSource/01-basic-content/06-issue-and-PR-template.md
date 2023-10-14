@@ -3,17 +3,17 @@ title: issue与pr模板的配置及应用
 date: 2022-07-26 18:35:55
 ---
 
-项目协作过程中，我们需要通过制定一些模板，从而简化协作者以及自己的维护工作，本文就介绍issue与pr的模板。
+项目协作过程中，我们需要通过制定一些模板，从而简化协作者以及自己的维护工作，本文就介绍 issue 与 pr 的模板。
 
-有一个仓库汇集了各种issue与pr模板，我们可以从中选取适合自己的：
+有一个仓库汇集了各种 issue 与 pr 模板，我们可以从中选取适合自己的：
 
 - 项目：[github-issue-templates](https://github.com/stevemao/github-issue-templates)
 
 ## issue
 
-给项目配置issue模板，能够让普通使用者更加规范地提交issue内容，也便于我们更加高效地处理issue。
+给项目配置 issue 模板，能够让普通使用者更加规范地提交 issue 内容，也便于我们更加高效地处理 issue。
 
-接下来我来讲下如何配置项目的issue模板。
+接下来我来讲下如何配置项目的 issue 模板。
 
 - [官方文档](https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
 
@@ -103,13 +103,13 @@ contact_links:
     about: 如果您的问题不是功能或者错误，请转到讨论面板并在提交之前检索您的问题是否已经存在。
 ```
 
-这样，文件只需要放置在 `.github/ISSUE_TEMPLATE`  目录下，GitHub就会自动将之识别解析为模板了，新建issue的页面也变成如下模样：
+这样，文件只需要放置在 `.github/ISSUE_TEMPLATE` 目录下，GitHub 就会自动将之识别解析为模板了，新建 issue 的页面也变成如下模样：
 
-![image_20220726_205630](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220726_205630.png)
+![image_20220726_205630](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220726_205630.png)
 
 ## pull request
 
-这里分享一下我个人使用的issue提交模板：
+这里分享一下我个人使用的 issue 提交模板：
 
 ```sh
 $ cat .github/pull-request-template.md
@@ -129,6 +129,6 @@ $ cat .github/pull-request-template.md
 -
 ```
 
-这样每当有协作者提交pr，都需要提前知晓一些预置信息，以及一些可能的情况。
+这样每当有协作者提交 pr，都需要提前知晓一些预置信息，以及一些可能的情况。
 
-还有一个很重要的点在于，鼓励协作者主动给自己的pr打标签分类，从而便于[自动构建release](./pages/4abd22/)的时候根据label归类pr信息。
+还有一个很重要的点在于，鼓励协作者主动给自己的 pr 打标签分类，从而便于[自动构建 release](./pages/4abd22/)的时候根据 label 归类 pr 信息。

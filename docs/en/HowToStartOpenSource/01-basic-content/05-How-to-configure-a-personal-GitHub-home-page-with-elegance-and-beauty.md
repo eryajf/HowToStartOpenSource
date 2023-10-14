@@ -3,7 +3,7 @@ title: How to configure a personal GitHub homepage to look elegant and good.
 date: 2022-07-22 10:02:33
 ---
 
-I noticed early  in GitHub that if you create a repository with the same name as your account, then the content of this repository will be displayed on your personal homepage, in other words, you can dress up your personal home page by dressing up this repository.
+I noticed early in GitHub that if you create a repository with the same name as your account, then the content of this repository will be displayed on your personal homepage, in other words, you can dress up your personal home page by dressing up this repository.
 
 I have also done some dress-up things, but a lot of content is still on the surface, so that the homepage looks relatively simple, recently the homepage has been remodeled as a whole, and a lot of good experience has been encountered in the process, this article is a summary of these contents, after reading, you can also quickly build a beautiful and simple personal homepage, this is an important personal business card, quickly dress up.
 
@@ -13,25 +13,27 @@ My profile：[https://github.com/eryajf](https://github.com/eryajf)
 
 ## Show
 
-![image_20220722_102304](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220722_102304.png)
+![image_20220722_102304](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220722_102304.png)
 
 ## Reference
 
 The first step in making a personal homepage, when there is no idea, the first thing we can do is to refer to the practices of others, start with imitation, and then gradually explore a set of homepages that can show our own personality from the process of imitation.
 
-- First of all, you can refer to all the configurations of my homepage to configure the tossing configuration of your personal homepage. 
+- First of all, you can refer to all the configurations of my homepage to configure the tossing configuration of your personal homepage.
 - There are also many repositories in GitHub that collect excellent configurations, here are some of them:
+
   - [awesome-github-profile-readme-chinese](https://github.com/eryajf/awesome-github-profile-readme-chinese)：The excellent Chinese area personal homepage collected by me is especially recommended.
 
   - [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme)：A large number of excellent cases have been collected for reference.
 
   [awesome-github-profile-readme-templates](https://github.com/durgeshsamariya/awesome-github-profile-readme-templates)：A large number of excellent templates have been sorted out for reference.
+
   - [creative-profile-readme](https://github.com/coderjojo/creative-profile-readme)：Another warehouse with a large number of cases.
 
 There are also some project websites that can make personal profiles online, which are very good, here are some of them:
 
-- Project：[profile-readme-generator](https://github.com/maurodesouza/profile-readme-generator)  |  Project：[https://profile-readme-generator.com/](https://profile-readme-generator.com/)
-- Project：[github-profile-readme-maker](https://github.com/VishwaGauravIn/github-profile-readme-maker)  |  Project：[https://gprm.itsvg.in/](https://gprm.itsvg.in/)
+- Project：[profile-readme-generator](https://github.com/maurodesouza/profile-readme-generator) | Project：[https://profile-readme-generator.com/](https://profile-readme-generator.com/)
+- Project：[github-profile-readme-maker](https://github.com/VishwaGauravIn/github-profile-readme-maker) | Project：[https://gprm.itsvg.in/](https://gprm.itsvg.in/)
 -
 
 ## Toss
@@ -167,7 +169,7 @@ This feature is built on the following projects
 ### Features like GitHub Pinned
 
 GitHub Pinned is a feature that pins items to your profile, and the effect is as follows:
-![image_20220722_111857](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220722_111857.png)
+![image_20220722_111857](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220722_111857.png)
 
 But there is a problem, this feature only allows us to add 6 items nailed here.
 
@@ -192,7 +194,7 @@ GitHub Actions is configured as follows:
 name: Latest blog post workflow
 on:
   schedule: # Run workflow automatically
-    - cron: '0 * * * *'
+    - cron: "0 * * * *"
   workflow_dispatch:
 jobs:
   update-readme-with-blog:
@@ -221,9 +223,8 @@ That's all for my profile configuration.
 
 Finally, I would like to express the following points:
 
-
 - Almost every function depends on the implementation of open source projects, the charm of open sourceis just that, I use your open source, you use my open source!
 
-- I think that one of the great pleasures of the personal homepage is tossing, the joy of tossing is  endless!!
+- I think that one of the great pleasures of the personal homepage is tossing, the joy of tossing is endless!!
 
 - I also hope that the personal homepages of domestic developers will blossom everywhere as soon as possible, and hundreds of schools of thought will argue!!

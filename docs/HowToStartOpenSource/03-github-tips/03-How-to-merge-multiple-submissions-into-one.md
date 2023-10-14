@@ -54,19 +54,20 @@ $ git rebase -i <421212d> # -i后面的参数为最后一个不需要合并的Co
 
 执行之后，将会进入一个交互界面，内容如下：
 
-![image_20220718_172053](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172053.png)
+![image_20220718_172053](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172053.png)
 
 我们把后两个 pick 改成 squash，改后如下：
 
-![image_20220718_172104](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172104.png)
+![image_20220718_172104](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172104.png)
 
 这里两个关键字的含义为：
+
 - pick 表示其他的提交将会合并到这一次提交上
 - squash 表示将对应标识的提交合并到 pick 选择的那次 commit 上。
 
 保存之后，进入一个新的交互页面，这个页面是填写提交信息的，可保持默认，然后保存，就合并成功了：
 
-![image_20220718_172112](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172112.png)
+![image_20220718_172112](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172112.png)
 
 通过查看状态，也能看到此时的状态详情：
 
@@ -85,7 +86,7 @@ $ git rebase -i <421212d> # -i后面的参数为最后一个不需要合并的Co
 
 当然在 vscode 中也能够清晰地看到变化：
 
-![image_20220718_172123](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172123.png)
+![image_20220718_172123](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172123.png)
 
 最后将这次调整 push 到远程即可，因为这次的本地调整，导致本地落后于远程，所以需要进行强推：
 
@@ -95,6 +96,6 @@ $ git push -f origin main
 
 此时再去到 eryajf 主视角看刚刚那次 PR，就可以看到提交次数只有一次了：
 
-![image_20220718_172134](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172134.png)
+![image_20220718_172134](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172134.png)
 
-当然，这里主要是为了体验整个压缩提交的流程，实际上开发过程中，并不需要这步操作，项目的owner在处理PR的时候可以直接选择压缩合并，也就不会将多次提交合并上去了。
+当然，这里主要是为了体验整个压缩提交的流程，实际上开发过程中，并不需要这步操作，项目的 owner 在处理 PR 的时候可以直接选择压缩合并，也就不会将多次提交合并上去了。

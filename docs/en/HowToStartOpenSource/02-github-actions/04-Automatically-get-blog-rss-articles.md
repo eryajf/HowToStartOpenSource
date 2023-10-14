@@ -17,12 +17,11 @@ Using the configuration is actually very simple, basically after reading the off
 
 Start by adding the Actions profile，e.g. `.github/workflows/blog-rss.yml`：
 
-
 ```yaml
 name: Latest blog post workflow
 on:
   schedule: # Run workflow automatically
-    - cron: '0 * * * *' # Runs every hour, on the hour
+    - cron: "0 * * * *" # Runs every hour, on the hour
   workflow_dispatch: # Run workflow manually (without waiting for the cron to be called), through the Github Actions Workflow page directly
 
 jobs:
@@ -46,7 +45,6 @@ Many configurations are known in name, and the answer can be found in the offici
 
 Configure the following where the content will be written:
 
-
 ```bash
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
@@ -56,7 +54,7 @@ The script runs every hour and automatically writes the fetched content between 
 
 The generated content has the following effect:
 
-![image_20220718_172600](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172600.png)
+![image_20220718_172600](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172600.png)
 
 ## Note
 
@@ -65,7 +63,6 @@ Let's talk about a few notes in case you extend the tool.
 ### Subscribe to multiple at once
 
 If you have multiple content sources to subscribe to, you can add the following identity to your actions:
-
 
 ```yaml
     - name: Pull in eryajf posts

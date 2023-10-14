@@ -5,9 +5,9 @@ date: 2022-07-18 17:25:42
 
 ## 前言
 
-在GitHub中，我们能看到每个人都在折腾个人同名仓库的profile，我在这上边也花了不少的时间，在这个冲浪经历中，感觉外国人折腾的好像要更厉害一些，浏览过程中看到有人能直接在个人的profile中生成博客最近更新文章，很是新颖，于是就学习了一下。
+在 GitHub 中，我们能看到每个人都在折腾个人同名仓库的 profile，我在这上边也花了不少的时间，在这个冲浪经历中，感觉外国人折腾的好像要更厉害一些，浏览过程中看到有人能直接在个人的 profile 中生成博客最近更新文章，很是新颖，于是就学习了一下。
 
-本文就来讲一下，如何借助 Github Actions 自动获取博客rss文章并呈现在profile中。
+本文就来讲一下，如何借助 Github Actions 自动获取博客 rss 文章并呈现在 profile 中。
 
 ## 配置
 
@@ -17,12 +17,11 @@ date: 2022-07-18 17:25:42
 
 首先添加 Actions 配置文件，e.g. `.github/workflows/blog-rss.yml`：
 
-
 ```yaml
 name: Latest blog post workflow
 on:
   schedule: # Run workflow automatically
-    - cron: '0 * * * *' # Runs every hour, on the hour
+    - cron: "0 * * * *" # Runs every hour, on the hour
   workflow_dispatch: # Run workflow manually (without waiting for the cron to be called), through the Github Actions Workflow page directly
 
 jobs:
@@ -46,7 +45,6 @@ jobs:
 
 在内容将要写入的地方配置如下内容：
 
-
 ```bash
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
@@ -56,7 +54,7 @@ jobs:
 
 生成内容效果如下：
 
-![image_20220718_172600](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172600.png)
+![image_20220718_172600](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172600.png)
 
 ## 注意
 
@@ -64,8 +62,7 @@ jobs:
 
 ### 一次订阅多个
 
-如果你有多个内容源需要订阅，则可以在Actions中添加如下标识：
-
+如果你有多个内容源需要订阅，则可以在 Actions 中添加如下标识：
 
 ```yaml
     - name: Pull in eryajf posts
@@ -75,14 +72,14 @@ jobs:
           comment_tag_name: "eryajf"
 ```
 
-在README中则需要添加如下内容：
+在 README 中则需要添加如下内容：
 
 ```bash
 <!-- eryajf:START -->
 <!-- eryajf:END -->
 ```
 
-`comment_tag_name`将与写入到README中的tag对应，就能实现多个源写入到同一个文件内了。
+`comment_tag_name`将与写入到 README 中的 tag 对应，就能实现多个源写入到同一个文件内了。
 
 正是借助这个能力，我创建了一个 [read-list](https://github.com/eryajf/read-list) 的项目。
 

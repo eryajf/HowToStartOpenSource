@@ -3,7 +3,6 @@ title: 个人维护流程
 date: 2022-07-18 17:13:51
 ---
 
-
 如果你是项目的负责人，在后期项目维护中，同样不建议直接使用本地 push 的方式进行，尽管我们有这个项目的全部权限，也可能会因为某次失手，导致将不符合预期的内容提交。这里建议走 pr 的方式进行维护，便于在 merge 的时候二次核验一下代码差异。
 
 接下来是一个维护的常规流程。
@@ -39,11 +38,11 @@ $ git push --set-upstream origin test
 
 然后我们来到 GitHub 项目页，可以看到 test 分支：
 
-![image_20220718_171427](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171427.png)
+![image_20220718_171427](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_171427.png)
 
 可以看到页面已经提示 test 分支，并有一个提交 PR 的按钮，我们来创建这个 PR：
 
-![image_20220718_171438](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171438.png)
+![image_20220718_171438](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_171438.png)
 
 通常点击 1 的 tab 进行交互，2 号可以选择当前项目的不同分支，我们这里选择刚刚的 test 分支。
 
@@ -51,11 +50,11 @@ $ git push --set-upstream origin test
 
 点击创建 PR：
 
-![image_20220718_171449](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171449.png)
+![image_20220718_171449](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_171449.png)
 
 通常我们应该在这一步写明一个标题，以及当次将要合并的内容纲要。
 
-![image_20220718_171458](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_171458.png)
+![image_20220718_171458](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_171458.png)
 
 此时视角切回到项目主维护者，可以通过编号 1 和编号 2 来核对提交的次数以及差异内容，这里因为是从本地推送，所以通常直接二次 check 即可，如果是处理别人的 PR，则应该将代码拉到本地进行一些功能测验。
 

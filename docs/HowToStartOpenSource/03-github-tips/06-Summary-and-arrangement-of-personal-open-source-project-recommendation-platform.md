@@ -19,7 +19,7 @@ date: 2022-07-25 21:08:45
 
 ## GitHub
 
-有不少推介平台，本身也是倚靠GitHub作为底层数据来源与支撑，于是我把这一类，统一规在GitHub当中。
+有不少推介平台，本身也是倚靠 GitHub 作为底层数据来源与支撑，于是我把这一类，统一规在 GitHub 当中。
 
 ### [科技爱好者周刊](https://github.com/ruanyf/weekly)
 
@@ -27,9 +27,9 @@ date: 2022-07-25 21:08:45
 
   国内互联网名宿阮一峰先生创建的周刊，已经成为众多互联网人每周五必读的一个刊物，受众垂直且数量庞大，是最值得推荐的一个去处之一。且阮先生通常对于优秀项目，向来都是不吝推荐的，因此非常推荐在其项目的[issue](https://github.com/ruanyf/weekly/issues)当中进行个人项目的推介。
 
-  另外插一句：当前项目 [HowToStartOpenSource](https://github.com/eryajf/HowToStartOpenSource) 也正是因为在周刊做了推荐，才得以在一天当中涨星近300，然后登上了GitHub Trending的。
+  另外插一句：当前项目 [HowToStartOpenSource](https://github.com/eryajf/HowToStartOpenSource) 也正是因为在周刊做了推荐，才得以在一天当中涨星近 300，然后登上了 GitHub Trending 的。
 
-  ![image_20220725_215059](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220725_215059.png)
+  ![image_20220725_215059](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220725_215059.png)
 
 - 提交方式
 
@@ -37,13 +37,13 @@ date: 2022-07-25 21:08:45
 
 - 其他同步平台
 
-  [阮一峰博客](https://www.ruanyifeng.com/blog/weekly/)  |  [flowus](https://ruanyf-weekly.flowus.cn/)  |  [公众号](https://mp.weixin.qq.com/s/KLPjVyMQ_TKY4TobrEYitg)
+  [阮一峰博客](https://www.ruanyifeng.com/blog/weekly/) | [flowus](https://ruanyf-weekly.flowus.cn/) | [公众号](https://mp.weixin.qq.com/s/KLPjVyMQ_TKY4TobrEYitg)
 
 ### [HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
 
 - 简单介绍
 
-  HelloGitHub在它还没有成名的时候我就已经关注了，而今该项目俨然已经成为56.7k的超高星项目。其以每个月一次的月刊受人瞩目，每次月刊一经发布，就会引来大量读者围观，是你开源项目推介的优选之处。
+  HelloGitHub 在它还没有成名的时候我就已经关注了，而今该项目俨然已经成为 56.7k 的超高星项目。其以每个月一次的月刊受人瞩目，每次月刊一经发布，就会引来大量读者围观，是你开源项目推介的优选之处。
 
 - 提交方式
 
@@ -51,13 +51,13 @@ date: 2022-07-25 21:08:45
 
 - 其他同步平台
 
-  [博客月刊](https://hellogithub.com/periodical/volume/75/)  |  [公众号](https://mp.weixin.qq.com/s/lg_GcfrL5g1wOTfmTK8emw)
+  [博客月刊](https://hellogithub.com/periodical/volume/75/) | [公众号](https://mp.weixin.qq.com/s/lg_GcfrL5g1wOTfmTK8emw)
 
 ### [GitHubDaily](https://github.com/GitHubDaily/GitHubDaily)
 
 - 简单介绍
 
-  GitHubDaily是我在逛微博的时候，经常会看到推荐项目的一个账号，目前该项目GitHub有16k star，也是一个推荐个人项目的好地方。
+  GitHubDaily 是我在逛微博的时候，经常会看到推荐项目的一个账号，目前该项目 GitHub 有 16k star，也是一个推荐个人项目的好地方。
 
 - 提交方式
 
@@ -65,7 +65,7 @@ date: 2022-07-25 21:08:45
 
 - 其他同步平台
 
-  [公众号](https://raw.githubusercontent.com/GitHubDaily/GitHubDaily/master/assets/weixin.png)  |  [微博](https://weibo.com/GitHubDaily)  |  [知乎](https://www.zhihu.com/people/githubdaily)
+  [公众号](https://raw.githubusercontent.com/GitHubDaily/GitHubDaily/master/assets/weixin.png) | [微博](https://weibo.com/GitHubDaily) | [知乎](https://www.zhihu.com/people/githubdaily)
 
 ### [Awesome-GitHub-Repo](https://github.com/Wechat-ggGitHub/Awesome-GitHub-Repo)
 
@@ -79,13 +79,13 @@ date: 2022-07-25 21:08:45
 
 - 其他同步平台
 
-  [公众号](https://mp.weixin.qq.com/s?__biz=MzUxNjg4NDEzNA==&mid=2247509655&idx=1&sn=a0879e64562cfd2b3114d5cdd09b0b20&chksm=f9a2755eced5fc4822404fae1bd71b611fe77419cc8ee8ee52f9bb2cafaf11f0f42cc183876f&token=822393006&lang=zh_CN#rd)  |  [知乎](https://www.zhihu.com/people/riao-11)
+  [公众号](https://mp.weixin.qq.com/s?__biz=MzUxNjg4NDEzNA==&mid=2247509655&idx=1&sn=a0879e64562cfd2b3114d5cdd09b0b20&chksm=f9a2755eced5fc4822404fae1bd71b611fe77419cc8ee8ee52f9bb2cafaf11f0f42cc183876f&token=822393006&lang=zh_CN#rd) | [知乎](https://www.zhihu.com/people/riao-11)
 
-### [Go语言爱好者周刊](https://github.com/polaris1119/golangweekly)
+### [Go 语言爱好者周刊](https://github.com/polaris1119/golangweekly)
 
 - 简单介绍
 
-  如果你的开源项目是Go语言项目，那么往go语言中文网站长创建的Go语言爱好者周刊推介自己的项目，就是一个合适的选择，尽管这个项目影响力还有限，但在go语言领域，还是很有话语权的。
+  如果你的开源项目是 Go 语言项目，那么往 go 语言中文网站长创建的 Go 语言爱好者周刊推介自己的项目，就是一个合适的选择，尽管这个项目影响力还有限，但在 go 语言领域，还是很有话语权的。
 
 - 提交方式
 
@@ -93,7 +93,7 @@ date: 2022-07-25 21:08:45
 
 - 其他同步平台
 
-  [go语言中文网](https://studygolang.com/go/weekly)  |  [公众号](https://mp.weixin.qq.com/s/oz7vFlOd0Hw63ejmrGJM3A)
+  [go 语言中文网](https://studygolang.com/go/weekly) | [公众号](https://mp.weixin.qq.com/s/oz7vFlOd0Hw63ejmrGJM3A)
 
 ### [TNT-Weekly](https://github.com/tnfe/TNT-Weekly)
 
@@ -113,30 +113,30 @@ date: 2022-07-25 21:08:45
 
 ### [v2ex](https://v2ex.com/)
 
-v2ex的技术氛围可算是最强的，如果你的项目足够优秀，且能够在一个合理合适的时机发布分享，通常都会引来不少关注度，以及讨论。
+v2ex 的技术氛围可算是最强的，如果你的项目足够优秀，且能够在一个合理合适的时机发布分享，通常都会引来不少关注度，以及讨论。
 
 据我观察，通常在周五上午发布会是一个合适的时机，其他时间段都不算是个合适的点，尤其不要想着周末发布，往往最后的数据会很惨淡。
 
 ### [learnku](https://learnku.com/)
 
-learnku也是一个不错的推介个人开源项目的论坛，不过貌似发布的内容通常围观度很是玄学，得看命。
+learnku 也是一个不错的推介个人开源项目的论坛，不过貌似发布的内容通常围观度很是玄学，得看命。
 
 ### 其他
 
 其他一些地方，大概可以作为同步分享的一个场所，这里同步陈列如下：
 
 - [掘金](https://juejin.cn/)
-- [Gitee](https://gitee.com/)：如果你的项目足够优秀，借助gitee的自动同步能力，然后点击项目名右侧的推荐按钮，一旦成功，也能获得一些关注度。
+- [Gitee](https://gitee.com/)：如果你的项目足够优秀，借助 gitee 的自动同步能力，然后点击项目名右侧的推荐按钮，一旦成功，也能获得一些关注度。
 
 ## 公众号
 
 有一些专注在公众号做开源项目分享的，这里也一并列举在此。
 
-### [GitHub黑板报](https://mp.weixin.qq.com/s/yIWlj_wxiXzXGT8Q2JyWcw)
+### [GitHub 黑板报](https://mp.weixin.qq.com/s/yIWlj_wxiXzXGT8Q2JyWcw)
 
 - 简单介绍
 
-  专注于GitHub上知名的Python、Java、Web、AI、数据分析等多个领域的优质学习资源,开源项目及开发者工具,为程序序员提供优质的开源项目。
+  专注于 GitHub 上知名的 Python、Java、Web、AI、数据分析等多个领域的优质学习资源,开源项目及开发者工具,为程序序员提供优质的开源项目。
 
 - 提交方式
 

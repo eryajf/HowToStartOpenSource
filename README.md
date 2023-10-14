@@ -1,6 +1,5 @@
 [English](./README-en.md) | 简体中文
 
-
 <h1 align="center">HowToStartOpenSource</h1>
 
 <div align="center">
@@ -18,11 +17,9 @@
 
 <p align="center"> ⚗️ GitHub开源项目维护协作指南</p>
 
-
 <div align="center">
 <img src="https://camo.githubusercontent.com/82291b0fe831bfc6781e07fc5090cbd0a8b912bb8b8d4fec0696c881834f81ac/68747470733a2f2f70726f626f742e6d656469612f394575424971676170492e676966" width="800"  height="3">
 </div><br>
-
 
 **查看在线版：** [https://howtosos.eryajf.net](https://howtosos.eryajf.net)
 
@@ -32,15 +29,15 @@
 
 `首页：`
 
-![image_20230218_143536](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230218_143536.png)
+![image_20230218_143536](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20230218_143536.png)
 
 `内容：`
 
-![image_20230218_143657](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230218_143657.png)
+![image_20230218_143657](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20230218_143657.png)
 
 `v2`
 
-![image_20230908_155559](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230908_155559.png)
+![image_20230908_155559](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20230908_155559.png)
 
 混迹于互联网，或多或少难免都会与 GitHub 有交互，大多数时候在公司中积累的 git 使用经验都是面向 GitLab 的，也很容易想当然地将过往的经验套到 GitHub 中，而事实上还是有一些差别的，最近开源了几个项目，有一些还涉及到要与外部开发者协同工作，当我真正面对要处理一个 PR 的时候，内心是慌乱的，一时间不知道该从何处下手，这里就整理记录一下这方面的实践。
 
@@ -48,5 +45,5 @@
 
 **历程**
 
-- [2022年7月24日，登上了GitHub日推。](https://github.com/bonfy/github-trending/blob/master/2022/2022-07-24.md#javascript)
-  ![GitHub-Trending](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220724_173425.png)
+- [2022 年 7 月 24 日，登上了 GitHub 日推。](https://github.com/bonfy/github-trending/blob/master/2022/2022-07-24.md#javascript)
+  ![GitHub-Trending](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220724_173425.png)

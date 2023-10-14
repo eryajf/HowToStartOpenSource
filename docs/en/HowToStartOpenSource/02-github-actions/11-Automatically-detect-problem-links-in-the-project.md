@@ -3,7 +3,6 @@ title: Automatically detect problem links in your project.
 date: 2022-08-08 15:47:36
 ---
 
-
 ## Preface
 
 Open source projects that I maintain [Thanks-Mirror](https://github.com/eryajf/Thanks-Mirror) Collated and recorded various package managers, system images, and useful images of common software, as the project became more and more perfect, to today, has accumulated 1091 links, over time, some domestic mirrors may stop maintenance, how to customize the perception of those links that have failed, is a matter to consider.
@@ -38,12 +37,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-            # Check all markdown and html files in repo (default)
-            args: --config ./.github/config/lychee.toml README.md
-            # Use json as output format (instead of markdown)
-            format: markdown
-            # Use different output file path
-            output: ./lychee/out.md
+          # Check all markdown and html files in repo (default)
+          args: --config ./.github/config/lychee.toml README.md
+          # Use json as output format (instead of markdown)
+          format: markdown
+          # Use different output file path
+          output: ./lychee/out.md
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v3
@@ -211,4 +210,4 @@ In this way, when there are abnormal links during PR, the detection will fail, a
 
 The effect after passing the test is as follows:
 
-![image_20220808_154825](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220808_154825.png)
+![image_20220808_154825](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220808_154825.png)

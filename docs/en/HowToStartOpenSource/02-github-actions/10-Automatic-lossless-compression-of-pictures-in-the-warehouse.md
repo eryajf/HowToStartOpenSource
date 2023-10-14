@@ -3,7 +3,6 @@ title: Automatically compress images in the warehouse losslessly
 date: 2022-08-01 23:42:55
 ---
 
-
 I maintain [awesome-github-profile-readme-chinese](https://github.com/eryajf/awesome-github-profile-readme-chinese) The project aims to collect and summarize the excellent personal homepages in the Chinese area, and everyone's homepage will be stored in the exampls directory by taking screenshots, and sometimes some friends' homepages have a lot of content, so that the overall screenshot is very large.
 
 This article introduces an interesting small action, its main function is to automatically scan the pictures in the warehouse, and then compress them almost losslessly, so that the volume of the entire warehouse is kept at a relatively low level.
@@ -14,7 +13,6 @@ Using the configuration is actually very simple, basically after reading the off
 
 Start by adding the Actions profile，e.g. `.github/workflows/images.yml`：
 
-
 ```yml
 name: 压缩图片
 on:
@@ -22,10 +20,10 @@ on:
     branches:
       - main
     paths:
-      - '**.jpg'
-      - '**.jpeg'
-      - '**.png'
-      - '**.webp'
+      - "**.jpg"
+      - "**.jpeg"
+      - "**.png"
+      - "**.webp"
   workflow_dispatch:
 jobs:
   build:
@@ -40,17 +38,17 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           compressOnly: true
-          jpegQuality: '60'
+          jpegQuality: "60"
           jpegProgressive: false
-          pngQuality: '60'
-          webpQuality: '60'
+          pngQuality: "60"
+          webpQuality: "60"
       - name: Create New Pull Request If Needed
         if: steps.calibre.outputs.markdown != ''
         uses: peter-evans/create-pull-request@v3
         with:
-          title: '🛠 压缩图片'
+          title: "🛠 压缩图片"
           branch-suffix: timestamp
-          commit-message: '🛠 压缩图片'
+          commit-message: "🛠 压缩图片"
           body: ${{ steps.calibre.outputs.markdown }}
 ```
 
@@ -66,10 +64,10 @@ One thing to note is that the `secrets. GITHUB_TOKEN` is used to operate the cur
 
 The effect is as follows:
 
-![image_20220801_234434](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220801_234434.png)
+![image_20220801_234434](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220801_234434.png)
 
 This action will automatically process the image and submit it to the current PR, we can click View diff to see the difference before and after:
 
-![image_20220801_234504](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220801_234504.png)
+![image_20220801_234504](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220801_234504.png)
 
 At present, according to my personal zoomed in on the two photos before and after, in the case of 80% reduction in volume, the clarity is almost the same, or a very powerful action, suitable for those warehouses that store more pictures.

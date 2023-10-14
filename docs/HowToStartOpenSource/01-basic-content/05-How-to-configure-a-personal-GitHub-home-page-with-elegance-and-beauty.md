@@ -3,33 +3,33 @@ title: 如何将个人的GitHub主页配置的优雅好看
 date: 2022-07-22 10:02:33
 ---
 
-我很早注意到，GitHub当中，你创建一个与自己账号同名的仓库，然后这个仓库的内容会展示在个人主页，换言之，你可以通过装扮这个仓库，来实现个人主页的装扮。
+我很早注意到，GitHub 当中，你创建一个与自己账号同名的仓库，然后这个仓库的内容会展示在个人主页，换言之，你可以通过装扮这个仓库，来实现个人主页的装扮。
 
 曾经也做过一些装扮的事情，只是很多内容还停留在表面，以至于主页看起来比较简单，最近对主页进行了整体的改造，过程中也遇到不少好的经验，这篇文章就是对这些内容的总结整理，看完之后，你也可以快速构建一个美观简洁的个人主页，这是一张重要的个人名片，快装扮起来吧。
 
 我的个人主页：[https://github.com/eryajf](https://github.com/eryajf)
 
-> 题外话：在折腾主页的过程中，我发现一个现象，国内的程序员折腾个人主页的比例要远远小于国外，也许，正是因为国内程序员都被困在996当中而失去了生活的情趣罢，再一次，旗帜鲜明地反对996。
+> 题外话：在折腾主页的过程中，我发现一个现象，国内的程序员折腾个人主页的比例要远远小于国外，也许，正是因为国内程序员都被困在 996 当中而失去了生活的情趣罢，再一次，旗帜鲜明地反对 996。
 
 ## 展示
 
-![image_20220722_102304](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220722_102304.png)
+![image_20220722_102304](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220722_102304.png)
 
 ## 参考
 
 我们制作个人主页的第一步，在没有思路的时候，首先可以做的，就是参考别人的做法，先从模仿开始，然后再从模仿的过程中，逐渐摸索出能够展示自己个性的一套主页。
 
 - 首先你可以参考我的主页全部配置，来进行个人主页的折腾配置。
-- GitHub中也有不少搜集了优秀配置的仓库，这里列举一二：
+- GitHub 中也有不少搜集了优秀配置的仓库，这里列举一二：
   - [awesome-github-profile-readme-chinese](https://github.com/eryajf/awesome-github-profile-readme-chinese)：由我整理的优秀的中文区个人主页搜集,特别推荐。
   - [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme)：收集了大量的优秀案例，可供参考。
   - [awesome-github-profile-readme-templates](https://github.com/durgeshsamariya/awesome-github-profile-readme-templates)：整理了大量的优秀模板，可供参考。
   - [creative-profile-readme](https://github.com/coderjojo/creative-profile-readme)：又一个整理了大量案例的仓库。
 
-还有一些能够在线制作个人profile的项目网站，非常优秀，这里列举如下：
+还有一些能够在线制作个人 profile 的项目网站，非常优秀，这里列举如下：
 
-- 项目：[profile-readme-generator](https://github.com/maurodesouza/profile-readme-generator)  |  在线：[https://profile-readme-generator.com/](https://profile-readme-generator.com/)
-- 项目：[github-profile-readme-maker](https://github.com/VishwaGauravIn/github-profile-readme-maker)  |  在线：[https://gprm.itsvg.in/](https://gprm.itsvg.in/)
+- 项目：[profile-readme-generator](https://github.com/maurodesouza/profile-readme-generator) | 在线：[https://profile-readme-generator.com/](https://profile-readme-generator.com/)
+- 项目：[github-profile-readme-maker](https://github.com/VishwaGauravIn/github-profile-readme-maker) | 在线：[https://gprm.itsvg.in/](https://gprm.itsvg.in/)
 -
 
 ## 折腾
@@ -51,7 +51,7 @@ date: 2022-07-22 10:02:33
 
 ### 内容与构图
 
-前边内容就不多说了，每个人根据自己的实际想法撰写即可，图片也是基于HTML的右置语法实现。如下：
+前边内容就不多说了，每个人根据自己的实际想法撰写即可，图片也是基于 HTML 的右置语法实现。如下：
 
 <img align='right' src="https://github.com/eryajf/tu/blob/main/img/image_20220626_200153.gif?raw=true" width="450" height="390" />
 
@@ -77,7 +77,7 @@ date: 2022-07-22 10:02:33
 - 源码：[devicon](https://github.com/devicons/devicon)
 - 在线：[devicon.dev](https://devicon.dev/)
 
-如果有图标在里边搜索不到，可以自己去对应语言或者工具的官网寻找icon图标。
+如果有图标在里边搜索不到，可以自己去对应语言或者工具的官网寻找 icon 图标。
 
 我们还可以直接通过在线工具配置生成：
 
@@ -86,7 +86,7 @@ date: 2022-07-22 10:02:33
 
 ### 状态汇总统计
 
-状态汇总建议你不必过多纠结，直接参照我的配置，将owner名字替换就OK了：
+状态汇总建议你不必过多纠结，直接参照我的配置，将 owner 名字替换就 OK 了：
 
 ```
 ![二丫讲梵's github stats](https://github-readme-stats.vercel.app/api?username=eryajf&hide_title=false&hide_border=true&show_icons=true&include_all_commits=true&line_height=20&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn)![主要使用语言](https://github-readme-stats.vercel.app/api/top-langs/?username=eryajf&hide_title=false&hide_border=true&layout=compact&bg_color=0,73FA79,73FDFF,D783FF&theme=graywhite&locale=cn)
@@ -112,7 +112,7 @@ date: 2022-07-22 10:02:33
 ![snake](./assets/github-contribution-grid-snake.svg)
 ```
 
-引用了仓库本地的一个svg文件，此文件借助一个`GitHub Actinos`每天自动生成一次。
+引用了仓库本地的一个 svg 文件，此文件借助一个`GitHub Actinos`每天自动生成一次。
 
 配置如下：
 
@@ -155,20 +155,20 @@ jobs:
 ![](https://activity-graph.herokuapp.com/graph?username=eryajf&theme=github)
 ```
 
-如果你觉得我用的样式可以，那么直接替换username就可以生成你自己的。
+如果你觉得我用的样式可以，那么直接替换 username 就可以生成你自己的。
 
 此功能基于如下项目构建：
 
 - 源码：[github-readme-activity-graph](https://github.com/Ashutosh00710/github-readme-activity-graph)
 - 在线：[github-readme-activity-graph-online](https://ashutosh00710.github.io/github-readme-activity-graph/)
 
-### 类似GitHub Pinned的功能
+### 类似 GitHub Pinned 的功能
 
 GitHub Pinned 是一个能够将项目钉在个人主页的功能，效果如下：
 
-![image_20220722_111857](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220722_111857.png)
+![image_20220722_111857](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220722_111857.png)
 
-但有一个问题，此功能只允许我们添加6个项目钉在这里。
+但有一个问题，此功能只允许我们添加 6 个项目钉在这里。
 
 通过如下配置，我们可以将更多自己想要钉住的项目钉在个人主页：
 
@@ -183,15 +183,15 @@ GitHub Pinned 是一个能够将项目钉在个人主页的功能，效果如下
 
 ### 博客最近更新
 
-此处功能是基于GitHub Actions实现，每个小时运行一次，通过订阅博客的RSS将博客最近更新的几篇文章列举在此：
+此处功能是基于 GitHub Actions 实现，每个小时运行一次，通过订阅博客的 RSS 将博客最近更新的几篇文章列举在此：
 
-GitHub Actions配置如下：
+GitHub Actions 配置如下：
 
 ```yaml
 name: Latest blog post workflow
 on:
   schedule: # Run workflow automatically
-    - cron: '0 * * * *'
+    - cron: "0 * * * *"
   workflow_dispatch:
 jobs:
   update-readme-with-blog:

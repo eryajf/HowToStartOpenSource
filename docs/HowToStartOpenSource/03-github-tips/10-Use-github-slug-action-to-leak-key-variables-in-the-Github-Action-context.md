@@ -3,7 +3,6 @@ title: 使用 github-slug-action 暴漏 Github Action 上下文中的关键变�
 date: 2023-02-28 15:05:10
 ---
 
-
 ## 前言
 
 使用 GitHub Action 时，有一种场景需求为，通过 release 触发构建，然后构建的过程中，还要用到这次创建的 release 号。
@@ -40,11 +39,11 @@ GITHUB_REF_NAME=v0.5.6
 网上大多数的方案是对 `GITHUB_REF` 这个变量下手，比如：
 
 ```yaml
-      - name: Get Release version
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        run: |
-          echo "::set-env name=RELEASE_VERSION::$(echo $GITHUB_REF | cut -d'/' -f 3)"
+- name: Get Release version
+  env:
+    ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+  run: |
+    echo "::set-env name=RELEASE_VERSION::$(echo $GITHUB_REF | cut -d'/' -f 3)"
 ```
 
 `📢注意：` 需要注意的是，如果使用 set-env 来添加变量，则需要声明 `ACTIONS_ALLOW_UNSECURE_COMMANDS: true`，否则运行过程中会报错如下：
@@ -67,6 +66,7 @@ The `set-env` command is disabled. Please upgrade to using Environment Files or 
 为了验证如上表述的内容，我创建一个测试脚本如下：
 
 ::: v-pre
+
 ```yaml
 name: test action env
 
@@ -101,11 +101,12 @@ jobs:
           echo "通过自定义脚本获取版本号第一种： ${{ env.RELEASE_VERSION_ONE }}"
           echo "通过自定义脚本获取版本号第二种： ${{ env.RELEASE_VERSION_TWO }}"
 ```
+
 :::
 
 运行后得到结果如下：
 
-![image_20230228_151615](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20230228_151615.jpg)
+![image_20230228_151615](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20230228_151615.jpg)
 
 ::: v-pre
 可见虽然在全局环境变量中能看到 `GITHUB_REF_NAME=v0.5.13`，但实际上在后续的上下文中，你并不能通过 `${{ env.GITHUB_REF_NAME }}` 来引用这个变量。
@@ -122,6 +123,7 @@ jobs:
 此时我们把 action 的配置文件改成下边这样：
 
 ::: v-pre
+
 ```yaml
 name: test action env
 
@@ -148,6 +150,7 @@ jobs:
           echo "通过GitHub-Action获取版本号： ${{ env.GITHUB_REF_NAME }}"
           echo "通过github-slug-action获取版本号： ${{ env.GITHUB_REF_NAME_SLUG }}"
 ```
+
 :::
 
 ::: v-pre

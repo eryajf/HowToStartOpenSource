@@ -33,8 +33,8 @@ permissions:
 jobs:
   update_release_draft:
     permissions:
-      contents: write  # for release-drafter/release-drafter to create a github release
-      pull-requests: write  # for release-drafter/release-drafter to add label to PR
+      contents: write # for release-drafter/release-drafter to create a github release
+      pull-requests: write # for release-drafter/release-drafter to add label to PR
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v5
@@ -109,7 +109,7 @@ Security
 - [ ] 我已经考虑过，并确认这份呈件对其他人很有价值。
 - [ ] 我接受此提交可能不会被使用，并根据维护人员的意愿关闭拉取请求。
 
-**填写PR内容：**
+**填写 PR 内容：**
 
 -
 ```
@@ -118,10 +118,10 @@ Security
 
 最后来看下生成的 release drafter：
 
-![image_20220718_172517](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172517.png)
+![image_20220718_172517](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172517.png)
 
 当你觉得可以发布一个新的版本的时候，就可以点击小铅笔按钮，对内容二次审查之后，点击发布：
 
-![image_20220718_172527](https://cdn.staticaly.com/gh/eryajf/tu/main/img/image_20220718_172527.png)
+![image_20220718_172527](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172527.png)
 
 以上就是借助 GitHub Actions 的能力，自动给项目构建 releases 的全部内容。
