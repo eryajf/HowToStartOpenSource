@@ -27,6 +27,10 @@
 >
 > 🍺 特别感谢 [ArslanYM](https://github.com/ArslanYM) 对本项目完成的英文翻译工作！！！
 
+在线版站点基于 EdgeOne Pages 构建，可点击如下链接快速尝试：
+
+[![使用 EdgeOne Pages 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?repository-url=https://github.com/eryajf/HowToStartOpenSource)
+
 `首页：`
 
 ![image_20230218_143536](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20230218_143536.png)
