@@ -1,7 +1,7 @@
-# vuepress
-docs/.vuepress/.cache
-docs/.vuepress/.temp
-docs/.vuepress/dist
+# vitepress
+docs/.vitepress/cache
+docs/.vitepress/temp
+docs/.vitepress/dist
 node_modules
 
 # npm

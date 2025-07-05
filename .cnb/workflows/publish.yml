@@ -8,7 +8,7 @@ main:
       imports:
         - https://cnb.cool/eryajf/build-env/-/blob/main/env.yaml
       docker:
-        image: docker.cnb.cool/znb/images/node:16
+        image: docker.cnb.cool/znb/images/debian:all
         volumes:
           - /data/.cache:copy-on-write
       stages:
@@ -28,17 +28,17 @@ main:
           timeout: 3h
           script: yarn build
 
-        # - name: 🚚 发布制品
-        #   image: tencentcom/rsync
-        #   settings:
-        #     user: ${SSH_USER}
-        #     key: ${SSH_KEY}
-        #     port: 2023
-        #     hosts:
-        #       - prod.eryajf.net
-        #     source: docs/.vuepress/dist/
-        #     target: /data/www/howtosos.eryajf.net/
-        #     delete: true
+        - name: 🚚 发布制品
+          image: tencentcom/rsync
+          settings:
+            user: ${SSH_USER}
+            key: ${SSH_KEY}
+            port: 2023
+            hosts:
+              - prod.eryajf.net
+            source: docs/.vuepress/dist/
+            target: /data/www/howtosos.eryajf.net/
+            delete: true
 
         # - name: 🕷 抓取分词
         #   script: |

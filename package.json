@@ -1,17 +1,22 @@
 {
-  "name": "vuepress-theme-reco-demo",
-  "version": "2.0.0",
-  "description": "Demo for vuepress-theme-reco@2.x.",
-  "repository": "git@github.com:recoluan/vuepress-theme-reco-demo.git",
-  "author": "reco_luan <recoluan@outlook.com>",
-  "license": "MIT",
+  "private": true,
+  "name": "howtostartopensource",
+  "version": "1.0.0",
+  "description": "How to Start Open Source",
+  "type": "module",
   "scripts": {
-    "dev": "vuepress dev docs --host 0.0.0.0",
-    "start": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vitepress dev docs --host 0.0.0.0",
+    "build": "NODE_OPTIONS=--max-old-space-size=24576 vitepress build docs"
+  },
+  "devDependencies": {
+    "@giscus/vue": "^3.1.1",
+    "echarts": "^5.6.0",
+    "sass": "^1.89.1",
+    "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "vuepress": "2.0.0-beta.66",
-    "vuepress-theme-reco": "2.0.0-beta.67"
+    "vitepress-plugin-rss": "^0.3.1",
+    "vitepress-theme-teek": "^1.3.5",
+    "vue": "^3.5.16"
   }
 }

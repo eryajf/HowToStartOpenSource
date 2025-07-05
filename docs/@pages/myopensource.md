@@ -1,27 +1,14 @@
 ---
-title: My Opensource Projects
+title: 我的开源项目汇总
 date: 2022-07-24 16:04:55
+permalink: /myopensource
 ---
 
-
-## 开源名片
-
-::: center
-[![eryajf’s GitHub image](https://crd.so/i/eryajf?dark&removeLink)](https://github.com/eryajf)
-:::
 
 ## 提交历史
 
 ::: center
-[![](https://raw.githubusercontent.com/eryajf/eryajf/master/assets/github-contribution-grid-snake.svg)](https://github.com/eryajf)
-
 [![](https://raw.githubusercontent.com/eryajf/eryajf/master/profile-3d-contrib/profile-night-rainbow.svg)](https://raw.githubusercontent.com/eryajf/eryajf/master/profile-3d-contrib/profile-night-rainbow.svg)
-:::
-
-## 状态总览
-
-::: center
-[![二丫讲梵's github stats](https://github-readme-stats.vercel.app/api?username=eryajf&hide_title=false&hide_border=true&show_icons=true&include_all_commits=true&line_height=20&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn)](https://github-readme-stats.vercel.app/api?username=eryajf&hide_title=false&hide_border=true&show_icons=true&include_all_commits=true&line_height=20&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn)
 :::
 
 ## 开源项目
@@ -55,3 +42,10 @@ date: 2022-07-24 16:04:55
 | [ldapool](https://github.com/eryajf/ldapool) | ![](https://img.shields.io/github/stars/eryajf/ldapool?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/watchers/eryajf/ldapool?color=6ed17a&logo=1001Tracklists) | ![](https://img.shields.io/github/forks/eryajf/ldapool?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | go-ldap库的连接池实现  |
 | [gojenkins](https://github.com/eryajf/gojenkins) | ![](https://img.shields.io/github/stars/eryajf/gojenkins?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/watchers/eryajf/gojenkins?color=6ed17a&logo=1001Tracklists) | ![](https://img.shields.io/github/forks/eryajf/gojenkins?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | fork自gojenkins,增加了很多功能  |
 | [chatgpt-dingtalk](https://github.com/eryajf/chatgpt-dingtalk) | ![](https://img.shields.io/github/stars/eryajf/chatgpt-dingtalk?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/watchers/eryajf/chatgpt-dingtalk?color=6ed17a&logo=1001Tracklists) | ![](https://img.shields.io/github/forks/eryajf/chatgpt-dingtalk?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | chatGPT机器人在钉钉群聊中交互  |
+| [emotion_generate](https://github.com/eryajf/emotion_generate) | ![](https://img.shields.io/github/stars/eryajf/emotion_generate?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/forks/eryajf/emotion_generate?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | Artalk评论系统的表情包  |
+| [awesome-chatgpt-answer](https://github.com/eryajf/awesome-chatgpt-answer) | ![](https://img.shields.io/github/stars/eryajf/awesome-chatgpt-answer?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/forks/eryajf/awesome-chatgpt-answer?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | 🙋 问得好，🗣 答得妙。  |
+| [eryajf-dockerfile](https://github.com/eryajf/eryajf-dockerfile) | ![](https://img.shields.io/github/stars/eryajf/eryajf-dockerfile?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/forks/eryajf/eryajf-dockerfile?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | 🏺 个人常用的Docker镜像汇总  |
+| [eryajfctl](https://github.com/eryajf/eryajfctl) | ![](https://img.shields.io/github/stars/eryajf/eryajfctl?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/forks/eryajf/eryajfctl?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | 🚀 基于Cobra库快速打造类似kubectl一样的命令行工具箱 🧰  |
+| [cloudctl](https://github.com/eryajf/cloudctl) | ![](https://img.shields.io/github/stars/eryajf/cloudctl?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/forks/eryajf/cloudctl?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | 🚀 与公有云等交互的命令行工具 🧰  |
+| [chatgpt-wecom](https://github.com/eryajf/chatgpt-wecom) | ![](https://img.shields.io/github/stars/eryajf/chatgpt-wecom?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/forks/eryajf/chatgpt-wecom?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | 💬 基于GO语言实现的体验最好的企微应用集成ChatGPT项目 🚀  |
+| [gitlabCodeSearch](https://github.com/eryajf/gitlabCodeSearch) | ![](https://img.shields.io/github/stars/eryajf/gitlabCodeSearch?color=f2f08d&logo=Undertale&logoColor=eb4630) | ![](https://img.shields.io/github/forks/eryajf/gitlabCodeSearch?color=ba86eb&logo=Handshake&logoColor=ea6aa6) | 🔎 使用关键字搜索所有gitlab项目 |
