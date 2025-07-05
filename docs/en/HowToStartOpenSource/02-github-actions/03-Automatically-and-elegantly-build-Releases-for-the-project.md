@@ -118,10 +118,10 @@ In this way, when the collaborator submits the PR, the collaborator will be acti
 
 Finally, let's look at the generated release drafter:
 
-![image_20220718_172517](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172517.png)
+![image_20220718_172517](/img/image_20220718_172517.png)
 
 When you feel that you can publish a new version, you can click the little pencil button, and after reviewing the content twice, click Publish:
 
-![image_20220718_172527](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172527.png)
+![image_20220718_172527](/img/image_20220718_172527.png)
 
 That's all for automatically building releases to a project with the help of GitHub Actions' capabilities.

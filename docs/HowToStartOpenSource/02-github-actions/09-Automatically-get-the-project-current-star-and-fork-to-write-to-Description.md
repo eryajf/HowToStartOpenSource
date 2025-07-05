@@ -43,4 +43,4 @@ jobs:
 
 效果如下：
 
-![image_20220729_164001](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220729_164001.png)
+![image_20220729_164001](/img/image_20220729_164001.png)

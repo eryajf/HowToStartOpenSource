@@ -14,7 +14,7 @@ Note that the next description will switch between the two accounts, here is the
 
 Usually, as collaborators, we fork the project into our own repository first:
 
-![image_20220718_171810](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_171810.png)
+![image_20220718_171810](/img/image_20220718_171810.png)
 
 Now that I'm in the perspective of lql95, I've forked the project I just named Eryajf to my own repository, at this point I can pull the project to my own local for coding:
 
@@ -47,7 +47,7 @@ $ git push --set-upstream origin main
 
 At this time, the remote repository of lql95 can actually be equivalent to the test branch that has just been maintained by itself, and we need to go to the eryajf repository to ask the other party to pull their own changes:
 
-![image_20220718_171822](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_171822.png)
+![image_20220718_171822](/img/image_20220718_171822.png)
 
 At this time, the remote repository of lql95 can actually be equivalent to the test branch that has just been maintained by itself, and we need to go to the eryajf repository to ask the other party to pull their own changes:
 
@@ -75,7 +75,7 @@ $ git push
 
 This commit will also be presented on top of the PR just created, now let's look at this PR from eryajf's perspective:
 
-![image_20220718_171832](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_171832.png)
+![image_20220718_171832](/img/image_20220718_171832.png)
 
 You can see the 2 commits of lql95, you can also view the details of this PR on the difference page, because this interaction content is not much, so it looks relatively simple here, in the real project collaboration process, a PR change file may be dozens, at this time through the page is very unintuitive, can be processed locally in the following way.
 

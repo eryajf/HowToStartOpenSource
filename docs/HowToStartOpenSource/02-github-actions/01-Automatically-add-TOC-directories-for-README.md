@@ -31,13 +31,13 @@ jobs:
 
 接着需要调整下项目的 Actions 权限，在 GitHub 上点击`settings`--> `actions` --> `General` --> `Workflow permissions` --> 选择 `Read and write permissions`。
 
-![image_20220718_172340](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172340.png)
+![image_20220718_172340](/img/image_20220718_172340.png)
 
 配置调整完成之后，就可以 push 项目看效果了，当然这里也可以通过 GitHub_Token 的方式认证，就不赘述了。
 
 效果呈现如下：
 
-![image_20220719_110310](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_110310.png)
+![image_20220719_110310](/img/image_20220719_110310.png)
 
 `配置列表：`[点我查看](https://github.com/marketplace/actions/toc-generator#options)
 
@@ -47,4 +47,4 @@ jobs:
 
 后来在一个地方学到了一招，原来 GitHub 针对 Markdown 文件已经默认支持了目录的方式，并且还支持搜索，如下：
 
-![image_20220719_110613](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_110613.png)
+![image_20220719_110613](/img/image_20220719_110613.png)

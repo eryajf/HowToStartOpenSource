@@ -105,7 +105,7 @@ contact_links:
 
 In this way, the file only needs to be placed in the `.github/ISSUE_TEMPLATE` directory, GitHub will automatically identify and parse it into a template, and the page for creating a new issue will look like this:
 
-![image_20220726_205630](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220726_205630.png)
+![image_20220726_205630](/img/image_20220726_205630.png)
 
 ## pull request
 

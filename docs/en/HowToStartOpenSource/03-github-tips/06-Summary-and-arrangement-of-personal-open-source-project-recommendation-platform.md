@@ -29,7 +29,7 @@ date: 2022-07-25 21:08:45
 
   另外插一句：当前项目 [HowToStartOpenSource](https://github.com/eryajf/HowToStartOpenSource) 也正是因为在周刊做了推荐，才得以在一天当中涨星近 300，然后登上了 GitHub Trending 的。
 
-  ![image_20220725_215059](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220725_215059.png)
+  ![image_20220725_215059](/img/image_20220725_215059.png)
 
 - 提交方式
 

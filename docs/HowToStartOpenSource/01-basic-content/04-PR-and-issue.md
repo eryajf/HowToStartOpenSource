@@ -7,7 +7,7 @@ date: 2022-07-19 14:49:19
 
 同样，我先在示例项目中创建一个`issue`：
 
-![image_20220719_145415](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_145415.png)
+![image_20220719_145415](/img/image_20220719_145415.png)
 
 这种时候，作为项目维护者，我们可以直接点击`Development`中的 `Create a branch` 创建一个 fix 分支，这样会自动关联上这个`issue`，同理，当该 fix 分支创建的`PR`被合并之后，`issue`也会自动关闭。
 
@@ -33,27 +33,27 @@ git push --set-upstream origin fix_testbug
 
 推到远程之后，我们来到 GitHub 页面中，此时可以看到 GitHub 会自动提示一个新的分支可以合并：
 
-![image_20220719_150429](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_150429.png)
+![image_20220719_150429](/img/image_20220719_150429.png)
 
 可以直接点击`Compare & pull request`：
 
-![image_20220719_151051](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151051.png)
+![image_20220719_151051](/img/image_20220719_151051.png)
 
 注意右侧`Development`中的说明，我们可以通过在说明中添加一些[关键字](https://docs.github.com/cn/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)，从而对`issue`进行关联，并触发关闭。当然也可以先创建 PR，然后再进行关联也可以：
 
-![image_20220719_151313](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151313.png)
+![image_20220719_151313](/img/image_20220719_151313.png)
 
 完成关联的 PR，可以看到有这样的状态显示：
 
-![image_20220719_151423](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151423.png)
+![image_20220719_151423](/img/image_20220719_151423.png)
 
 这个时候，我们点击到`#21`号`issue`中，也可以看到被关联到该`PR`上了：
 
-![image_20220719_151547](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151547.png)
+![image_20220719_151547](/img/image_20220719_151547.png)
 
 现在我们将 `#23` 号`PR`进行合并，合并之后可以看到关联的`issue`也被关闭了，此次关联的临时分支也被删除了：
 
-![image_20220719_151825](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151825.png)
+![image_20220719_151825](/img/image_20220719_151825.png)
 
 以上就是项目协同中，`PR`与`issue`的联动维护。
 
@@ -68,7 +68,7 @@ git pull
 
 这样执行之后，会发现本地代码竟然已经超过远程分支了：
 
-![image_20220719_154112](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_154112.png)
+![image_20220719_154112](/img/image_20220719_154112.png)
 
 其中的 389fe 那次是当前远程分支的 ID，我们可以执行如下命令，与远程对齐：
 
@@ -81,6 +81,6 @@ HEAD is now at 389fe7b fix: test bug (#23)
 
 图示如下：
 
-![image_20220719_154244](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_154244.png)
+![image_20220719_154244](/img/image_20220719_154244.png)
 
 理论上这次只有一个提交，而不应该出现 3 个`commit`，就是这个原因。

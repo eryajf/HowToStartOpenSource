@@ -63,10 +63,10 @@ jobs:
 
 效果如下：
 
-![image_20220801_234434](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220801_234434.png)
+![image_20220801_234434](/img/image_20220801_234434.png)
 
 这个动作会自动将图片处理好，然后提交到当次 PR 上，我们可以点开 View diff 查看前后的区别：
 
-![image_20220801_234504](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220801_234504.png)
+![image_20220801_234504](/img/image_20220801_234504.png)
 
 目前这个效果据我个人放大前后两张照片来看，在体积缩小了 80%的情况下，清晰度几乎是一致的，还是非常给力的一个动作，适合那些存放图片比较多的仓库。

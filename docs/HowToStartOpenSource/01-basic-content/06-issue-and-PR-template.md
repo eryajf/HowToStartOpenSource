@@ -105,7 +105,7 @@ contact_links:
 
 这样，文件只需要放置在 `.github/ISSUE_TEMPLATE` 目录下，GitHub 就会自动将之识别解析为模板了，新建 issue 的页面也变成如下模样：
 
-![image_20220726_205630](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220726_205630.png)
+![image_20220726_205630](/img/image_20220726_205630.png)
 
 ## pull request
 

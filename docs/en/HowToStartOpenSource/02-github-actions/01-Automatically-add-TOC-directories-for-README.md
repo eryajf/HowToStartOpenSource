@@ -31,13 +31,13 @@ jobs:
 
 Next, you need to adjust the project's Actions permissions，Click on GitHub, `settings`--> `actions` --> `General` --> `Workflow permissions` --> choose `Read and write permissions`。
 
-![image_20220718_172340](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172340.png)
+![image_20220718_172340](/img/image_20220718_172340.png)
 
 After the configuration adjustment is completed, you can push the project to see the effect, of course, you can also pass the GitHub_Token way of certification here, so I won't repeat it.
 
 The effect is presented as follows:
 
-![image_20220719_110310](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_110310.png)
+![image_20220719_110310](/img/image_20220719_110310.png)
 
 `Configure the list：` [see](https://github.com/marketplace/actions/toc-generator#options)
 
@@ -47,4 +47,4 @@ It can be configured according to your actual needs and situation!
 
 Later, I learned a trick in one place, it turned out that GitHub already supports the directory method by default for Markdown files, and also supports search, as follows：
 
-![image_20220719_110613](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_110613.png)
+![image_20220719_110613](/img/image_20220719_110613.png)

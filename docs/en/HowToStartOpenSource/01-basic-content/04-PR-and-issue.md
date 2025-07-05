@@ -7,7 +7,7 @@ When we need to solve a bug in a project, usually a new `PR` will be accompanied
 
 Again, I'll start by creating an `issue` in the sample project:
 
-![image_20220719_145415](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_145415.png)
+![image_20220719_145415](/img/image_20220719_145415.png)
 
 In this case, as the project maintainer, we can directly click `Create a branch` in `Development` to create a fix branch, which will automatically associate the `issue`, and similarly, when the `PR` created by the fix branch is merged, the `issue `will be automatically closed.
 
@@ -33,27 +33,27 @@ git push --set-upstream origin fix_testbug
 
 After pushing to the remote, we come to the GitHub page, at which point we can see that GitHub will automatically prompt a new branch to merge:
 
-![image_20220719_150429](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_150429.png)
+![image_20220719_150429](/img/image_20220719_150429.png)
 
 You can directly click `Compare & pull request`:
 
-![image_20220719_151051](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151051.png)
+![image_20220719_151051](/img/image_20220719_151051.png)
 
 Pay attention to the instructions in `Development` on the right, we can add some by adding some to the instructions[keywords](https://docs.github.com/cn/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)，This associates the `issue` and triggers a shutdown. Of course, you can also create a PR first and then associate it:
 
-![image_20220719_151313](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151313.png)
+![image_20220719_151313](/img/image_20220719_151313.png)
 
 After completing the associated PR, you can see that there is a status display like this:
 
-![image_20220719_151423](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151423.png)
+![image_20220719_151423](/img/image_20220719_151423.png)
 
 At this time, we click on the `#21` `issue`, and we can also see that it is linked to the `PR`:
 
-![image_20220719_151547](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151547.png)
+![image_20220719_151547](/img/image_20220719_151547.png)
 
 Now we merge the `#23` `PR` , and after the merge, you can see that the associated `issue` has also been closed, and the temporary branch of the link has been deleted:
 
-![image_20220719_151825](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_151825.png)
+![image_20220719_151825](/img/image_20220719_151825.png)
 
 The above is the linkage maintenance of `PR` and `issue` in project collaboration.
 
@@ -68,7 +68,7 @@ git pull
 
 After executing this way, you will find that the local code has exceeded the remote branch:
 
-![image_20220719_154112](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_154112.png)
+![image_20220719_154112](/img/image_20220719_154112.png)
 
 Among them, 389fe is the ID of the current remote branch, we can execute the following command to align with the remote:
 
@@ -81,6 +81,6 @@ In this way, the local and remote are aligned, and the next time you re-branch a
 
 The illustration is as follows:
 
-![image_20220719_154244](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220719_154244.png)
+![image_20220719_154244](/img/image_20220719_154244.png)
 
 Theoretically, there is only one commit this time, instead of 3 `commits`, which is why.

@@ -13,11 +13,11 @@ date: 2022-07-27 19:54:27
 
 首先来到 GitHub 当中，在 `Settings` --> `Pages` 中添加`CNAME:`
 
-![image_20220727_200747](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220727_200747.png)
+![image_20220727_200747](/img/image_20220727_200747.png)
 
 然后在个人的域名解析处，添加一条 CNAME 记录：
 
-![image_20220727_200900](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220727_200900.png)
+![image_20220727_200900](/img/image_20220727_200900.png)
 
 然后回到 GitHub 配置页面，查看检查是否成功。成功之后，使用 http://pages.eryajf.net 就可以访问网站了。
 

@@ -211,4 +211,4 @@ jobs:
 
 检测通过之后的效果如下：
 
-![image_20220808_154825](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220808_154825.png)
+![image_20220808_154825](/img/image_20220808_154825.png)

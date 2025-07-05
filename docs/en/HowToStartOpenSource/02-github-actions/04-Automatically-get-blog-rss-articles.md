@@ -54,7 +54,7 @@ The script runs every hour and automatically writes the fetched content between 
 
 The generated content has the following effect:
 
-![image_20220718_172600](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172600.png)
+![image_20220718_172600](/img/image_20220718_172600.png)
 
 ## Note
 

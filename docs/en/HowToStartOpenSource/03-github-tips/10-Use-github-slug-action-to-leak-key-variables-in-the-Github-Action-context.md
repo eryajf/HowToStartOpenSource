@@ -106,7 +106,7 @@ jobs:
 
 After running, the result is as follows:
 
-![image_20230228_151615](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20230228_151615.jpg)
+![image_20230228_151615](/img/image_20230228_151615.jpg)
 
 ::: v-pre
 It can be seen that although `GITHUB_REF_NAME=v0.5.13` can be seen in the global environment variable, in fact, in the subsequent context, you cannot refer to this variable through `${{ env.GITHUB_REF_NAME }}`.

@@ -94,6 +94,6 @@ jobs:
 
 最后构建的镜像效果如下：
 
-![image_20220723_105957](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220723_105957.png)
+![image_20220723_105957](/img/image_20220723_105957.png)
 
 这里也可以看到推上去的镜像都是兼容两个 CPU 架构平台的。

@@ -13,7 +13,7 @@ date: 2022-07-22 10:02:33
 
 ## 展示
 
-![image_20220722_102304](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220722_102304.png)
+![image_20220722_102304](/img/image_20220722_102304.png)
 
 ## 参考
 
@@ -166,7 +166,7 @@ jobs:
 
 GitHub Pinned 是一个能够将项目钉在个人主页的功能，效果如下：
 
-![image_20220722_111857](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220722_111857.png)
+![image_20220722_111857](/img/image_20220722_111857.png)
 
 但有一个问题，此功能只允许我们添加 6 个项目钉在这里。
 

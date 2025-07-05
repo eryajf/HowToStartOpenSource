@@ -13,11 +13,11 @@ Next, only a two-step configuration is required to complete this operation.
 
 First, go to GitHub and add `CNAME:` to `Settings` --> `Pages`
 
-![image_20220727_200747](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220727_200747.png)
+![image_20220727_200747](/img/image_20220727_200747.png)
 
 Then add a CNAME record to the personal domain name resolution:
 
-![image_20220727_200900](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220727_200900.png)
+![image_20220727_200900](/img/image_20220727_200900.png)
 
 ## Then go back to the GitHub configuration page and see if the check was successful. Once successful, you can use http://pages.eryajf.net to access the website.
 

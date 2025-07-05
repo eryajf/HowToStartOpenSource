@@ -55,7 +55,7 @@ The configuration items are also relatively simple, do not repeat too much, adju
 
 After this configuration is added, every time there is a push action, or a PR request, the action will be automatically run, as shown in the following example:
 
-![image_20220724_084202](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220724_084202.png)
+![image_20220724_084202](/img/image_20220724_084202.png)
 
 When this step fails, the person submitting the PR will also perform some self-tests according to the content of the error.
 

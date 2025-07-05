@@ -95,6 +95,6 @@ Here are a separate description of several key configuration items:：
 
 The final image looks like this:
 
-![image_20220723_105957](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220723_105957.png)
+![image_20220723_105957](/img/image_20220723_105957.png)
 
 Here you can also see that the images pushed up are compatible with the two CPU architecture platforms.

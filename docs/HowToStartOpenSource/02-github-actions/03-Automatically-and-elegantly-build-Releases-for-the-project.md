@@ -118,10 +118,10 @@ Security
 
 最后来看下生成的 release drafter：
 
-![image_20220718_172517](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172517.png)
+![image_20220718_172517](/img/image_20220718_172517.png)
 
 当你觉得可以发布一个新的版本的时候，就可以点击小铅笔按钮，对内容二次审查之后，点击发布：
 
-![image_20220718_172527](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172527.png)
+![image_20220718_172527](/img/image_20220718_172527.png)
 
 以上就是借助 GitHub Actions 的能力，自动给项目构建 releases 的全部内容。

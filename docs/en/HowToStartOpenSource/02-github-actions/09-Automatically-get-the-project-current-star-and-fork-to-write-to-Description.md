@@ -43,4 +43,4 @@ The current configuration performs an update every hour, and you can adjust it f
 
 The effect is as follows:
 
-![image_20220729_164001](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220729_164001.png)
+![image_20220729_164001](/img/image_20220729_164001.png)

@@ -13,7 +13,7 @@ My profile：[https://github.com/eryajf](https://github.com/eryajf)
 
 ## Show
 
-![image_20220722_102304](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220722_102304.png)
+![image_20220722_102304](/img/image_20220722_102304.png)
 
 ## Reference
 
@@ -169,7 +169,7 @@ This feature is built on the following projects
 ### Features like GitHub Pinned
 
 GitHub Pinned is a feature that pins items to your profile, and the effect is as follows:
-![image_20220722_111857](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220722_111857.png)
+![image_20220722_111857](/img/image_20220722_111857.png)
 
 But there is a problem, this feature only allows us to add 6 items nailed here.
 

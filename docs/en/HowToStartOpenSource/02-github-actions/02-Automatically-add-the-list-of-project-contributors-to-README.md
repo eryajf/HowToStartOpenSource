@@ -45,7 +45,7 @@ The GITHUB_TOKEN is used in the configuration file, and my article has a detaile
 
 The next step is when the main branch pushes the code, and the list of contributors is automatically generated into the readme. The build effect of my test project is as follows:
 
-![image_20220718_172421](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172421.png)
+![image_20220718_172421](/img/image_20220718_172421.png)
 
 Of course, if you feel that the above configuration is more troublesome, you can directly use the following method, which will be simpler, and directly add the following content to the README will be automatically generated:
 

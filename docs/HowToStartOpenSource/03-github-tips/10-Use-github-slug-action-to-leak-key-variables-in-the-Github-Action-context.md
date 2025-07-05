@@ -106,7 +106,7 @@ jobs:
 
 运行后得到结果如下：
 
-![image_20230228_151615](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20230228_151615.jpg)
+![image_20230228_151615](/img/image_20230228_151615.jpg)
 
 ::: v-pre
 可见虽然在全局环境变量中能看到 `GITHUB_REF_NAME=v0.5.13`，但实际上在后续的上下文中，你并不能通过 `${{ env.GITHUB_REF_NAME }}` 来引用这个变量。

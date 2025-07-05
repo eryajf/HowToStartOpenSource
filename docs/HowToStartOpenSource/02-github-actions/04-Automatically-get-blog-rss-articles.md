@@ -54,7 +54,7 @@ jobs:
 
 生成内容效果如下：
 
-![image_20220718_172600](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220718_172600.png)
+![image_20220718_172600](/img/image_20220718_172600.png)
 
 ## 注意
 

@@ -210,4 +210,4 @@ In this way, when there are abnormal links during PR, the detection will fail, a
 
 The effect after passing the test is as follows:
 
-![image_20220808_154825](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220808_154825.png)
+![image_20220808_154825](/img/image_20220808_154825.png)

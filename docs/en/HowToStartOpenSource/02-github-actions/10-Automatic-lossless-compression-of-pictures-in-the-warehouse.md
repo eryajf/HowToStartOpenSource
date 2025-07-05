@@ -64,10 +64,10 @@ One thing to note is that the `secrets. GITHUB_TOKEN` is used to operate the cur
 
 The effect is as follows:
 
-![image_20220801_234434](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220801_234434.png)
+![image_20220801_234434](/img/image_20220801_234434.png)
 
 This action will automatically process the image and submit it to the current PR, we can click View diff to see the difference before and after:
 
-![image_20220801_234504](https://cdn.jsdelivr.net/gh/eryajf/tu/img/image_20220801_234504.png)
+![image_20220801_234504](/img/image_20220801_234504.png)
 
 At present, according to my personal zoomed in on the two photos before and after, in the case of 80% reduction in volume, the clarity is almost the same, or a very powerful action, suitable for those warehouses that store more pictures.
