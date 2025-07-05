@@ -1,0 +1,49 @@
+main:
+  push:
+    - runner:
+        cpus: 16
+      services:
+        - docker
+        - git-clone-yyds
+      imports:
+        - https://cnb.cool/eryajf/build-env/-/blob/main/env.yaml
+      docker:
+        image: docker.cnb.cool/znb/images/node:16
+        volumes:
+          - /data/.cache:copy-on-write
+      stages:
+        - name: ⚛️ 定义变量
+          script: echo -n $(date "+%Y-%m-%d %H:%M")
+          exports:
+            info: CUSTOM_ENV_DATE_INFO
+
+        - name: 🖨️ 打印环境
+          script: node -v && npm -v && yarn -v
+
+        - name: 📦️ 安装依赖
+          timeout: 3h
+          script: npm install  --registry=http://registry.npmmirror.com
+
+        - name: ⚗️ 编译项目
+          timeout: 3h
+          script: yarn build
+
+        # - name: 🚚 发布制品
+        #   image: tencentcom/rsync
+        #   settings:
+        #     user: ${SSH_USER}
+        #     key: ${SSH_KEY}
+        #     port: 2023
+        #     hosts:
+        #       - prod.eryajf.net
+        #     source: docs/.vuepress/dist/
+        #     target: /data/www/howtosos.eryajf.net/
+        #     delete: true
+
+        # - name: 🕷 抓取分词
+        #   script: |
+        #     docker run --rm \
+        #     -e MEILISEARCH_HOST_URL="https://search.eryajf.net" \
+        #     -e MEILISEARCH_API_KEY=${MEILISEARCH_API_KEY} \
+        #     docker.cnb.cool/znb/images/eryajf-docs-scraper:v0.12.12-eryajf \
+        #     pipenv run ./docs_scraper config.json

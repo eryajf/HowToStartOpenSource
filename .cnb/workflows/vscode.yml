@@ -1,0 +1,13 @@
+$:
+  vscode:
+    - docker:
+        image: docker.cnb.cool/znb/images/node:16
+      runner:
+        cpus: 8
+      services:
+        - vscode
+        - docker
+      stages:
+        - name: 默认安装依赖
+          script: |
+            npm install
