@@ -47,9 +47,9 @@ const teekConfig = defineTeekConfig({
     options: {
       // giscus 配置，官网：https://giscus.app/zh-CN
       repo: 'eryajf/HowToStartOpenSource', //仓库
-      repoId: 'R_kgDON4RvxA', //仓库ID
+      repoId: 'R_kgDOHmCGvA', //仓库ID
       category: 'General', // 讨论分类
-      categoryId: 'DIC_kwDON4RvxM4CnUkh', //讨论分类ID
+      categoryId: 'DIC_kwDOHmCGvM4CsgXS', //讨论分类ID
     },
   },
   vitePlugins: {
@@ -69,7 +69,7 @@ const teekConfig = defineTeekConfig({
     {
       provider: "baidu",
       options: {
-        id: "457b1f311c48412b87b946117f8314fc",
+        id: "59ddb15e56326c369ab59a277f49b6c8",
       },
     },
     // {
